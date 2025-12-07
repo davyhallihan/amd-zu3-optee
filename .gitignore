@@ -1,5 +1,13 @@
 embeddedsw
 embeddedsw/*
+arm-trusted-firmware
+arm-trusted-firmware/*
+u-boot-xlnx
+u-boot-xlnx/*
+u-boot
+u-boot/*
+uboot_src
+uboot_src/*
 artifacts
 artifacts/*
 dtc

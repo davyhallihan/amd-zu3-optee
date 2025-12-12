@@ -1,0 +1,19 @@
+/include/ "system-conf.dtsi"
+/ {
+	reserved-memory {
+	        #address-cells = <2>;
+	        #size-cells = <2>;
+	        ranges;
+
+	        optee_tz_mem: optee@1E000000 { // Check this start address!
+	            compatible = "optee,optee-tz-mem";
+	            reg = <0x0 0x1E000000 0x0 0x02000000>; // Check this size! (e.g., 32MB)
+	            no-map;
+	        };
+	    };
+	
+	optee {
+	    compatible = "linaro,optee-tz";
+	    method = "smc";
+	};
+};

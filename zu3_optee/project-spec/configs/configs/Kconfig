@@ -1,0 +1,24 @@
+
+mainmenu "PetaLinux System Configuration"
+config SUBSYSTEM_TYPE_LINUX
+        bool
+        default y
+        select SYSTEM_ZYNQMP
+
+config SYSTEM_ZYNQMP
+        bool "ZYNQMP Configuration"
+        help
+          ZYNQMP Configuration for the project.
+          All these config options will be in /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/config
+
+config SUBSYSTEM_VARIANT_ZYNQMPEG
+        bool
+        default y
+        help
+
+config SUBSYSTEM_DISTRO_PETALINUX
+        bool
+        default y
+        help
+
+source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/configs/Kconfig.main

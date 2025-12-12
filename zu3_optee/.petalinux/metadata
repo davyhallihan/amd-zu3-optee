@@ -1,0 +1,5 @@
+PETALINUX_VER=2025.1
+HARDWARE_PATH=/home/davy/research/optee/zup_pl_project/zup_base.xsa
+HDF_EXT=xsa
+VALIDATE_HW_CHKSUM=1
+YOCTO_SDK=2f13d13b0075d484279502922bdd4bc9349595686cc5d15b2af98b9daf2c7035

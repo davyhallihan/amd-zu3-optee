@@ -1,0 +1,30 @@
+diff --git a/core/arch/arm/plat-zynqmp/conf.mk b/core/arch/arm/plat-zynqmp/conf.mk
+index 1234567..89abcdef 100644
+--- a/core/arch/arm/plat-zynqmp/conf.mk
++++ b/core/arch/arm/plat-zynqmp/conf.mk
+@@ -43,6 +43,14 @@ CFG_UART_CLK_HZ ?= UART1_CLK_IN_HZ
+ CFG_DDR_SIZE ?= 0x80000000
+ endif
+ 
++# FORCE AUP_ZU3 CONFIGURATION (Unconditional)
++CFG_UART_BASE = UART1_BASE
++CFG_UART_IT = IT_UART1
++CFG_UART_CLK_HZ = UART1_CLK_IN_HZ
++CFG_TZDRAM_START = 0x1E000000
++CFG_TZDRAM_SIZE = 0x02000000
++CFG_CORE_TXLAT_TABLES = 32
++
+ # By default use DT address as specified by Xilinx
+ CFG_DT_ADDR ?= 0x100000
+ 
+diff --git a/core/arch/arm/plat-zynqmp/platform_config.h b/core/arch/arm/plat-zynqmp/platform_config.h
+index 1234567..89abcdef 100644
+--- a/core/arch/arm/plat-zynqmp/platform_config.h
++++ b/core/arch/arm/plat-zynqmp/platform_config.h
+@@ -60,4 +60,5 @@
+ 	defined(PLATFORM_FLAVOR_zcu106) || \
+-	defined(PLATFORM_FLAVOR_ultra96)
++	defined(PLATFORM_FLAVOR_ultra96) || \
++	defined(PLATFORM_FLAVOR_aup_zu3)
+ 
+ #define GIC_BASE		0xF9010000

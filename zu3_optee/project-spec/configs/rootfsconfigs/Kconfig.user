@@ -1,0 +1,26 @@
+menu "user packages " 
+config gpio-demo  
+	 bool "gpio-demo"
+	 help
+	
+config optee-client  
+	 bool "optee-client"
+	 help
+	
+config optee-examples  
+	 bool "optee-examples"
+	 help
+	
+config optee-os  
+	 bool "optee-os"
+	 help
+	
+config optee-test  
+	 bool "optee-test"
+	 help
+	
+config peekpoke  
+	 bool "peekpoke"
+	 help
+	
+endmenu

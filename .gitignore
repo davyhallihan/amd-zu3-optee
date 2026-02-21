@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 embeddedsw
 embeddedsw/*
 arm-trusted-firmware
@@ -36,3 +37,6 @@ device-tree/dts/*
 busybox*
 */**/.gitignore
 todo.md
+=======
+*/linux/*
+>>>>>>> origin/main

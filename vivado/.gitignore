@@ -1,0 +1,19 @@
+# Vivado build artifacts
+vivado_project/
+output/
+.Xil/
+*.jou
+*.log
+*.str
+*.dcp
+*.backup.jou
+*.backup.log
+*.xpr
+*.lpr
+*.bda
+*.tmp
+.gen/
+.ip_user_files/
+.hbs/
+*.wdb
+*.pb

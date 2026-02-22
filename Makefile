@@ -18,11 +18,11 @@ PATH := $(PATH):$(abspath gnu/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-el
 export PATH
 
 # --- Memory Layout (Critical for TrustZone) ---
-# We reserve 32MB for OP-TEE at 0x60000000. 
+# We reserve 32MB for OP-TEE at 0x1E000000. 
 # This must match Device Tree and OP-TEE configuration.
-TZDRAM_START    := 0x60000000
-TZDRAM_SIZE     := 0x02000000
-SHMEM_START     := 0x62000000
+TZDRAM_START    := 0x1E001000
+TZDRAM_SIZE     := 0x01E00000
+SHMEM_START     := 0x1FE00000
 SHMEM_SIZE      := 0x00200000
 
 # --- Directory Definitions ---
@@ -35,9 +35,12 @@ ATF_DIR         := arm-trusted-firmware
 OPTEE_OS_DIR    := optee_os
 OPTEE_CLI_DIR   := optee_client
 OPTEE_EX_DIR    := optee_examples
+SECURE_SW_DIR   := secure_switch
 UBOOT_DIR       := u-boot-xlnx
 BUSYBOX_VER     := 1.36.1
+BUSYBOX_VER     := 1.36.1
 BUSYBOX_DIR     := busybox-$(BUSYBOX_VER)
+LINUX_DIR       := linux-xlnx
 
 # --- Input Artifacts (From Vitis) ---
 FSBL_ELF        := $(VENDOR_DIR)/fsbl.elf 
@@ -49,14 +52,19 @@ UINITRD         := $(ARTIFACTS_DIR)/uInitrd
 SYSTEM_DTB      := $(ARTIFACTS_DIR)/system.dtb
 UBOOT_ELF       := $(ARTIFACTS_DIR)/u-boot.elf
 ATF_ELF         := $(ARTIFACTS_DIR)/bl31.elf
+ATF_ELF         := $(ARTIFACTS_DIR)/bl31.elf
 OPTEE_ELF       := $(ARTIFACTS_DIR)/optee_os.elf
+UTEE_ITB        := $(ARTIFACTS_DIR)/uTee
+BOOT_SCR        := $(ARTIFACTS_DIR)/boot_tee.scr
+BITSTREAM       := $(ARTIFACTS_DIR)/bitstream.bit
+ZIMAGE          := $(ARTIFACTS_DIR)/zImage
 
 # ==============================================================================
 #  Main Targets
 # ==============================================================================
-.PHONY: all setup clean help check_vitis rootfs
+.PHONY: all setup clean help check_vitis rootfs atf optee uboot linux clean-atf clean-optee clean-uboot clean-rootfs clean-linux
 
-all: setup check_vitis $(BOOT_BIN) $(UINITRD) $(SYSTEM_DTB)
+all: setup check_vitis $(BOOT_BIN) $(UINITRD) $(SYSTEM_DTB) $(UTEE_ITB) $(BOOT_SCR) $(ZIMAGE) $(BITSTREAM)
 	@echo "============================================================"
 	@echo " Build Complete!"
 	@echo " 1. Copy these to SD Card (FAT32 partition):"
@@ -70,6 +78,18 @@ check_vitis:
 	@mkdir -p $(ARTIFACTS_DIR) $(VENDOR_DIR)
 	@if [ ! -f $(FSBL_ELF) ]; then echo "❌ ERROR: $(FSBL_ELF) missing. Please copy from Vitis!"; exit 1; fi
 	@if [ ! -f $(PMUFW_ELF) ]; then echo "❌ ERROR: $(PMUFW_ELF) missing. Please copy from Vitis!"; exit 1; fi
+	@cp $(FSBL_ELF) $(ARTIFACTS_DIR)/
+	@cp $(PMUFW_ELF) $(ARTIFACTS_DIR)/
+	@# Check for XSA if bitstream is missing
+	@if [ ! -f $(BITSTREAM) ]; then \
+		XSA_FILE=$$(find $(VENDOR_DIR) -name "*.xsa" | head -n 1); \
+		if [ -z "$$XSA_FILE" ]; then \
+			echo "❌ ERROR: No .xsa file found in $(VENDOR_DIR). Please provide an XSA or $(BITSTREAM)!"; \
+			exit 1; \
+		else \
+			echo ">>> Found XSA: $$XSA_FILE. Bitstream will be extracted."; \
+		fi \
+	fi
 
 # ==============================================================================
 #  0. Set Up Directories
@@ -86,6 +106,10 @@ setup:
 	@if [ ! -d $(OPTEE_CLI_DIR) ]; then git clone https://github.com/OP-TEE/optee_client $(OPTEE_CLI_DIR); fi
 	@if [ ! -d $(OPTEE_EX_DIR) ]; then git clone https://github.com/linaro-swg/optee_examples $(OPTEE_EX_DIR); fi
 	@if [ ! -d $(UBOOT_DIR) ]; then git clone https://github.com/Xilinx/u-boot-xlnx $(UBOOT_DIR); fi
+	@if [ ! -d $(LINUX_DIR) ]; then \
+		echo ">>> Cloning Linux Kernel (This may take a while)..."; \
+		git clone --depth 1 -b xlnx_rebase_v6.6_LTS_2024.1 https://github.com/Xilinx/linux-xlnx.git $(LINUX_DIR); \
+	fi
 	@if [ ! -d gnu/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-linux-gnu ]; then \
 		echo ">>> Downloading ARM GNU Toolchain..."; \
 		wget https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-linux-gnu.tar.xz -O /tmp/arm-gnu-toolchain.tar.xz && \
@@ -107,9 +131,23 @@ $(ATF_ELF):
 	$(MAKE) -C $(ATF_DIR) \
 		CROSS_COMPILE=$(CROSS_COMPILE_BARE) \
 		PLAT=zynqmp \
-		RESET_TO_BL31=1 \
+		SPD=opteed \
+		PRELOADED_BL33_BASE=0x8000000 \
+		ZYNQMP_ATF_MEM_BASE=0x20000000 \
+		ZYNQMP_ATF_MEM_SIZE=0x80000 \
+		ZYNQMP_BL32_MEM_BASE=0x1E000000 \
+		ZYNQMP_BL32_MEM_SIZE=0x02000000 \
+		BL32_BASE=0x1E000000 \
+		BL32_MEM_BASE=0x1E000000 \
+		DEBUG=1 \
+		LOG_LEVEL=50 \
+		ZYNQMP_CONSOLE=cadence1 \
 		bl31
-	cp $(ATF_DIR)/build/zynqmp/release/bl31/bl31.elf $@
+	if [ -f $(ATF_DIR)/build/zynqmp/debug/bl31/bl31.elf ]; then \
+		cp $(ATF_DIR)/build/zynqmp/debug/bl31/bl31.elf $@; \
+	else \
+		cp $(ATF_DIR)/build/zynqmp/release/bl31/bl31.elf $@; \
+	fi
 
 # ==============================================================================
 #  2. OP-TEE OS (BL32)
@@ -124,7 +162,13 @@ $(OPTEE_ELF):
 		CFG_USER_TA_TARGETS=ta_arm64 \
 		PLATFORM=zynqmp \
 		CFG_ARM64_core=y \
-		CFG_TEE_CORE_LOG_LEVEL=2 \
+		CFG_UART_BASE=UART1_BASE \
+		CFG_UART_IT=IT_UART1 \
+		CFG_UART_CLK_HZ=100000000 \
+		CFG_DDR_SIZE=0x100000000 \
+		CFG_TEE_CORE_LOG_LEVEL=4 \
+		CFG_CORE_TXLAT_TABLES=32 \
+		CFG_CORE_RESERVED_SHM=n \
 		CFG_TZDRAM_START=$(TZDRAM_START) \
 		CFG_TZDRAM_SIZE=$(TZDRAM_SIZE) \
 		CFG_SHMEM_START=$(SHMEM_START) \
@@ -145,6 +189,22 @@ $(UBOOT_ELF):
 	cp $(UBOOT_DIR)/u-boot.elf $@
 
 # ==============================================================================
+#  3.1. Boot Script (boot.scr)
+# ==============================================================================
+$(BOOT_SCR): boot.cmd
+	@echo ">>> Compiling Boot Script..."
+	$(MKIMAGE) -C none -A arm -T script -d boot.cmd $@
+
+# ==============================================================================
+#  3.2. uTee (OP-TEE Image for U-Boot)
+# ==============================================================================
+$(UTEE_ITB): $(OPTEE_ELF)
+	@echo ">>> Generating uTee..."
+	$(CROSS_COMPILE_AARCH64)objcopy -O binary $(OPTEE_ELF) $(OPTEE_OS_DIR)/tee.bin
+	$(MKIMAGE) -A arm64 -O linux -C none -T kernel -a $(TZDRAM_START) -e $(TZDRAM_START) \
+		-n "OP-TEE" -d $(OPTEE_OS_DIR)/tee.bin $@
+
+# ==============================================================================
 #  4. Device Tree (Patched for OP-TEE)
 # ==============================================================================
 $(SYSTEM_DTB): $(UBOOT_ELF)
@@ -159,8 +219,8 @@ $(SYSTEM_DTB): $(UBOOT_ELF)
 	# We strictly reserve the memory so Linux doesn't crash accessing Secure World
 	echo "/ { reserved-memory { \
 		#address-cells = <2>; #size-cells = <2>; ranges; \
-		optee_reserved: optee@$(shell printf '%x' $(TZDRAM_START)) { \
-			reg = <0x0 $(TZDRAM_START) 0x0 $(TZDRAM_SIZE)>; \
+		optee_reserved: optee@1E000000 { \
+			reg = <0x0 0x1E000000 0x0 0x02000000>; \
 			no-map; \
 		}; \
 	}; };" >> $(ARTIFACTS_DIR)/pre_system.dts
@@ -206,6 +266,20 @@ optee_examples_build: $(OPTEE_ELF) optee_client_build
 	find $(OPTEE_EX_DIR)/out/ca -type f -executable -exec cp {} $(ROOTFS_BUILD)/usr/bin/ \;
 	find $(OPTEE_EX_DIR)/out/ta -name "*.ta" -exec cp {} $(ROOTFS_BUILD)/lib/optee_armtz/ \;
 
+# Build Secure Switch Benchmark (TA + CA)
+secure_switch_build: $(OPTEE_ELF) optee_client_build
+	@echo ">>> Building Secure Switch Benchmark TA/CA..."
+	$(MAKE) -C $(SECURE_SW_DIR)/ta \
+		CROSS_COMPILE=$(CROSS_COMPILE_AARCH64) \
+		TA_DEV_KIT_DIR=$(abspath $(OPTEE_OS_DIR)/out/arm-plat-zynqmp/export-ta_arm64)
+	$(MAKE) -C $(SECURE_SW_DIR)/host \
+		CROSS_COMPILE=$(CROSS_COMPILE_AARCH64) \
+		TEEC_EXPORT=$(abspath $(OPTEE_CLI_DIR)/out/export/usr) \
+		--no-builtin-variables
+	mkdir -p $(ROOTFS_BUILD)/usr/bin $(ROOTFS_BUILD)/lib/optee_armtz
+	cp $(SECURE_SW_DIR)/host/optee_benchmark_switch $(ROOTFS_BUILD)/usr/bin/
+	cp $(SECURE_SW_DIR)/ta/*.ta $(ROOTFS_BUILD)/lib/optee_armtz/
+
 # Create Init Script
 init_script:
 	mkdir -p $(ROOTFS_BUILD)/proc $(ROOTFS_BUILD)/sys $(ROOTFS_BUILD)/dev $(ROOTFS_BUILD)/tmp
@@ -223,10 +297,19 @@ init_script:
 # Assemble RootFS Image (uInitrd)
 MKIMAGE := $(abspath u-boot-xlnx/tools/mkimage)
 
-$(UINITRD): busybox_build optee_client_build optee_examples_build init_script
+$(UINITRD): busybox_build optee_client_build optee_examples_build secure_switch_build init_script
 	@echo ">>> Packing Initramfs..."
 	cd $(ROOTFS_BUILD) && find . | cpio -H newc -o | gzip > ../rootfs.cpio.gz
 	$(MKIMAGE) -A arm64 -T ramdisk -C gzip -d $(ARTIFACTS_DIR)/rootfs.cpio.gz $@
+
+# ==============================================================================
+#  5.1. Linux Kernel (zImage)
+# ==============================================================================
+$(ZIMAGE):
+	@echo ">>> Building Linux Kernel..."
+	$(MAKE) -C $(LINUX_DIR) ARCH=arm64 CROSS_COMPILE=$(CROSS_COMPILE_AARCH64) xilinx_zynqmp_defconfig
+	$(MAKE) -C $(LINUX_DIR) ARCH=arm64 CROSS_COMPILE=$(CROSS_COMPILE_AARCH64) -j$$(nproc) Image
+	cp $(LINUX_DIR)/arch/arm64/boot/Image $@
 
 # ==============================================================================
 #  6. Boot Image Generation (BOOT.BIN)
@@ -246,13 +329,39 @@ $(BOOT_BIN): $(FSBL_ELF) $(PMUFW_ELF) $(ATF_ELF) $(OPTEE_ELF) $(UBOOT_ELF)
 	$(BOOTGEN) -arch zynqmp -image artifacts/boot.bif -w -o $@
 
 # ==============================================================================
+#  7. Bitstream Extraction
+# ==============================================================================
+$(BITSTREAM):
+	@echo ">>> Extracting Bitstream from XSA..."
+	@XSA_FILE=$$(find $(VENDOR_DIR) -name "*.xsa" | head -n 1); \
+	if [ -z "$$XSA_FILE" ]; then echo "❌ ERROR: No XSA found!"; exit 1; fi; \
+	unzip -p $$XSA_FILE *.bit > $@
+
+# ==============================================================================
 #  Clean
 # ==============================================================================
-clean:
+clean: clean-atf clean-optee clean-uboot clean-rootfs clean-linux
 	rm -rf $(ARTIFACTS_DIR)
+
+clean-atf:
+	rm -f $(ATF_ELF)
 	$(MAKE) -C $(ATF_DIR) distclean
+
+clean-optee:
+	rm -f $(OPTEE_ELF) $(UTEE_ITB)
 	$(MAKE) -C $(OPTEE_OS_DIR) clean
+
+clean-uboot:
+	rm -f $(UBOOT_ELF) $(BOOT_SCR) $(SYSTEM_DTB)
 	$(MAKE) -C $(UBOOT_DIR) distclean
+
+clean-rootfs:
+	rm -f $(UINITRD)
+	rm -rf $(ROOTFS_BUILD)
 	$(MAKE) -C $(OPTEE_CLI_DIR) clean
 	$(MAKE) -C $(OPTEE_EX_DIR) clean
 	@if [ -d $(BUSYBOX_DIR) ]; then $(MAKE) -C $(BUSYBOX_DIR) clean; fi
+
+clean-linux:
+	rm -f $(ZIMAGE)
+	$(MAKE) -C $(LINUX_DIR) clean

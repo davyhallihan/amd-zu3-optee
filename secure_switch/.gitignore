@@ -1,0 +1,18 @@
+# Object files
+*.o
+.*.cmd
+.*.d
+
+# Build artifacts
+*.ta
+*.elf
+*.map
+*.dmp
+*.stripped.elf
+dyn_list
+ta.lds
+optee_benchmark_switch
+
+# Bitbake build directories
+oe-logs/
+oe-workdir/

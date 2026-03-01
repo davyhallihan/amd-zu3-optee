@@ -27,13 +27,13 @@ endmenu
 endif
 
 if !SUBSYSTEM_DISTRO_PETALINUX
-source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/configs/Kconfig.yoctomachinesettings
+source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig.yoctomachinesettings
 endif
 
 if SUBSYSTEM_DISTRO_PETALINUX
 menu "Yocto Settings"
 
-source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/configs/Kconfig.yoctomachinesettings
+source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig.yoctomachinesettings
 
 if SUBSYSTEM_SDT_FLOW
 config MC_PLNX_IMAGES_LOCATION

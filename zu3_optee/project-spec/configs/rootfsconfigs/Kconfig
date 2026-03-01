@@ -9310,7 +9310,7 @@ config Init-manager-sysvinit
 endchoice
 endmenu
 
-source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/rootfsconfigs/Kconfig.user
+source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/rootfsconfigs/Kconfig.user
 
 menu "PetaLinux RootFS Settings"
 config ADD_EXTRA_USERS

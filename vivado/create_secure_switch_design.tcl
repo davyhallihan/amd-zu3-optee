@@ -61,22 +61,21 @@ create_bd_design "system"
 # Add Zynq UltraScale+ MPSoC PS
 create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.5 zynq_ps
 
-# Apply board preset if board files are available
-if {[catch {apply_board_connection -board_interface "default" -ip_intf "zynq_ps/default" -diagram "system"} err]} {
-    puts "INFO: Board automation not available, configuring PS manually."
+# Apply full board preset (DDR, clocks, MIO, etc.) via board automation
+if {[catch {apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1"} [get_bd_cells zynq_ps]} err]} {
+    puts "WARNING: Board automation failed: $err"
+    puts "Falling back to manual PS configuration."
 }
 
-# Configure the PS — essential settings for AUP-ZU3
-# Enable M_AXI_HPM0_FPD (AXI master for our PL peripheral)
-# Enable UART1 (console on AUP-ZU3), basic DDR
+# Configure PS settings on top of board preset
+# Board preset already configures: UART1 on MIO 32..33, I2C0 on MIO 34..35, I2C1 on MIO 36..37
+# We only add what the preset doesn't cover (AXI, PL clock, TTC, TrustZone)
 set_property -dict [list \
     CONFIG.PSU__USE__M_AXI_GP0 {1} \
     CONFIG.PSU__MAXIGP0__DATA_WIDTH {32} \
     CONFIG.PSU__FPGA_PL0_ENABLE {1} \
     CONFIG.PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ {100} \
     CONFIG.PSU__USE__M_AXI_GP2 {0} \
-    CONFIG.PSU__UART1__PERIPHERAL__ENABLE {1} \
-    CONFIG.PSU__UART1__PERIPHERAL__IO {MIO 36 .. 37} \
     CONFIG.PSU__TTC0__PERIPHERAL__ENABLE {1} \
     CONFIG.PSU__PROTECTION__ENABLE {1} \
 ] [get_bd_cells zynq_ps]

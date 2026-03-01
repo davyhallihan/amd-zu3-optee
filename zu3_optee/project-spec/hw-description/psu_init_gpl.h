@@ -33025,6 +33025,8 @@
 #define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
 #undef CRL_APB_RST_LPD_IOU2_OFFSET 
 #define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
+#undef CRL_APB_RST_LPD_IOU2_OFFSET 
+#define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
 #undef UART1_BAUD_RATE_DIVIDER_REG0_OFFSET 
 #define UART1_BAUD_RATE_DIVIDER_REG0_OFFSET                                        0XFF010034
 #undef UART1_BAUD_RATE_GEN_REG0_OFFSET 
@@ -33383,6 +33385,16 @@
 #define CRL_APB_RST_LPD_IOU2_I2C1_RESET_DEFVAL                 0x0017FFFF
 #define CRL_APB_RST_LPD_IOU2_I2C1_RESET_SHIFT                  10
 #define CRL_APB_RST_LPD_IOU2_I2C1_RESET_MASK                   0x00000400U
+
+/*
+* Block level reset
+*/
+#undef CRL_APB_RST_LPD_IOU2_TTC0_RESET_DEFVAL 
+#undef CRL_APB_RST_LPD_IOU2_TTC0_RESET_SHIFT 
+#undef CRL_APB_RST_LPD_IOU2_TTC0_RESET_MASK 
+#define CRL_APB_RST_LPD_IOU2_TTC0_RESET_DEFVAL                 0x0017FFFF
+#define CRL_APB_RST_LPD_IOU2_TTC0_RESET_SHIFT                  11
+#define CRL_APB_RST_LPD_IOU2_TTC0_RESET_MASK                   0x00000800U
 
 /*
 * Block level reset
@@ -33862,6 +33874,7779 @@
 #define GPIO_MASK_DATA_2_MSW_DATA_2_MSW_DEFVAL                 0x00000000
 #define GPIO_MASK_DATA_2_MSW_DATA_2_MSW_SHIFT                  0
 #define GPIO_MASK_DATA_2_MSW_DATA_2_MSW_MASK                   0x000003FFU
+#undef LPD_XPPU_CFG_MASTER_ID00_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID00_OFFSET                                            0XFF980100
+#undef LPD_XPPU_CFG_MASTER_ID01_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID01_OFFSET                                            0XFF980104
+#undef LPD_XPPU_CFG_MASTER_ID02_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID02_OFFSET                                            0XFF980108
+#undef LPD_XPPU_CFG_MASTER_ID03_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID03_OFFSET                                            0XFF98010C
+#undef LPD_XPPU_CFG_MASTER_ID04_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID04_OFFSET                                            0XFF980110
+#undef LPD_XPPU_CFG_MASTER_ID05_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID05_OFFSET                                            0XFF980114
+#undef LPD_XPPU_CFG_MASTER_ID06_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID06_OFFSET                                            0XFF980118
+#undef LPD_XPPU_CFG_MASTER_ID07_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID07_OFFSET                                            0XFF98011C
+#undef LPD_XPPU_CFG_MASTER_ID08_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID08_OFFSET                                            0XFF980120
+#undef LPD_XPPU_CFG_MASTER_ID09_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID09_OFFSET                                            0XFF980124
+#undef LPD_XPPU_CFG_MASTER_ID10_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID10_OFFSET                                            0XFF980128
+#undef LPD_XPPU_CFG_MASTER_ID11_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID11_OFFSET                                            0XFF98012C
+#undef LPD_XPPU_CFG_MASTER_ID12_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID12_OFFSET                                            0XFF980130
+#undef LPD_XPPU_CFG_MASTER_ID13_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID13_OFFSET                                            0XFF980134
+#undef LPD_XPPU_CFG_MASTER_ID19_OFFSET 
+#define LPD_XPPU_CFG_MASTER_ID19_OFFSET                                            0XFF98014C
+#undef LPD_XPPU_CFG_APERPERM_024_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_024_OFFSET                                           0XFF981060
+#undef LPD_XPPU_CFG_APERPERM_025_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_025_OFFSET                                           0XFF981064
+#undef LPD_XPPU_CFG_APERPERM_026_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_026_OFFSET                                           0XFF981068
+#undef LPD_XPPU_CFG_APERPERM_027_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_027_OFFSET                                           0XFF98106C
+#undef LPD_XPPU_CFG_APERPERM_028_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_028_OFFSET                                           0XFF981070
+#undef LPD_XPPU_CFG_APERPERM_029_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_029_OFFSET                                           0XFF981074
+#undef LPD_XPPU_CFG_APERPERM_030_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_030_OFFSET                                           0XFF981078
+#undef LPD_XPPU_CFG_APERPERM_031_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_031_OFFSET                                           0XFF98107C
+#undef LPD_XPPU_CFG_APERPERM_032_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_032_OFFSET                                           0XFF981080
+#undef LPD_XPPU_CFG_APERPERM_033_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_033_OFFSET                                           0XFF981084
+#undef LPD_XPPU_CFG_APERPERM_034_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_034_OFFSET                                           0XFF981088
+#undef LPD_XPPU_CFG_APERPERM_035_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_035_OFFSET                                           0XFF98108C
+#undef LPD_XPPU_CFG_APERPERM_048_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_048_OFFSET                                           0XFF9810C0
+#undef LPD_XPPU_CFG_APERPERM_049_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_049_OFFSET                                           0XFF9810C4
+#undef LPD_XPPU_CFG_APERPERM_050_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_050_OFFSET                                           0XFF9810C8
+#undef LPD_XPPU_CFG_APERPERM_051_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_051_OFFSET                                           0XFF9810CC
+#undef LPD_XPPU_CFG_APERPERM_065_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_065_OFFSET                                           0XFF981104
+#undef LPD_XPPU_CFG_APERPERM_066_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_066_OFFSET                                           0XFF981108
+#undef LPD_XPPU_CFG_APERPERM_067_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_067_OFFSET                                           0XFF98110C
+#undef LPD_XPPU_CFG_APERPERM_068_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_068_OFFSET                                           0XFF981110
+#undef LPD_XPPU_CFG_APERPERM_069_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_069_OFFSET                                           0XFF981114
+#undef LPD_XPPU_CFG_APERPERM_070_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_070_OFFSET                                           0XFF981118
+#undef LPD_XPPU_CFG_APERPERM_071_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_071_OFFSET                                           0XFF98111C
+#undef LPD_XPPU_CFG_APERPERM_072_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_072_OFFSET                                           0XFF981120
+#undef LPD_XPPU_CFG_APERPERM_073_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_073_OFFSET                                           0XFF981124
+#undef LPD_XPPU_CFG_APERPERM_074_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_074_OFFSET                                           0XFF981128
+#undef LPD_XPPU_CFG_APERPERM_094_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_094_OFFSET                                           0XFF981178
+#undef LPD_XPPU_CFG_APERPERM_095_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_095_OFFSET                                           0XFF98117C
+#undef LPD_XPPU_CFG_APERPERM_096_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_096_OFFSET                                           0XFF981180
+#undef LPD_XPPU_CFG_APERPERM_097_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_097_OFFSET                                           0XFF981184
+#undef LPD_XPPU_CFG_APERPERM_098_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_098_OFFSET                                           0XFF981188
+#undef LPD_XPPU_CFG_APERPERM_099_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_099_OFFSET                                           0XFF98118C
+#undef LPD_XPPU_CFG_APERPERM_100_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_100_OFFSET                                           0XFF981190
+#undef LPD_XPPU_CFG_APERPERM_101_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_101_OFFSET                                           0XFF981194
+#undef LPD_XPPU_CFG_APERPERM_102_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_102_OFFSET                                           0XFF981198
+#undef LPD_XPPU_CFG_APERPERM_103_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_103_OFFSET                                           0XFF98119C
+#undef LPD_XPPU_CFG_APERPERM_104_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_104_OFFSET                                           0XFF9811A0
+#undef LPD_XPPU_CFG_APERPERM_105_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_105_OFFSET                                           0XFF9811A4
+#undef LPD_XPPU_CFG_APERPERM_106_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_106_OFFSET                                           0XFF9811A8
+#undef LPD_XPPU_CFG_APERPERM_107_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_107_OFFSET                                           0XFF9811AC
+#undef LPD_XPPU_CFG_APERPERM_108_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_108_OFFSET                                           0XFF9811B0
+#undef LPD_XPPU_CFG_APERPERM_109_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_109_OFFSET                                           0XFF9811B4
+#undef LPD_XPPU_CFG_APERPERM_110_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_110_OFFSET                                           0XFF9811B8
+#undef LPD_XPPU_CFG_APERPERM_111_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_111_OFFSET                                           0XFF9811BC
+#undef LPD_XPPU_CFG_APERPERM_112_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_112_OFFSET                                           0XFF9811C0
+#undef LPD_XPPU_CFG_APERPERM_113_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_113_OFFSET                                           0XFF9811C4
+#undef LPD_XPPU_CFG_APERPERM_114_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_114_OFFSET                                           0XFF9811C8
+#undef LPD_XPPU_CFG_APERPERM_115_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_115_OFFSET                                           0XFF9811CC
+#undef LPD_XPPU_CFG_APERPERM_116_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_116_OFFSET                                           0XFF9811D0
+#undef LPD_XPPU_CFG_APERPERM_117_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_117_OFFSET                                           0XFF9811D4
+#undef LPD_XPPU_CFG_APERPERM_118_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_118_OFFSET                                           0XFF9811D8
+#undef LPD_XPPU_CFG_APERPERM_119_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_119_OFFSET                                           0XFF9811DC
+#undef LPD_XPPU_CFG_APERPERM_120_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_120_OFFSET                                           0XFF9811E0
+#undef LPD_XPPU_CFG_APERPERM_121_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_121_OFFSET                                           0XFF9811E4
+#undef LPD_XPPU_CFG_APERPERM_122_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_122_OFFSET                                           0XFF9811E8
+#undef LPD_XPPU_CFG_APERPERM_123_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_123_OFFSET                                           0XFF9811EC
+#undef LPD_XPPU_CFG_APERPERM_124_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_124_OFFSET                                           0XFF9811F0
+#undef LPD_XPPU_CFG_APERPERM_125_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_125_OFFSET                                           0XFF9811F4
+#undef LPD_XPPU_CFG_APERPERM_126_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_126_OFFSET                                           0XFF9811F8
+#undef LPD_XPPU_CFG_APERPERM_127_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_127_OFFSET                                           0XFF9811FC
+#undef LPD_XPPU_CFG_APERPERM_128_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_128_OFFSET                                           0XFF981200
+#undef LPD_XPPU_CFG_APERPERM_129_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_129_OFFSET                                           0XFF981204
+#undef LPD_XPPU_CFG_APERPERM_130_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_130_OFFSET                                           0XFF981208
+#undef LPD_XPPU_CFG_APERPERM_131_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_131_OFFSET                                           0XFF98120C
+#undef LPD_XPPU_CFG_APERPERM_132_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_132_OFFSET                                           0XFF981210
+#undef LPD_XPPU_CFG_APERPERM_133_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_133_OFFSET                                           0XFF981214
+#undef LPD_XPPU_CFG_APERPERM_154_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_154_OFFSET                                           0XFF981268
+#undef LPD_XPPU_CFG_APERPERM_167_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_167_OFFSET                                           0XFF98129C
+#undef LPD_XPPU_CFG_APERPERM_204_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_204_OFFSET                                           0XFF981330
+#undef LPD_XPPU_CFG_APERPERM_256_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_256_OFFSET                                           0XFF981400
+#undef LPD_XPPU_CFG_APERPERM_257_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_257_OFFSET                                           0XFF981404
+#undef LPD_XPPU_CFG_APERPERM_258_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_258_OFFSET                                           0XFF981408
+#undef LPD_XPPU_CFG_APERPERM_259_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_259_OFFSET                                           0XFF98140C
+#undef LPD_XPPU_CFG_APERPERM_260_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_260_OFFSET                                           0XFF981410
+#undef LPD_XPPU_CFG_APERPERM_261_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_261_OFFSET                                           0XFF981414
+#undef LPD_XPPU_CFG_APERPERM_262_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_262_OFFSET                                           0XFF981418
+#undef LPD_XPPU_CFG_APERPERM_263_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_263_OFFSET                                           0XFF98141C
+#undef LPD_XPPU_CFG_APERPERM_264_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_264_OFFSET                                           0XFF981420
+#undef LPD_XPPU_CFG_APERPERM_265_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_265_OFFSET                                           0XFF981424
+#undef LPD_XPPU_CFG_APERPERM_266_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_266_OFFSET                                           0XFF981428
+#undef LPD_XPPU_CFG_APERPERM_267_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_267_OFFSET                                           0XFF98142C
+#undef LPD_XPPU_CFG_APERPERM_268_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_268_OFFSET                                           0XFF981430
+#undef LPD_XPPU_CFG_APERPERM_269_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_269_OFFSET                                           0XFF981434
+#undef LPD_XPPU_CFG_APERPERM_270_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_270_OFFSET                                           0XFF981438
+#undef LPD_XPPU_CFG_APERPERM_271_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_271_OFFSET                                           0XFF98143C
+#undef LPD_XPPU_CFG_APERPERM_272_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_272_OFFSET                                           0XFF981440
+#undef LPD_XPPU_CFG_APERPERM_273_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_273_OFFSET                                           0XFF981444
+#undef LPD_XPPU_CFG_APERPERM_274_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_274_OFFSET                                           0XFF981448
+#undef LPD_XPPU_CFG_APERPERM_275_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_275_OFFSET                                           0XFF98144C
+#undef LPD_XPPU_CFG_APERPERM_276_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_276_OFFSET                                           0XFF981450
+#undef LPD_XPPU_CFG_APERPERM_277_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_277_OFFSET                                           0XFF981454
+#undef LPD_XPPU_CFG_APERPERM_278_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_278_OFFSET                                           0XFF981458
+#undef LPD_XPPU_CFG_APERPERM_279_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_279_OFFSET                                           0XFF98145C
+#undef LPD_XPPU_CFG_APERPERM_280_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_280_OFFSET                                           0XFF981460
+#undef LPD_XPPU_CFG_APERPERM_281_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_281_OFFSET                                           0XFF981464
+#undef LPD_XPPU_CFG_APERPERM_282_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_282_OFFSET                                           0XFF981468
+#undef LPD_XPPU_CFG_APERPERM_283_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_283_OFFSET                                           0XFF98146C
+#undef LPD_XPPU_CFG_APERPERM_284_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_284_OFFSET                                           0XFF981470
+#undef LPD_XPPU_CFG_APERPERM_285_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_285_OFFSET                                           0XFF981474
+#undef LPD_XPPU_CFG_APERPERM_286_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_286_OFFSET                                           0XFF981478
+#undef LPD_XPPU_CFG_APERPERM_287_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_287_OFFSET                                           0XFF98147C
+#undef LPD_XPPU_CFG_APERPERM_288_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_288_OFFSET                                           0XFF981480
+#undef LPD_XPPU_CFG_APERPERM_289_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_289_OFFSET                                           0XFF981484
+#undef LPD_XPPU_CFG_APERPERM_290_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_290_OFFSET                                           0XFF981488
+#undef LPD_XPPU_CFG_APERPERM_291_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_291_OFFSET                                           0XFF98148C
+#undef LPD_XPPU_CFG_APERPERM_292_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_292_OFFSET                                           0XFF981490
+#undef LPD_XPPU_CFG_APERPERM_293_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_293_OFFSET                                           0XFF981494
+#undef LPD_XPPU_CFG_APERPERM_294_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_294_OFFSET                                           0XFF981498
+#undef LPD_XPPU_CFG_APERPERM_295_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_295_OFFSET                                           0XFF98149C
+#undef LPD_XPPU_CFG_APERPERM_296_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_296_OFFSET                                           0XFF9814A0
+#undef LPD_XPPU_CFG_APERPERM_297_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_297_OFFSET                                           0XFF9814A4
+#undef LPD_XPPU_CFG_APERPERM_298_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_298_OFFSET                                           0XFF9814A8
+#undef LPD_XPPU_CFG_APERPERM_299_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_299_OFFSET                                           0XFF9814AC
+#undef LPD_XPPU_CFG_APERPERM_300_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_300_OFFSET                                           0XFF9814B0
+#undef LPD_XPPU_CFG_APERPERM_301_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_301_OFFSET                                           0XFF9814B4
+#undef LPD_XPPU_CFG_APERPERM_302_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_302_OFFSET                                           0XFF9814B8
+#undef LPD_XPPU_CFG_APERPERM_303_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_303_OFFSET                                           0XFF9814BC
+#undef LPD_XPPU_CFG_APERPERM_304_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_304_OFFSET                                           0XFF9814C0
+#undef LPD_XPPU_CFG_APERPERM_305_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_305_OFFSET                                           0XFF9814C4
+#undef LPD_XPPU_CFG_APERPERM_306_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_306_OFFSET                                           0XFF9814C8
+#undef LPD_XPPU_CFG_APERPERM_307_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_307_OFFSET                                           0XFF9814CC
+#undef LPD_XPPU_CFG_APERPERM_308_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_308_OFFSET                                           0XFF9814D0
+#undef LPD_XPPU_CFG_APERPERM_309_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_309_OFFSET                                           0XFF9814D4
+#undef LPD_XPPU_CFG_APERPERM_318_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_318_OFFSET                                           0XFF9814F8
+#undef LPD_XPPU_CFG_APERPERM_319_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_319_OFFSET                                           0XFF9814FC
+#undef LPD_XPPU_CFG_APERPERM_320_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_320_OFFSET                                           0XFF981500
+#undef LPD_XPPU_CFG_APERPERM_321_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_321_OFFSET                                           0XFF981504
+#undef LPD_XPPU_CFG_APERPERM_322_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_322_OFFSET                                           0XFF981508
+#undef LPD_XPPU_CFG_APERPERM_323_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_323_OFFSET                                           0XFF98150C
+#undef LPD_XPPU_CFG_APERPERM_324_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_324_OFFSET                                           0XFF981510
+#undef LPD_XPPU_CFG_APERPERM_325_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_325_OFFSET                                           0XFF981514
+#undef LPD_XPPU_CFG_APERPERM_334_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_334_OFFSET                                           0XFF981538
+#undef LPD_XPPU_CFG_APERPERM_335_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_335_OFFSET                                           0XFF98153C
+#undef LPD_XPPU_CFG_APERPERM_336_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_336_OFFSET                                           0XFF981540
+#undef LPD_XPPU_CFG_APERPERM_337_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_337_OFFSET                                           0XFF981544
+#undef LPD_XPPU_CFG_APERPERM_338_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_338_OFFSET                                           0XFF981548
+#undef LPD_XPPU_CFG_APERPERM_339_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_339_OFFSET                                           0XFF98154C
+#undef LPD_XPPU_CFG_APERPERM_340_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_340_OFFSET                                           0XFF981550
+#undef LPD_XPPU_CFG_APERPERM_341_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_341_OFFSET                                           0XFF981554
+#undef LPD_XPPU_CFG_APERPERM_350_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_350_OFFSET                                           0XFF981578
+#undef LPD_XPPU_CFG_APERPERM_351_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_351_OFFSET                                           0XFF98157C
+#undef LPD_XPPU_CFG_APERPERM_352_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_352_OFFSET                                           0XFF981580
+#undef LPD_XPPU_CFG_APERPERM_353_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_353_OFFSET                                           0XFF981584
+#undef LPD_XPPU_CFG_APERPERM_354_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_354_OFFSET                                           0XFF981588
+#undef LPD_XPPU_CFG_APERPERM_355_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_355_OFFSET                                           0XFF98158C
+#undef LPD_XPPU_CFG_APERPERM_356_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_356_OFFSET                                           0XFF981590
+#undef LPD_XPPU_CFG_APERPERM_357_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_357_OFFSET                                           0XFF981594
+#undef LPD_XPPU_CFG_APERPERM_366_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_366_OFFSET                                           0XFF9815B8
+#undef LPD_XPPU_CFG_APERPERM_367_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_367_OFFSET                                           0XFF9815BC
+#undef LPD_XPPU_CFG_APERPERM_368_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_368_OFFSET                                           0XFF9815C0
+#undef LPD_XPPU_CFG_APERPERM_369_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_369_OFFSET                                           0XFF9815C4
+#undef LPD_XPPU_CFG_APERPERM_370_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_370_OFFSET                                           0XFF9815C8
+#undef LPD_XPPU_CFG_APERPERM_371_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_371_OFFSET                                           0XFF9815CC
+#undef LPD_XPPU_CFG_APERPERM_372_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_372_OFFSET                                           0XFF9815D0
+#undef LPD_XPPU_CFG_APERPERM_373_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_373_OFFSET                                           0XFF9815D4
+#undef LPD_XPPU_CFG_APERPERM_374_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_374_OFFSET                                           0XFF9815D8
+#undef LPD_XPPU_CFG_APERPERM_375_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_375_OFFSET                                           0XFF9815DC
+#undef LPD_XPPU_CFG_APERPERM_376_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_376_OFFSET                                           0XFF9815E0
+#undef LPD_XPPU_CFG_APERPERM_377_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_377_OFFSET                                           0XFF9815E4
+#undef LPD_XPPU_CFG_APERPERM_378_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_378_OFFSET                                           0XFF9815E8
+#undef LPD_XPPU_CFG_APERPERM_379_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_379_OFFSET                                           0XFF9815EC
+#undef LPD_XPPU_CFG_APERPERM_380_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_380_OFFSET                                           0XFF9815F0
+#undef LPD_XPPU_CFG_APERPERM_381_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_381_OFFSET                                           0XFF9815F4
+#undef LPD_XPPU_CFG_APERPERM_382_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_382_OFFSET                                           0XFF9815F8
+#undef LPD_XPPU_CFG_APERPERM_383_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_383_OFFSET                                           0XFF9815FC
+#undef LPD_XPPU_CFG_IEN_OFFSET 
+#define LPD_XPPU_CFG_IEN_OFFSET                                                    0XFF980018
+#undef LPD_XPPU_SINK_ERR_CTRL_OFFSET 
+#define LPD_XPPU_SINK_ERR_CTRL_OFFSET                                              0XFF9CFFEC
+#undef LPD_XPPU_CFG_CTRL_OFFSET 
+#define LPD_XPPU_CFG_CTRL_OFFSET                                                   0XFF980000
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID00_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID00_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID00_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID00_MIDR_DEFVAL                   0x83FF0040
+#define LPD_XPPU_CFG_MASTER_ID00_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID00_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID00_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID00_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID00_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID00_MIDM_DEFVAL                   0x83FF0040
+#define LPD_XPPU_CFG_MASTER_ID00_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID00_MIDM_MASK                     0x03FF0000U
+
+/*
+* Predefined Master ID for PMU
+*/
+#undef LPD_XPPU_CFG_MASTER_ID00_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID00_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID00_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID00_MID_DEFVAL                    0x83FF0040
+#define LPD_XPPU_CFG_MASTER_ID00_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID00_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID01_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID01_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID01_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID01_MIDR_DEFVAL                   0x03F00000
+#define LPD_XPPU_CFG_MASTER_ID01_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID01_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID01_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID01_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID01_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID01_MIDM_DEFVAL                   0x03F00000
+#define LPD_XPPU_CFG_MASTER_ID01_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID01_MIDM_MASK                     0x03FF0000U
+
+/*
+* Predefined Master ID for RPU0
+*/
+#undef LPD_XPPU_CFG_MASTER_ID01_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID01_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID01_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID01_MID_DEFVAL                    0x03F00000
+#define LPD_XPPU_CFG_MASTER_ID01_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID01_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID02_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID02_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID02_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID02_MIDR_DEFVAL                   0x83F00010
+#define LPD_XPPU_CFG_MASTER_ID02_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID02_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID02_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID02_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID02_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID02_MIDM_DEFVAL                   0x83F00010
+#define LPD_XPPU_CFG_MASTER_ID02_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID02_MIDM_MASK                     0x03FF0000U
+
+/*
+* Predefined Master ID for RPU1
+*/
+#undef LPD_XPPU_CFG_MASTER_ID02_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID02_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID02_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID02_MID_DEFVAL                    0x83F00010
+#define LPD_XPPU_CFG_MASTER_ID02_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID02_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID03_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID03_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID03_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID03_MIDR_DEFVAL                   0x83C00080
+#define LPD_XPPU_CFG_MASTER_ID03_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID03_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID03_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID03_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID03_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID03_MIDM_DEFVAL                   0x83C00080
+#define LPD_XPPU_CFG_MASTER_ID03_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID03_MIDM_MASK                     0x03FF0000U
+
+/*
+* Predefined Master ID for APU
+*/
+#undef LPD_XPPU_CFG_MASTER_ID03_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID03_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID03_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID03_MID_DEFVAL                    0x83C00080
+#define LPD_XPPU_CFG_MASTER_ID03_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID03_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID04_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID04_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID04_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID04_MIDR_DEFVAL                   0x83C30080
+#define LPD_XPPU_CFG_MASTER_ID04_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID04_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID04_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID04_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID04_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID04_MIDM_DEFVAL                   0x83C30080
+#define LPD_XPPU_CFG_MASTER_ID04_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID04_MIDM_MASK                     0x03FF0000U
+
+/*
+* Predefined Master ID for A53 Core 0
+*/
+#undef LPD_XPPU_CFG_MASTER_ID04_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID04_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID04_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID04_MID_DEFVAL                    0x83C30080
+#define LPD_XPPU_CFG_MASTER_ID04_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID04_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID05_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID05_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID05_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID05_MIDR_DEFVAL                   0x03C30081
+#define LPD_XPPU_CFG_MASTER_ID05_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID05_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID05_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID05_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID05_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID05_MIDM_DEFVAL                   0x03C30081
+#define LPD_XPPU_CFG_MASTER_ID05_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID05_MIDM_MASK                     0x03FF0000U
+
+/*
+* Predefined Master ID for A53 Core 1
+*/
+#undef LPD_XPPU_CFG_MASTER_ID05_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID05_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID05_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID05_MID_DEFVAL                    0x03C30081
+#define LPD_XPPU_CFG_MASTER_ID05_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID05_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID06_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID06_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID06_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID06_MIDR_DEFVAL                   0x03C30082
+#define LPD_XPPU_CFG_MASTER_ID06_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID06_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID06_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID06_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID06_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID06_MIDM_DEFVAL                   0x03C30082
+#define LPD_XPPU_CFG_MASTER_ID06_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID06_MIDM_MASK                     0x03FF0000U
+
+/*
+* Predefined Master ID for A53 Core 2
+*/
+#undef LPD_XPPU_CFG_MASTER_ID06_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID06_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID06_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID06_MID_DEFVAL                    0x03C30082
+#define LPD_XPPU_CFG_MASTER_ID06_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID06_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID07_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID07_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID07_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID07_MIDR_DEFVAL                   0x83C30083
+#define LPD_XPPU_CFG_MASTER_ID07_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID07_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID07_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID07_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID07_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID07_MIDM_DEFVAL                   0x83C30083
+#define LPD_XPPU_CFG_MASTER_ID07_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID07_MIDM_MASK                     0x03FF0000U
+
+/*
+* Predefined Master ID for A53 Core 3
+*/
+#undef LPD_XPPU_CFG_MASTER_ID07_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID07_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID07_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID07_MID_DEFVAL                    0x83C30083
+#define LPD_XPPU_CFG_MASTER_ID07_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID07_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID08_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID08_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID08_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID08_MIDR_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID08_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID08_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID08_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID08_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID08_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID08_MIDM_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID08_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID08_MIDM_MASK                     0x03FF0000U
+
+/*
+* Programmable Master ID
+*/
+#undef LPD_XPPU_CFG_MASTER_ID08_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID08_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID08_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID08_MID_DEFVAL                    0x00000000
+#define LPD_XPPU_CFG_MASTER_ID08_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID08_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID09_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID09_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID09_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID09_MIDR_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID09_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID09_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID09_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID09_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID09_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID09_MIDM_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID09_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID09_MIDM_MASK                     0x03FF0000U
+
+/*
+* Programmable Master ID
+*/
+#undef LPD_XPPU_CFG_MASTER_ID09_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID09_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID09_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID09_MID_DEFVAL                    0x00000000
+#define LPD_XPPU_CFG_MASTER_ID09_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID09_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID10_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID10_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID10_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID10_MIDR_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID10_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID10_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID10_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID10_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID10_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID10_MIDM_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID10_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID10_MIDM_MASK                     0x03FF0000U
+
+/*
+* Programmable Master ID
+*/
+#undef LPD_XPPU_CFG_MASTER_ID10_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID10_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID10_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID10_MID_DEFVAL                    0x00000000
+#define LPD_XPPU_CFG_MASTER_ID10_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID10_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID11_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID11_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID11_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID11_MIDR_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID11_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID11_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID11_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID11_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID11_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID11_MIDM_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID11_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID11_MIDM_MASK                     0x03FF0000U
+
+/*
+* Programmable Master ID
+*/
+#undef LPD_XPPU_CFG_MASTER_ID11_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID11_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID11_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID11_MID_DEFVAL                    0x00000000
+#define LPD_XPPU_CFG_MASTER_ID11_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID11_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID12_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID12_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID12_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID12_MIDR_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID12_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID12_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID12_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID12_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID12_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID12_MIDM_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID12_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID12_MIDM_MASK                     0x03FF0000U
+
+/*
+* Programmable Master ID
+*/
+#undef LPD_XPPU_CFG_MASTER_ID12_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID12_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID12_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID12_MID_DEFVAL                    0x00000000
+#define LPD_XPPU_CFG_MASTER_ID12_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID12_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID13_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID13_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID13_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID13_MIDR_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID13_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID13_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID13_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID13_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID13_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID13_MIDM_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID13_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID13_MIDM_MASK                     0x03FF0000U
+
+/*
+* Programmable Master ID
+*/
+#undef LPD_XPPU_CFG_MASTER_ID13_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID13_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID13_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID13_MID_DEFVAL                    0x00000000
+#define LPD_XPPU_CFG_MASTER_ID13_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID13_MID_MASK                      0x000003FFU
+
+/*
+* If set, only read transactions are allowed for the masters matching this
+    *  register
+*/
+#undef LPD_XPPU_CFG_MASTER_ID19_MIDR_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID19_MIDR_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID19_MIDR_MASK 
+#define LPD_XPPU_CFG_MASTER_ID19_MIDR_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID19_MIDR_SHIFT                    30
+#define LPD_XPPU_CFG_MASTER_ID19_MIDR_MASK                     0x40000000U
+
+/*
+* Mask to be applied before comparing
+*/
+#undef LPD_XPPU_CFG_MASTER_ID19_MIDM_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID19_MIDM_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID19_MIDM_MASK 
+#define LPD_XPPU_CFG_MASTER_ID19_MIDM_DEFVAL                   0x00000000
+#define LPD_XPPU_CFG_MASTER_ID19_MIDM_SHIFT                    16
+#define LPD_XPPU_CFG_MASTER_ID19_MIDM_MASK                     0x03FF0000U
+
+/*
+* Programmable Master ID
+*/
+#undef LPD_XPPU_CFG_MASTER_ID19_MID_DEFVAL 
+#undef LPD_XPPU_CFG_MASTER_ID19_MID_SHIFT 
+#undef LPD_XPPU_CFG_MASTER_ID19_MID_MASK 
+#define LPD_XPPU_CFG_MASTER_ID19_MID_DEFVAL                    0x00000000
+#define LPD_XPPU_CFG_MASTER_ID19_MID_SHIFT                     0
+#define LPD_XPPU_CFG_MASTER_ID19_MID_MASK                      0x000003FFU
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_024_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_024_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_024_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_024_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_024_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_024_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_024_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_024_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_024_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_024_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_024_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_024_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_024_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_024_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_024_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_024_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_024_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_024_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_025_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_025_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_025_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_025_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_025_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_025_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_025_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_025_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_025_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_025_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_025_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_025_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_025_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_025_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_025_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_025_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_025_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_025_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_026_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_026_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_026_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_026_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_026_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_026_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_026_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_026_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_026_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_026_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_026_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_026_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_026_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_026_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_026_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_026_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_026_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_026_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_027_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_027_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_027_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_027_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_027_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_027_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_027_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_027_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_027_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_027_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_027_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_027_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_027_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_027_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_027_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_027_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_027_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_027_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_028_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_028_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_028_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_028_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_028_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_028_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_028_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_028_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_028_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_028_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_028_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_028_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_028_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_028_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_028_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_028_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_028_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_028_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_029_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_029_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_029_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_029_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_029_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_029_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_029_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_029_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_029_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_029_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_029_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_029_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_029_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_029_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_029_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_029_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_029_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_029_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_030_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_030_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_030_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_030_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_030_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_030_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_030_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_030_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_030_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_030_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_030_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_030_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_030_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_030_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_030_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_030_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_030_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_030_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_031_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_031_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_031_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_031_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_031_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_031_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_031_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_031_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_031_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_031_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_031_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_031_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_031_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_031_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_031_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_031_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_031_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_031_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_032_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_032_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_032_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_032_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_032_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_032_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_032_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_032_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_032_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_032_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_032_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_032_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_032_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_032_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_032_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_032_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_032_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_032_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_033_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_033_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_033_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_033_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_033_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_033_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_033_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_033_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_033_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_033_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_033_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_033_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_033_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_033_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_033_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_033_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_033_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_033_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_034_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_034_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_034_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_034_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_034_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_034_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_034_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_034_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_034_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_034_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_034_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_034_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_034_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_034_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_034_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_034_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_034_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_034_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_035_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_035_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_035_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_035_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_035_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_035_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_035_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_035_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_035_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_035_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_035_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_035_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_035_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_035_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_035_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_035_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_035_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_035_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_048_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_048_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_048_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_048_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_048_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_048_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_048_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_048_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_048_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_048_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_048_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_048_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_048_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_048_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_048_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_048_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_048_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_048_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_049_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_049_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_049_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_049_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_049_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_049_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_049_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_049_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_049_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_049_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_049_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_049_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_049_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_049_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_049_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_049_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_049_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_049_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_050_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_050_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_050_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_050_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_050_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_050_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_050_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_050_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_050_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_050_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_050_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_050_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_050_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_050_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_050_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_050_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_050_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_050_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_051_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_051_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_051_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_051_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_051_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_051_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_051_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_051_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_051_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_051_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_051_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_051_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_051_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_051_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_051_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_051_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_051_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_051_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_065_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_065_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_065_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_065_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_065_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_065_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_065_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_065_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_065_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_065_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_065_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_065_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_065_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_065_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_065_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_065_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_065_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_065_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_066_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_066_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_066_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_066_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_066_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_066_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_066_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_066_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_066_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_066_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_066_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_066_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_066_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_066_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_066_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_066_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_066_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_066_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_067_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_067_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_067_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_067_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_067_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_067_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_067_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_067_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_067_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_067_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_067_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_067_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_067_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_067_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_067_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_067_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_067_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_067_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_068_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_068_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_068_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_068_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_068_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_068_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_068_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_068_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_068_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_068_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_068_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_068_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_068_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_068_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_068_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_068_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_068_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_068_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_069_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_069_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_069_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_069_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_069_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_069_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_069_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_069_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_069_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_069_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_069_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_069_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_069_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_069_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_069_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_069_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_069_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_069_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_070_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_070_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_070_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_070_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_070_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_070_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_070_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_070_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_070_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_070_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_070_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_070_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_070_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_070_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_070_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_070_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_070_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_070_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_071_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_071_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_071_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_071_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_071_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_071_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_071_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_071_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_071_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_071_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_071_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_071_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_071_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_071_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_071_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_071_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_071_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_071_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_072_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_072_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_072_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_072_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_072_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_072_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_072_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_072_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_072_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_072_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_072_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_072_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_072_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_072_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_072_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_072_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_072_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_072_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_073_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_073_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_073_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_073_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_073_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_073_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_073_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_073_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_073_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_073_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_073_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_073_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_073_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_073_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_073_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_073_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_073_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_073_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_074_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_074_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_074_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_074_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_074_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_074_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_074_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_074_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_074_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_074_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_074_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_074_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_074_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_074_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_074_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_074_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_074_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_074_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_094_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_094_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_094_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_094_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_094_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_094_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_094_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_094_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_094_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_094_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_094_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_094_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_094_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_094_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_094_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_094_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_094_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_094_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_095_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_095_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_095_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_095_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_095_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_095_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_095_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_095_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_095_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_095_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_095_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_095_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_095_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_095_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_095_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_095_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_095_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_095_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_096_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_096_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_096_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_096_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_096_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_096_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_096_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_096_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_096_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_096_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_096_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_096_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_096_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_096_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_096_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_096_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_096_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_096_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_097_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_097_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_097_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_097_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_097_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_097_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_097_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_097_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_097_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_097_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_097_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_097_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_097_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_097_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_097_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_097_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_097_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_097_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_098_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_098_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_098_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_098_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_098_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_098_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_098_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_098_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_098_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_098_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_098_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_098_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_098_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_098_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_098_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_098_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_098_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_098_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_099_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_099_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_099_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_099_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_099_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_099_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_099_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_099_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_099_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_099_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_099_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_099_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_099_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_099_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_099_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_099_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_099_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_099_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_100_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_100_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_100_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_100_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_100_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_100_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_100_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_100_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_100_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_100_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_100_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_100_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_100_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_100_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_100_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_100_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_100_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_100_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_101_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_101_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_101_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_101_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_101_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_101_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_101_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_101_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_101_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_101_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_101_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_101_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_101_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_101_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_101_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_101_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_101_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_101_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_102_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_102_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_102_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_102_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_102_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_102_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_102_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_102_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_102_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_102_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_102_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_102_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_102_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_102_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_102_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_102_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_102_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_102_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_103_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_103_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_103_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_103_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_103_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_103_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_103_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_103_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_103_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_103_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_103_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_103_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_103_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_103_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_103_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_103_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_103_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_103_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_104_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_104_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_104_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_104_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_104_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_104_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_104_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_104_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_104_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_104_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_104_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_104_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_104_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_104_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_104_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_104_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_104_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_104_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_105_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_105_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_105_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_105_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_105_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_105_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_105_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_105_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_105_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_105_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_105_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_105_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_105_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_105_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_105_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_105_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_105_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_105_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_106_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_106_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_106_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_106_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_106_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_106_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_106_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_106_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_106_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_106_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_106_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_106_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_106_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_106_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_106_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_106_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_106_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_106_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_107_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_107_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_107_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_107_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_107_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_107_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_107_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_107_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_107_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_107_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_107_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_107_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_107_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_107_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_107_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_107_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_107_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_107_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_108_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_108_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_108_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_108_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_108_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_108_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_108_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_108_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_108_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_108_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_108_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_108_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_108_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_108_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_108_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_108_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_108_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_108_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_109_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_109_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_109_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_109_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_109_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_109_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_109_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_109_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_109_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_109_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_109_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_109_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_109_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_109_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_109_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_109_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_109_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_109_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_110_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_110_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_110_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_110_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_110_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_110_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_110_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_110_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_110_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_110_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_110_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_110_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_110_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_110_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_110_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_110_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_110_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_110_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_111_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_111_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_111_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_111_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_111_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_111_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_111_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_111_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_111_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_111_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_111_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_111_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_111_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_111_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_111_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_111_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_111_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_111_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_112_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_112_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_112_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_112_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_112_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_112_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_112_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_112_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_112_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_112_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_112_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_112_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_112_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_112_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_112_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_112_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_112_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_112_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_113_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_113_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_113_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_113_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_113_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_113_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_113_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_113_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_113_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_113_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_113_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_113_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_113_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_113_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_113_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_113_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_113_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_113_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_114_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_114_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_114_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_114_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_114_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_114_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_114_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_114_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_114_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_114_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_114_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_114_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_114_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_114_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_114_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_114_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_114_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_114_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_115_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_115_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_115_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_115_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_115_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_115_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_115_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_115_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_115_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_115_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_115_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_115_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_115_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_115_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_115_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_115_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_115_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_115_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_116_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_116_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_116_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_116_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_116_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_116_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_116_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_116_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_116_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_116_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_116_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_116_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_116_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_116_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_116_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_116_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_116_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_116_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_117_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_117_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_117_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_117_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_117_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_117_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_117_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_117_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_117_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_117_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_117_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_117_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_117_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_117_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_117_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_117_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_117_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_117_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_118_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_118_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_118_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_118_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_118_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_118_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_118_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_118_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_118_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_118_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_118_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_118_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_118_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_118_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_118_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_118_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_118_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_118_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_119_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_119_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_119_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_119_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_119_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_119_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_119_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_119_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_119_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_119_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_119_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_119_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_119_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_119_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_119_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_119_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_119_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_119_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_120_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_120_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_120_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_120_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_120_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_120_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_120_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_120_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_120_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_120_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_120_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_120_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_120_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_120_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_120_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_120_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_120_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_120_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_121_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_121_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_121_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_121_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_121_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_121_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_121_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_121_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_121_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_121_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_121_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_121_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_121_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_121_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_121_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_121_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_121_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_121_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_122_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_122_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_122_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_122_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_122_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_122_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_122_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_122_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_122_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_122_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_122_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_122_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_122_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_122_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_122_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_122_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_122_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_122_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_123_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_123_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_123_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_123_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_123_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_123_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_123_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_123_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_123_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_123_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_123_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_123_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_123_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_123_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_123_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_123_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_123_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_123_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_124_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_124_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_124_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_124_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_124_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_124_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_124_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_124_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_124_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_124_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_124_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_124_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_124_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_124_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_124_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_124_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_124_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_124_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_125_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_125_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_125_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_125_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_125_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_125_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_125_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_125_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_125_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_125_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_125_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_125_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_125_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_125_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_125_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_125_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_125_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_125_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_126_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_126_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_126_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_126_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_126_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_126_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_126_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_126_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_126_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_126_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_126_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_126_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_126_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_126_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_126_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_126_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_126_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_126_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_127_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_127_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_127_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_127_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_127_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_127_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_127_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_127_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_127_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_127_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_127_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_127_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_127_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_127_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_127_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_127_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_127_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_127_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_128_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_128_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_128_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_128_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_128_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_128_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_128_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_128_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_128_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_128_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_128_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_128_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_128_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_128_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_128_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_128_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_128_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_128_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_129_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_129_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_129_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_129_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_129_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_129_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_129_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_129_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_129_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_129_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_129_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_129_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_129_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_129_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_129_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_129_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_129_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_129_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_130_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_130_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_130_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_130_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_130_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_130_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_130_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_130_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_130_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_130_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_130_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_130_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_130_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_130_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_130_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_130_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_130_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_130_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_131_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_131_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_131_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_131_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_131_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_131_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_131_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_131_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_131_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_131_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_131_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_131_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_131_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_131_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_131_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_131_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_131_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_131_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_132_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_132_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_132_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_132_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_132_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_132_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_132_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_132_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_132_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_132_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_132_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_132_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_132_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_132_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_132_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_132_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_132_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_132_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_133_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_133_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_133_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_133_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_133_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_133_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_133_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_133_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_133_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_133_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_133_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_133_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_133_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_133_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_133_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_133_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_133_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_133_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_154_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_154_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_154_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_154_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_154_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_154_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_154_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_154_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_154_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_154_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_154_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_154_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_154_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_154_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_154_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_154_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_154_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_154_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_167_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_167_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_167_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_167_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_167_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_167_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_167_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_167_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_167_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_167_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_167_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_167_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_167_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_167_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_167_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_167_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_167_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_167_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_204_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_204_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_204_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_204_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_204_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_204_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_204_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_204_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_204_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_204_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_204_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_204_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_204_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_204_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_204_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_204_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_204_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_204_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_256_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_256_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_256_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_256_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_256_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_256_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_256_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_256_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_256_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_256_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_256_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_256_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_256_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_256_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_256_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_256_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_256_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_256_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_257_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_257_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_257_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_257_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_257_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_257_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_257_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_257_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_257_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_257_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_257_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_257_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_257_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_257_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_257_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_257_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_257_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_257_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_258_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_258_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_258_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_258_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_258_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_258_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_258_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_258_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_258_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_258_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_258_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_258_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_258_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_258_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_258_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_258_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_258_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_258_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_259_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_259_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_259_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_259_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_259_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_259_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_259_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_259_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_259_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_259_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_259_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_259_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_259_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_259_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_259_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_259_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_259_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_259_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_260_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_260_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_260_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_260_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_260_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_260_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_260_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_260_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_260_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_260_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_260_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_260_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_260_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_260_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_260_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_260_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_260_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_260_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_261_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_261_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_261_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_261_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_261_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_261_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_261_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_261_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_261_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_261_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_261_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_261_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_261_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_261_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_261_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_261_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_261_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_261_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_262_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_262_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_262_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_262_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_262_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_262_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_262_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_262_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_262_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_262_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_262_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_262_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_262_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_262_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_262_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_262_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_262_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_262_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_263_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_263_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_263_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_263_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_263_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_263_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_263_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_263_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_263_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_263_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_263_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_263_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_263_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_263_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_263_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_263_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_263_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_263_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_264_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_264_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_264_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_264_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_264_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_264_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_264_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_264_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_264_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_264_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_264_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_264_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_264_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_264_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_264_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_264_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_264_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_264_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_265_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_265_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_265_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_265_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_265_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_265_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_265_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_265_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_265_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_265_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_265_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_265_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_265_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_265_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_265_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_265_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_265_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_265_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_266_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_266_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_266_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_266_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_266_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_266_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_266_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_266_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_266_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_266_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_266_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_266_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_266_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_266_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_266_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_266_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_266_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_266_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_267_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_267_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_267_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_267_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_267_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_267_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_267_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_267_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_267_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_267_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_267_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_267_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_267_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_267_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_267_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_267_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_267_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_267_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_268_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_268_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_268_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_268_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_268_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_268_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_268_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_268_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_268_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_268_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_268_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_268_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_268_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_268_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_268_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_268_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_268_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_268_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_269_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_269_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_269_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_269_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_269_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_269_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_269_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_269_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_269_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_269_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_269_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_269_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_269_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_269_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_269_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_269_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_269_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_269_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_270_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_270_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_270_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_270_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_270_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_270_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_270_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_270_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_270_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_270_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_270_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_270_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_270_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_270_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_270_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_270_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_270_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_270_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_271_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_271_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_271_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_271_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_271_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_271_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_271_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_271_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_271_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_271_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_271_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_271_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_271_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_271_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_271_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_271_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_271_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_271_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_272_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_272_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_272_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_272_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_272_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_272_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_272_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_272_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_272_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_272_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_272_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_272_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_272_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_272_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_272_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_272_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_272_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_272_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_273_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_273_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_273_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_273_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_273_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_273_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_273_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_273_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_273_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_273_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_273_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_273_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_273_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_273_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_273_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_273_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_273_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_273_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_274_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_274_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_274_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_274_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_274_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_274_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_274_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_274_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_274_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_274_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_274_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_274_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_274_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_274_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_274_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_274_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_274_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_274_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_275_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_275_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_275_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_275_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_275_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_275_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_275_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_275_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_275_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_275_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_275_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_275_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_275_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_275_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_275_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_275_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_275_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_275_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_276_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_276_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_276_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_276_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_276_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_276_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_276_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_276_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_276_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_276_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_276_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_276_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_276_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_276_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_276_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_276_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_276_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_276_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_277_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_277_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_277_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_277_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_277_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_277_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_277_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_277_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_277_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_277_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_277_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_277_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_277_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_277_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_277_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_277_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_277_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_277_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_278_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_278_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_278_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_278_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_278_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_278_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_278_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_278_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_278_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_278_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_278_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_278_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_278_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_278_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_278_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_278_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_278_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_278_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_279_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_279_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_279_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_279_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_279_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_279_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_279_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_279_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_279_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_279_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_279_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_279_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_279_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_279_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_279_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_279_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_279_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_279_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_280_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_280_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_280_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_280_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_280_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_280_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_280_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_280_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_280_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_280_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_280_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_280_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_280_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_280_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_280_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_280_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_280_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_280_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_281_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_281_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_281_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_281_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_281_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_281_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_281_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_281_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_281_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_281_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_281_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_281_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_281_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_281_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_281_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_281_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_281_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_281_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_282_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_282_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_282_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_282_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_282_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_282_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_282_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_282_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_282_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_282_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_282_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_282_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_282_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_282_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_282_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_282_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_282_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_282_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_283_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_283_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_283_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_283_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_283_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_283_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_283_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_283_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_283_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_283_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_283_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_283_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_283_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_283_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_283_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_283_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_283_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_283_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_284_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_284_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_284_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_284_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_284_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_284_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_284_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_284_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_284_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_284_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_284_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_284_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_284_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_284_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_284_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_284_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_284_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_284_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_285_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_285_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_285_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_285_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_285_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_285_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_285_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_285_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_285_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_285_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_285_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_285_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_285_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_285_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_285_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_285_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_285_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_285_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_286_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_286_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_286_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_286_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_286_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_286_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_286_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_286_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_286_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_286_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_286_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_286_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_286_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_286_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_286_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_286_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_286_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_286_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_287_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_287_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_287_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_287_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_287_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_287_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_287_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_287_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_287_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_287_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_287_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_287_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_287_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_287_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_287_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_287_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_287_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_287_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_288_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_288_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_288_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_288_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_288_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_288_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_288_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_288_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_288_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_288_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_288_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_288_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_288_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_288_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_288_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_288_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_288_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_288_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_289_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_289_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_289_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_289_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_289_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_289_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_289_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_289_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_289_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_289_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_289_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_289_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_289_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_289_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_289_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_289_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_289_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_289_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_290_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_290_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_290_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_290_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_290_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_290_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_290_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_290_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_290_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_290_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_290_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_290_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_290_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_290_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_290_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_290_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_290_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_290_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_291_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_291_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_291_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_291_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_291_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_291_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_291_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_291_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_291_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_291_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_291_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_291_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_291_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_291_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_291_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_291_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_291_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_291_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_292_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_292_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_292_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_292_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_292_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_292_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_292_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_292_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_292_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_292_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_292_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_292_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_292_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_292_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_292_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_292_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_292_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_292_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_293_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_293_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_293_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_293_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_293_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_293_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_293_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_293_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_293_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_293_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_293_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_293_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_293_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_293_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_293_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_293_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_293_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_293_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_294_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_294_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_294_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_294_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_294_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_294_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_294_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_294_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_294_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_294_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_294_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_294_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_294_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_294_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_294_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_294_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_294_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_294_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_295_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_295_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_295_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_295_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_295_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_295_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_295_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_295_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_295_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_295_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_295_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_295_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_295_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_295_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_295_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_295_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_295_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_295_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_296_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_296_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_296_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_296_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_296_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_296_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_296_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_296_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_296_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_296_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_296_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_296_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_296_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_296_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_296_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_296_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_296_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_296_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_297_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_297_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_297_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_297_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_297_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_297_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_297_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_297_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_297_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_297_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_297_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_297_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_297_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_297_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_297_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_297_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_297_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_297_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_298_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_298_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_298_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_298_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_298_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_298_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_298_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_298_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_298_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_298_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_298_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_298_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_298_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_298_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_298_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_298_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_298_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_298_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_299_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_299_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_299_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_299_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_299_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_299_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_299_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_299_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_299_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_299_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_299_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_299_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_299_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_299_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_299_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_299_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_299_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_299_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_300_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_300_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_300_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_300_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_300_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_300_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_300_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_300_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_300_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_300_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_300_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_300_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_300_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_300_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_300_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_300_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_300_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_300_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_301_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_301_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_301_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_301_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_301_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_301_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_301_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_301_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_301_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_301_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_301_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_301_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_301_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_301_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_301_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_301_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_301_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_301_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_302_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_302_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_302_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_302_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_302_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_302_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_302_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_302_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_302_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_302_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_302_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_302_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_302_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_302_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_302_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_302_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_302_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_302_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_303_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_303_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_303_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_303_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_303_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_303_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_303_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_303_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_303_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_303_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_303_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_303_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_303_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_303_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_303_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_303_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_303_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_303_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_304_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_304_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_304_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_304_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_304_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_304_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_304_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_304_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_304_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_304_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_304_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_304_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_304_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_304_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_304_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_304_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_304_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_304_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_305_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_305_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_305_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_305_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_305_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_305_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_305_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_305_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_305_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_305_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_305_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_305_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_305_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_305_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_305_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_305_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_305_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_305_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_306_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_306_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_306_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_306_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_306_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_306_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_306_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_306_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_306_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_306_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_306_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_306_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_306_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_306_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_306_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_306_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_306_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_306_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_307_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_307_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_307_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_307_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_307_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_307_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_307_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_307_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_307_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_307_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_307_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_307_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_307_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_307_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_307_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_307_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_307_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_307_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_308_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_308_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_308_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_308_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_308_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_308_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_308_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_308_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_308_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_308_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_308_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_308_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_308_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_308_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_308_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_308_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_308_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_308_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_309_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_309_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_309_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_309_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_309_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_309_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_309_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_309_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_309_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_309_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_309_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_309_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_309_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_309_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_309_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_309_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_309_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_309_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_318_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_318_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_318_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_318_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_318_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_318_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_318_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_318_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_318_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_318_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_318_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_318_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_318_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_318_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_318_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_318_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_318_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_318_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_319_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_319_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_319_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_319_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_319_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_319_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_319_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_319_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_319_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_319_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_319_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_319_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_319_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_319_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_319_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_319_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_319_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_319_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_320_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_320_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_320_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_320_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_320_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_320_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_320_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_320_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_320_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_320_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_320_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_320_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_320_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_320_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_320_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_320_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_320_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_320_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_321_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_321_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_321_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_321_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_321_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_321_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_321_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_321_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_321_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_321_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_321_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_321_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_321_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_321_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_321_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_321_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_321_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_321_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_322_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_322_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_322_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_322_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_322_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_322_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_322_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_322_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_322_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_322_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_322_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_322_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_322_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_322_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_322_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_322_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_322_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_322_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_323_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_323_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_323_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_323_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_323_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_323_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_323_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_323_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_323_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_323_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_323_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_323_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_323_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_323_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_323_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_323_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_323_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_323_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_324_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_324_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_324_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_324_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_324_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_324_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_324_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_324_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_324_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_324_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_324_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_324_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_324_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_324_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_324_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_324_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_324_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_324_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_325_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_325_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_325_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_325_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_325_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_325_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_325_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_325_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_325_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_325_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_325_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_325_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_325_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_325_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_325_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_325_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_325_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_325_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_334_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_334_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_334_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_334_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_334_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_334_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_334_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_334_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_334_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_334_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_334_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_334_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_334_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_334_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_334_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_334_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_334_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_334_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_335_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_335_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_335_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_335_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_335_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_335_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_335_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_335_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_335_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_335_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_335_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_335_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_335_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_335_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_335_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_335_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_335_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_335_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_336_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_336_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_336_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_336_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_336_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_336_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_336_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_336_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_336_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_336_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_336_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_336_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_336_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_336_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_336_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_336_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_336_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_336_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_337_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_337_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_337_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_337_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_337_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_337_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_337_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_337_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_337_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_337_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_337_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_337_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_337_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_337_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_337_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_337_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_337_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_337_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_338_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_338_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_338_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_338_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_338_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_338_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_338_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_338_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_338_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_338_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_338_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_338_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_338_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_338_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_338_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_338_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_338_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_338_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_339_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_339_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_339_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_339_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_339_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_339_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_339_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_339_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_339_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_339_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_339_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_339_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_339_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_339_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_339_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_339_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_339_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_339_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_340_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_340_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_340_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_340_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_340_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_340_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_340_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_340_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_340_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_340_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_340_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_340_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_340_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_340_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_340_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_340_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_340_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_340_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_341_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_341_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_341_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_341_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_341_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_341_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_341_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_341_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_341_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_341_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_341_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_341_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_341_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_341_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_341_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_341_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_341_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_341_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_350_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_350_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_350_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_350_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_350_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_350_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_350_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_350_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_350_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_350_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_350_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_350_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_350_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_350_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_350_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_350_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_350_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_350_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_351_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_351_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_351_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_351_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_351_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_351_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_351_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_351_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_351_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_351_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_351_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_351_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_351_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_351_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_351_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_351_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_351_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_351_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_352_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_352_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_352_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_352_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_352_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_352_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_352_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_352_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_352_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_352_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_352_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_352_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_352_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_352_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_352_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_352_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_352_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_352_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_353_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_353_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_353_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_353_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_353_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_353_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_353_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_353_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_353_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_353_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_353_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_353_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_353_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_353_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_353_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_353_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_353_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_353_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_354_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_354_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_354_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_354_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_354_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_354_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_354_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_354_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_354_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_354_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_354_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_354_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_354_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_354_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_354_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_354_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_354_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_354_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_355_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_355_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_355_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_355_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_355_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_355_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_355_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_355_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_355_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_355_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_355_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_355_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_355_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_355_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_355_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_355_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_355_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_355_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_356_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_356_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_356_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_356_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_356_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_356_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_356_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_356_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_356_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_356_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_356_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_356_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_356_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_356_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_356_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_356_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_356_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_356_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_357_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_357_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_357_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_357_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_357_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_357_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_357_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_357_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_357_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_357_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_357_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_357_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_357_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_357_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_357_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_357_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_357_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_357_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_366_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_366_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_366_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_366_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_366_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_366_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_366_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_366_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_366_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_366_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_366_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_366_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_366_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_366_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_366_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_366_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_366_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_366_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_367_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_367_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_367_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_367_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_367_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_367_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_367_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_367_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_367_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_367_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_367_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_367_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_367_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_367_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_367_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_367_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_367_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_367_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_368_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_368_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_368_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_368_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_368_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_368_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_368_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_368_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_368_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_368_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_368_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_368_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_368_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_368_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_368_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_368_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_368_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_368_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_369_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_369_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_369_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_369_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_369_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_369_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_369_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_369_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_369_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_369_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_369_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_369_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_369_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_369_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_369_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_369_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_369_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_369_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_370_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_370_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_370_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_370_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_370_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_370_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_370_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_370_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_370_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_370_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_370_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_370_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_370_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_370_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_370_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_370_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_370_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_370_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_371_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_371_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_371_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_371_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_371_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_371_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_371_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_371_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_371_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_371_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_371_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_371_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_371_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_371_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_371_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_371_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_371_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_371_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_372_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_372_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_372_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_372_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_372_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_372_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_372_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_372_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_372_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_372_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_372_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_372_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_372_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_372_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_372_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_372_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_372_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_372_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_373_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_373_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_373_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_373_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_373_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_373_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_373_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_373_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_373_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_373_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_373_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_373_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_373_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_373_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_373_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_373_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_373_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_373_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_374_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_374_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_374_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_374_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_374_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_374_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_374_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_374_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_374_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_374_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_374_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_374_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_374_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_374_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_374_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_374_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_374_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_374_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_375_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_375_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_375_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_375_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_375_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_375_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_375_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_375_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_375_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_375_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_375_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_375_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_375_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_375_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_375_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_375_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_375_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_375_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_376_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_376_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_376_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_376_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_376_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_376_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_376_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_376_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_376_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_376_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_376_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_376_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_376_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_376_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_376_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_376_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_376_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_376_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_377_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_377_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_377_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_377_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_377_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_377_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_377_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_377_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_377_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_377_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_377_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_377_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_377_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_377_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_377_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_377_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_377_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_377_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_378_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_378_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_378_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_378_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_378_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_378_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_378_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_378_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_378_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_378_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_378_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_378_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_378_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_378_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_378_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_378_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_378_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_378_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_379_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_379_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_379_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_379_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_379_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_379_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_379_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_379_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_379_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_379_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_379_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_379_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_379_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_379_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_379_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_379_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_379_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_379_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_380_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_380_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_380_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_380_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_380_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_380_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_380_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_380_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_380_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_380_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_380_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_380_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_380_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_380_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_380_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_380_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_380_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_380_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_381_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_381_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_381_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_381_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_381_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_381_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_381_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_381_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_381_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_381_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_381_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_381_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_381_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_381_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_381_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_381_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_381_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_381_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_382_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_382_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_382_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_382_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_382_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_382_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_382_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_382_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_382_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_382_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_382_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_382_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_382_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_382_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_382_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_382_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_382_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_382_PARITY_MASK                  0xF0000000U
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_383_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_383_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_383_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_383_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_383_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_383_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_383_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_383_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_383_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_383_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_383_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_383_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_383_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_383_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_383_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_383_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_383_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_383_PARITY_MASK                  0xF0000000U
+
+/*
+* See Interuppt Status Register for details
+*/
+#undef LPD_XPPU_CFG_IEN_APER_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_IEN_APER_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_IEN_APER_PARITY_MASK 
+#define LPD_XPPU_CFG_IEN_APER_PARITY_DEFVAL                    0x00000000
+#define LPD_XPPU_CFG_IEN_APER_PARITY_SHIFT                     7
+#define LPD_XPPU_CFG_IEN_APER_PARITY_MASK                      0x00000080U
+
+/*
+* See Interuppt Status Register for details
+*/
+#undef LPD_XPPU_CFG_IEN_APER_TZ_DEFVAL 
+#undef LPD_XPPU_CFG_IEN_APER_TZ_SHIFT 
+#undef LPD_XPPU_CFG_IEN_APER_TZ_MASK 
+#define LPD_XPPU_CFG_IEN_APER_TZ_DEFVAL                        0x00000000
+#define LPD_XPPU_CFG_IEN_APER_TZ_SHIFT                         6
+#define LPD_XPPU_CFG_IEN_APER_TZ_MASK                          0x00000040U
+
+/*
+* See Interuppt Status Register for details
+*/
+#undef LPD_XPPU_CFG_IEN_APER_PERM_DEFVAL 
+#undef LPD_XPPU_CFG_IEN_APER_PERM_SHIFT 
+#undef LPD_XPPU_CFG_IEN_APER_PERM_MASK 
+#define LPD_XPPU_CFG_IEN_APER_PERM_DEFVAL                      0x00000000
+#define LPD_XPPU_CFG_IEN_APER_PERM_SHIFT                       5
+#define LPD_XPPU_CFG_IEN_APER_PERM_MASK                        0x00000020U
+
+/*
+* See Interuppt Status Register for details
+*/
+#undef LPD_XPPU_CFG_IEN_MID_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_IEN_MID_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_IEN_MID_PARITY_MASK 
+#define LPD_XPPU_CFG_IEN_MID_PARITY_DEFVAL                     0x00000000
+#define LPD_XPPU_CFG_IEN_MID_PARITY_SHIFT                      3
+#define LPD_XPPU_CFG_IEN_MID_PARITY_MASK                       0x00000008U
+
+/*
+* See Interuppt Status Register for details
+*/
+#undef LPD_XPPU_CFG_IEN_MID_RO_DEFVAL 
+#undef LPD_XPPU_CFG_IEN_MID_RO_SHIFT 
+#undef LPD_XPPU_CFG_IEN_MID_RO_MASK 
+#define LPD_XPPU_CFG_IEN_MID_RO_DEFVAL                         0x00000000
+#define LPD_XPPU_CFG_IEN_MID_RO_SHIFT                          2
+#define LPD_XPPU_CFG_IEN_MID_RO_MASK                           0x00000004U
+
+/*
+* See Interuppt Status Register for details
+*/
+#undef LPD_XPPU_CFG_IEN_MID_MISS_DEFVAL 
+#undef LPD_XPPU_CFG_IEN_MID_MISS_SHIFT 
+#undef LPD_XPPU_CFG_IEN_MID_MISS_MASK 
+#define LPD_XPPU_CFG_IEN_MID_MISS_DEFVAL                       0x00000000
+#define LPD_XPPU_CFG_IEN_MID_MISS_SHIFT                        1
+#define LPD_XPPU_CFG_IEN_MID_MISS_MASK                         0x00000002U
+
+/*
+* See Interuppt Status Register for details
+*/
+#undef LPD_XPPU_CFG_IEN_INV_APB_DEFVAL 
+#undef LPD_XPPU_CFG_IEN_INV_APB_SHIFT 
+#undef LPD_XPPU_CFG_IEN_INV_APB_MASK 
+#define LPD_XPPU_CFG_IEN_INV_APB_DEFVAL                        0x00000000
+#define LPD_XPPU_CFG_IEN_INV_APB_SHIFT                         0
+#define LPD_XPPU_CFG_IEN_INV_APB_MASK                          0x00000001U
+
+/*
+* Whether an APB access to the "hole" region and to an unimplemented regis
+    * ter space causes PSLVERR
+*/
+#undef LPD_XPPU_SINK_ERR_CTRL_PSLVERR_DEFVAL 
+#undef LPD_XPPU_SINK_ERR_CTRL_PSLVERR_SHIFT 
+#undef LPD_XPPU_SINK_ERR_CTRL_PSLVERR_MASK 
+#define LPD_XPPU_SINK_ERR_CTRL_PSLVERR_DEFVAL                  0x00000000
+#define LPD_XPPU_SINK_ERR_CTRL_PSLVERR_SHIFT                   0
+#define LPD_XPPU_SINK_ERR_CTRL_PSLVERR_MASK                    0x00000001U
+
+/*
+* 0=Bypass XPPU (transparent) 1=Enable XPPU permission checking
+*/
+#undef LPD_XPPU_CFG_CTRL_ENABLE_DEFVAL 
+#undef LPD_XPPU_CFG_CTRL_ENABLE_SHIFT 
+#undef LPD_XPPU_CFG_CTRL_ENABLE_MASK 
+#define LPD_XPPU_CFG_CTRL_ENABLE_DEFVAL                        0x00000000
+#define LPD_XPPU_CFG_CTRL_ENABLE_SHIFT                         0
+#define LPD_XPPU_CFG_CTRL_ENABLE_MASK                          0x00000001U
+#undef FPD_XMPU_CFG_R09_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R09_CONFIG_OFFSET                                             0XFD5D019C
+#undef FPD_XMPU_CFG_R09_START_OFFSET 
+#define FPD_XMPU_CFG_R09_START_OFFSET                                              0XFD5D0190
+#undef FPD_XMPU_CFG_R09_END_OFFSET 
+#define FPD_XMPU_CFG_R09_END_OFFSET                                                0XFD5D0194
+#undef FPD_XMPU_CFG_R09_MASTER_OFFSET 
+#define FPD_XMPU_CFG_R09_MASTER_OFFSET                                             0XFD5D0198
+#undef FPD_XMPU_CFG_R08_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R08_CONFIG_OFFSET                                             0XFD5D018C
+#undef FPD_XMPU_CFG_R08_START_OFFSET 
+#define FPD_XMPU_CFG_R08_START_OFFSET                                              0XFD5D0180
+#undef FPD_XMPU_CFG_R08_END_OFFSET 
+#define FPD_XMPU_CFG_R08_END_OFFSET                                                0XFD5D0184
+#undef FPD_XMPU_CFG_R08_MASTER_OFFSET 
+#define FPD_XMPU_CFG_R08_MASTER_OFFSET                                             0XFD5D0188
+#undef FPD_XMPU_CFG_R07_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R07_CONFIG_OFFSET                                             0XFD5D017C
+#undef FPD_XMPU_CFG_R07_START_OFFSET 
+#define FPD_XMPU_CFG_R07_START_OFFSET                                              0XFD5D0170
+#undef FPD_XMPU_CFG_R07_END_OFFSET 
+#define FPD_XMPU_CFG_R07_END_OFFSET                                                0XFD5D0174
+#undef FPD_XMPU_CFG_R07_MASTER_OFFSET 
+#define FPD_XMPU_CFG_R07_MASTER_OFFSET                                             0XFD5D0178
+#undef FPD_XMPU_CFG_R06_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R06_CONFIG_OFFSET                                             0XFD5D016C
+#undef FPD_XMPU_CFG_R06_START_OFFSET 
+#define FPD_XMPU_CFG_R06_START_OFFSET                                              0XFD5D0160
+#undef FPD_XMPU_CFG_R06_END_OFFSET 
+#define FPD_XMPU_CFG_R06_END_OFFSET                                                0XFD5D0164
+#undef FPD_XMPU_CFG_R06_MASTER_OFFSET 
+#define FPD_XMPU_CFG_R06_MASTER_OFFSET                                             0XFD5D0168
+#undef FPD_XMPU_CFG_R05_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R05_CONFIG_OFFSET                                             0XFD5D015C
+#undef FPD_XMPU_CFG_R05_START_OFFSET 
+#define FPD_XMPU_CFG_R05_START_OFFSET                                              0XFD5D0150
+#undef FPD_XMPU_CFG_R05_END_OFFSET 
+#define FPD_XMPU_CFG_R05_END_OFFSET                                                0XFD5D0154
+#undef FPD_XMPU_CFG_R05_MASTER_OFFSET 
+#define FPD_XMPU_CFG_R05_MASTER_OFFSET                                             0XFD5D0158
+#undef FPD_XMPU_CFG_R04_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R04_CONFIG_OFFSET                                             0XFD5D014C
+#undef FPD_XMPU_CFG_R04_START_OFFSET 
+#define FPD_XMPU_CFG_R04_START_OFFSET                                              0XFD5D0140
+#undef FPD_XMPU_CFG_R04_END_OFFSET 
+#define FPD_XMPU_CFG_R04_END_OFFSET                                                0XFD5D0144
+#undef FPD_XMPU_CFG_R04_MASTER_OFFSET 
+#define FPD_XMPU_CFG_R04_MASTER_OFFSET                                             0XFD5D0148
+#undef FPD_XMPU_CFG_R03_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R03_CONFIG_OFFSET                                             0XFD5D013C
+#undef FPD_XMPU_CFG_R03_START_OFFSET 
+#define FPD_XMPU_CFG_R03_START_OFFSET                                              0XFD5D0130
+#undef FPD_XMPU_CFG_R03_END_OFFSET 
+#define FPD_XMPU_CFG_R03_END_OFFSET                                                0XFD5D0134
+#undef FPD_XMPU_CFG_R03_MASTER_OFFSET 
+#define FPD_XMPU_CFG_R03_MASTER_OFFSET                                             0XFD5D0138
+#undef FPD_XMPU_CFG_R02_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R02_CONFIG_OFFSET                                             0XFD5D012C
+#undef FPD_XMPU_CFG_R02_START_OFFSET 
+#define FPD_XMPU_CFG_R02_START_OFFSET                                              0XFD5D0120
+#undef FPD_XMPU_CFG_R02_END_OFFSET 
+#define FPD_XMPU_CFG_R02_END_OFFSET                                                0XFD5D0124
+#undef FPD_XMPU_CFG_R02_MASTER_OFFSET 
+#define FPD_XMPU_CFG_R02_MASTER_OFFSET                                             0XFD5D0128
+#undef FPD_XMPU_CFG_R01_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R01_CONFIG_OFFSET                                             0XFD5D011C
+#undef FPD_XMPU_CFG_R01_START_OFFSET 
+#define FPD_XMPU_CFG_R01_START_OFFSET                                              0XFD5D0110
+#undef FPD_XMPU_CFG_R01_END_OFFSET 
+#define FPD_XMPU_CFG_R01_END_OFFSET                                                0XFD5D0114
+#undef FPD_XMPU_CFG_R01_MASTER_OFFSET 
+#define FPD_XMPU_CFG_R01_MASTER_OFFSET                                             0XFD5D0118
+#undef FPD_XMPU_CFG_R00_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R00_CONFIG_OFFSET                                             0XFD5D010C
+#undef FPD_XMPU_CFG_R00_START_OFFSET 
+#define FPD_XMPU_CFG_R00_START_OFFSET                                              0XFD5D0100
+#undef FPD_XMPU_CFG_R00_END_OFFSET 
+#define FPD_XMPU_CFG_R00_END_OFFSET                                                0XFD5D0104
+#undef FPD_XMPU_CFG_R00_MASTER_OFFSET 
+#define FPD_XMPU_CFG_R00_MASTER_OFFSET                                             0XFD5D0108
+#undef FPD_XMPU_CFG_IEN_OFFSET 
+#define FPD_XMPU_CFG_IEN_OFFSET                                                    0XFD5D0018
+#undef FPD_XMPU_SINK_ERR_CTRL_OFFSET 
+#define FPD_XMPU_SINK_ERR_CTRL_OFFSET                                              0XFD4FFFEC
+#undef FPD_XMPU_CFG_CTRL_OFFSET 
+#define FPD_XMPU_CFG_CTRL_OFFSET                                                   0XFD5D0000
+#undef FPD_XMPU_CFG_R09_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R09_CONFIG_OFFSET                                             0XFD5D019C
+#undef FPD_XMPU_CFG_R08_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R08_CONFIG_OFFSET                                             0XFD5D018C
+#undef FPD_XMPU_CFG_R07_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R07_CONFIG_OFFSET                                             0XFD5D017C
+#undef FPD_XMPU_CFG_R06_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R06_CONFIG_OFFSET                                             0XFD5D016C
+#undef FPD_XMPU_CFG_R05_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R05_CONFIG_OFFSET                                             0XFD5D015C
+#undef FPD_XMPU_CFG_R04_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R04_CONFIG_OFFSET                                             0XFD5D014C
+#undef FPD_XMPU_CFG_R03_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R03_CONFIG_OFFSET                                             0XFD5D013C
+#undef FPD_XMPU_CFG_R02_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R02_CONFIG_OFFSET                                             0XFD5D012C
+#undef FPD_XMPU_CFG_R00_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R00_CONFIG_OFFSET                                             0XFD5D010C
+#undef FPD_XMPU_CFG_R01_CONFIG_OFFSET 
+#define FPD_XMPU_CFG_R01_CONFIG_OFFSET                                             0XFD5D011C
+
+/*
+* 0: Relaxed NS checking. A secure access is allowed to access secure or n
+    * on-secure region based on Rd/WrAllowed configuration. A non-secure acces
+    * s can only access non-secure region based on Rd/WrAllowed configuration
+    * 1: Strict NS checking. A secure access can only access secure region bas
+    * ed on Rd/WrAllowed configuration. A non-secure access can only access no
+    * n-secure region based on Rd/WrAllowed configuration
+*/
+#undef FPD_XMPU_CFG_R09_CONFIG_NSCHECKTYPE_DEFVAL 
+#undef FPD_XMPU_CFG_R09_CONFIG_NSCHECKTYPE_SHIFT 
+#undef FPD_XMPU_CFG_R09_CONFIG_NSCHECKTYPE_MASK 
+#define FPD_XMPU_CFG_R09_CONFIG_NSCHECKTYPE_DEFVAL             0x00000008
+#define FPD_XMPU_CFG_R09_CONFIG_NSCHECKTYPE_SHIFT              4
+#define FPD_XMPU_CFG_R09_CONFIG_NSCHECKTYPE_MASK               0x00000010U
+
+/*
+* 0: Region is configured to be secure 1: Region is configured to be non-s
+    * ecure (NS)
+*/
+#undef FPD_XMPU_CFG_R09_CONFIG_REGIONNS_DEFVAL 
+#undef FPD_XMPU_CFG_R09_CONFIG_REGIONNS_SHIFT 
+#undef FPD_XMPU_CFG_R09_CONFIG_REGIONNS_MASK 
+#define FPD_XMPU_CFG_R09_CONFIG_REGIONNS_DEFVAL                0x00000008
+#define FPD_XMPU_CFG_R09_CONFIG_REGIONNS_SHIFT                 3
+#define FPD_XMPU_CFG_R09_CONFIG_REGIONNS_MASK                  0x00000008U
+
+/*
+* 0: Write address matching this region are poisoned 1: Write address matc
+    * hing this region are allowed
+*/
+#undef FPD_XMPU_CFG_R09_CONFIG_WRALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R09_CONFIG_WRALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R09_CONFIG_WRALLOWED_MASK 
+#define FPD_XMPU_CFG_R09_CONFIG_WRALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R09_CONFIG_WRALLOWED_SHIFT                2
+#define FPD_XMPU_CFG_R09_CONFIG_WRALLOWED_MASK                 0x00000004U
+
+/*
+* 0: Read address matching this region are poisoned 1: Read address matchi
+    * ng this region are allowed
+*/
+#undef FPD_XMPU_CFG_R09_CONFIG_RDALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R09_CONFIG_RDALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R09_CONFIG_RDALLOWED_MASK 
+#define FPD_XMPU_CFG_R09_CONFIG_RDALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R09_CONFIG_RDALLOWED_SHIFT                1
+#define FPD_XMPU_CFG_R09_CONFIG_RDALLOWED_MASK                 0x00000002U
+
+/*
+* This field sets the start address bits [39:12] of this region (aligned t
+    * o 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R09_START_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R09_START_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R09_START_ADDR_MASK 
+#define FPD_XMPU_CFG_R09_START_ADDR_DEFVAL                     0x00000000
+#define FPD_XMPU_CFG_R09_START_ADDR_SHIFT                      0
+#define FPD_XMPU_CFG_R09_START_ADDR_MASK                       0x0FFFFFFFU
+
+/*
+* This field sets the end address bits [39:12] of this region (aligned to
+    * 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R09_END_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R09_END_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R09_END_ADDR_MASK 
+#define FPD_XMPU_CFG_R09_END_ADDR_DEFVAL                       0x00000000
+#define FPD_XMPU_CFG_R09_END_ADDR_SHIFT                        0
+#define FPD_XMPU_CFG_R09_END_ADDR_MASK                         0x0FFFFFFFU
+
+/*
+* Master ID mask.
+*/
+#undef FPD_XMPU_CFG_R09_MASTER_MASK_DEFVAL 
+#undef FPD_XMPU_CFG_R09_MASTER_MASK_SHIFT 
+#undef FPD_XMPU_CFG_R09_MASTER_MASK_MASK 
+#define FPD_XMPU_CFG_R09_MASTER_MASK_DEFVAL                    0x00000000
+#define FPD_XMPU_CFG_R09_MASTER_MASK_SHIFT                     16
+#define FPD_XMPU_CFG_R09_MASTER_MASK_MASK                      0x03FF0000U
+
+/*
+* Master ID value. An AXI MasterID will match this Master ID value of this
+    *  region if: AXI_MasterID AND MASK == ID AND MASK
+*/
+#undef FPD_XMPU_CFG_R09_MASTER_ID_DEFVAL 
+#undef FPD_XMPU_CFG_R09_MASTER_ID_SHIFT 
+#undef FPD_XMPU_CFG_R09_MASTER_ID_MASK 
+#define FPD_XMPU_CFG_R09_MASTER_ID_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_R09_MASTER_ID_SHIFT                       0
+#define FPD_XMPU_CFG_R09_MASTER_ID_MASK                        0x000003FFU
+
+/*
+* 0: Relaxed NS checking. A secure access is allowed to access secure or n
+    * on-secure region based on Rd/WrAllowed configuration. A non-secure acces
+    * s can only access non-secure region based on Rd/WrAllowed configuration
+    * 1: Strict NS checking. A secure access can only access secure region bas
+    * ed on Rd/WrAllowed configuration. A non-secure access can only access no
+    * n-secure region based on Rd/WrAllowed configuration
+*/
+#undef FPD_XMPU_CFG_R08_CONFIG_NSCHECKTYPE_DEFVAL 
+#undef FPD_XMPU_CFG_R08_CONFIG_NSCHECKTYPE_SHIFT 
+#undef FPD_XMPU_CFG_R08_CONFIG_NSCHECKTYPE_MASK 
+#define FPD_XMPU_CFG_R08_CONFIG_NSCHECKTYPE_DEFVAL             0x00000008
+#define FPD_XMPU_CFG_R08_CONFIG_NSCHECKTYPE_SHIFT              4
+#define FPD_XMPU_CFG_R08_CONFIG_NSCHECKTYPE_MASK               0x00000010U
+
+/*
+* 0: Region is configured to be secure 1: Region is configured to be non-s
+    * ecure (NS)
+*/
+#undef FPD_XMPU_CFG_R08_CONFIG_REGIONNS_DEFVAL 
+#undef FPD_XMPU_CFG_R08_CONFIG_REGIONNS_SHIFT 
+#undef FPD_XMPU_CFG_R08_CONFIG_REGIONNS_MASK 
+#define FPD_XMPU_CFG_R08_CONFIG_REGIONNS_DEFVAL                0x00000008
+#define FPD_XMPU_CFG_R08_CONFIG_REGIONNS_SHIFT                 3
+#define FPD_XMPU_CFG_R08_CONFIG_REGIONNS_MASK                  0x00000008U
+
+/*
+* 0: Write address matching this region are poisoned 1: Write address matc
+    * hing this region are allowed
+*/
+#undef FPD_XMPU_CFG_R08_CONFIG_WRALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R08_CONFIG_WRALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R08_CONFIG_WRALLOWED_MASK 
+#define FPD_XMPU_CFG_R08_CONFIG_WRALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R08_CONFIG_WRALLOWED_SHIFT                2
+#define FPD_XMPU_CFG_R08_CONFIG_WRALLOWED_MASK                 0x00000004U
+
+/*
+* 0: Read address matching this region are poisoned 1: Read address matchi
+    * ng this region are allowed
+*/
+#undef FPD_XMPU_CFG_R08_CONFIG_RDALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R08_CONFIG_RDALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R08_CONFIG_RDALLOWED_MASK 
+#define FPD_XMPU_CFG_R08_CONFIG_RDALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R08_CONFIG_RDALLOWED_SHIFT                1
+#define FPD_XMPU_CFG_R08_CONFIG_RDALLOWED_MASK                 0x00000002U
+
+/*
+* This field sets the start address bits [39:12] of this region (aligned t
+    * o 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R08_START_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R08_START_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R08_START_ADDR_MASK 
+#define FPD_XMPU_CFG_R08_START_ADDR_DEFVAL                     0x00000000
+#define FPD_XMPU_CFG_R08_START_ADDR_SHIFT                      0
+#define FPD_XMPU_CFG_R08_START_ADDR_MASK                       0x0FFFFFFFU
+
+/*
+* This field sets the end address bits [39:12] of this region (aligned to
+    * 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R08_END_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R08_END_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R08_END_ADDR_MASK 
+#define FPD_XMPU_CFG_R08_END_ADDR_DEFVAL                       0x00000000
+#define FPD_XMPU_CFG_R08_END_ADDR_SHIFT                        0
+#define FPD_XMPU_CFG_R08_END_ADDR_MASK                         0x0FFFFFFFU
+
+/*
+* Master ID mask.
+*/
+#undef FPD_XMPU_CFG_R08_MASTER_MASK_DEFVAL 
+#undef FPD_XMPU_CFG_R08_MASTER_MASK_SHIFT 
+#undef FPD_XMPU_CFG_R08_MASTER_MASK_MASK 
+#define FPD_XMPU_CFG_R08_MASTER_MASK_DEFVAL                    0x00000000
+#define FPD_XMPU_CFG_R08_MASTER_MASK_SHIFT                     16
+#define FPD_XMPU_CFG_R08_MASTER_MASK_MASK                      0x03FF0000U
+
+/*
+* Master ID value. An AXI MasterID will match this Master ID value of this
+    *  region if: AXI_MasterID AND MASK == ID AND MASK
+*/
+#undef FPD_XMPU_CFG_R08_MASTER_ID_DEFVAL 
+#undef FPD_XMPU_CFG_R08_MASTER_ID_SHIFT 
+#undef FPD_XMPU_CFG_R08_MASTER_ID_MASK 
+#define FPD_XMPU_CFG_R08_MASTER_ID_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_R08_MASTER_ID_SHIFT                       0
+#define FPD_XMPU_CFG_R08_MASTER_ID_MASK                        0x000003FFU
+
+/*
+* 0: Relaxed NS checking. A secure access is allowed to access secure or n
+    * on-secure region based on Rd/WrAllowed configuration. A non-secure acces
+    * s can only access non-secure region based on Rd/WrAllowed configuration
+    * 1: Strict NS checking. A secure access can only access secure region bas
+    * ed on Rd/WrAllowed configuration. A non-secure access can only access no
+    * n-secure region based on Rd/WrAllowed configuration
+*/
+#undef FPD_XMPU_CFG_R07_CONFIG_NSCHECKTYPE_DEFVAL 
+#undef FPD_XMPU_CFG_R07_CONFIG_NSCHECKTYPE_SHIFT 
+#undef FPD_XMPU_CFG_R07_CONFIG_NSCHECKTYPE_MASK 
+#define FPD_XMPU_CFG_R07_CONFIG_NSCHECKTYPE_DEFVAL             0x00000008
+#define FPD_XMPU_CFG_R07_CONFIG_NSCHECKTYPE_SHIFT              4
+#define FPD_XMPU_CFG_R07_CONFIG_NSCHECKTYPE_MASK               0x00000010U
+
+/*
+* 0: Region is configured to be secure 1: Region is configured to be non-s
+    * ecure (NS)
+*/
+#undef FPD_XMPU_CFG_R07_CONFIG_REGIONNS_DEFVAL 
+#undef FPD_XMPU_CFG_R07_CONFIG_REGIONNS_SHIFT 
+#undef FPD_XMPU_CFG_R07_CONFIG_REGIONNS_MASK 
+#define FPD_XMPU_CFG_R07_CONFIG_REGIONNS_DEFVAL                0x00000008
+#define FPD_XMPU_CFG_R07_CONFIG_REGIONNS_SHIFT                 3
+#define FPD_XMPU_CFG_R07_CONFIG_REGIONNS_MASK                  0x00000008U
+
+/*
+* 0: Write address matching this region are poisoned 1: Write address matc
+    * hing this region are allowed
+*/
+#undef FPD_XMPU_CFG_R07_CONFIG_WRALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R07_CONFIG_WRALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R07_CONFIG_WRALLOWED_MASK 
+#define FPD_XMPU_CFG_R07_CONFIG_WRALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R07_CONFIG_WRALLOWED_SHIFT                2
+#define FPD_XMPU_CFG_R07_CONFIG_WRALLOWED_MASK                 0x00000004U
+
+/*
+* 0: Read address matching this region are poisoned 1: Read address matchi
+    * ng this region are allowed
+*/
+#undef FPD_XMPU_CFG_R07_CONFIG_RDALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R07_CONFIG_RDALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R07_CONFIG_RDALLOWED_MASK 
+#define FPD_XMPU_CFG_R07_CONFIG_RDALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R07_CONFIG_RDALLOWED_SHIFT                1
+#define FPD_XMPU_CFG_R07_CONFIG_RDALLOWED_MASK                 0x00000002U
+
+/*
+* This field sets the start address bits [39:12] of this region (aligned t
+    * o 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R07_START_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R07_START_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R07_START_ADDR_MASK 
+#define FPD_XMPU_CFG_R07_START_ADDR_DEFVAL                     0x00000000
+#define FPD_XMPU_CFG_R07_START_ADDR_SHIFT                      0
+#define FPD_XMPU_CFG_R07_START_ADDR_MASK                       0x0FFFFFFFU
+
+/*
+* This field sets the end address bits [39:12] of this region (aligned to
+    * 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R07_END_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R07_END_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R07_END_ADDR_MASK 
+#define FPD_XMPU_CFG_R07_END_ADDR_DEFVAL                       0x00000000
+#define FPD_XMPU_CFG_R07_END_ADDR_SHIFT                        0
+#define FPD_XMPU_CFG_R07_END_ADDR_MASK                         0x0FFFFFFFU
+
+/*
+* Master ID mask.
+*/
+#undef FPD_XMPU_CFG_R07_MASTER_MASK_DEFVAL 
+#undef FPD_XMPU_CFG_R07_MASTER_MASK_SHIFT 
+#undef FPD_XMPU_CFG_R07_MASTER_MASK_MASK 
+#define FPD_XMPU_CFG_R07_MASTER_MASK_DEFVAL                    0x00000000
+#define FPD_XMPU_CFG_R07_MASTER_MASK_SHIFT                     16
+#define FPD_XMPU_CFG_R07_MASTER_MASK_MASK                      0x03FF0000U
+
+/*
+* Master ID value. An AXI MasterID will match this Master ID value of this
+    *  region if: AXI_MasterID AND MASK == ID AND MASK
+*/
+#undef FPD_XMPU_CFG_R07_MASTER_ID_DEFVAL 
+#undef FPD_XMPU_CFG_R07_MASTER_ID_SHIFT 
+#undef FPD_XMPU_CFG_R07_MASTER_ID_MASK 
+#define FPD_XMPU_CFG_R07_MASTER_ID_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_R07_MASTER_ID_SHIFT                       0
+#define FPD_XMPU_CFG_R07_MASTER_ID_MASK                        0x000003FFU
+
+/*
+* 0: Relaxed NS checking. A secure access is allowed to access secure or n
+    * on-secure region based on Rd/WrAllowed configuration. A non-secure acces
+    * s can only access non-secure region based on Rd/WrAllowed configuration
+    * 1: Strict NS checking. A secure access can only access secure region bas
+    * ed on Rd/WrAllowed configuration. A non-secure access can only access no
+    * n-secure region based on Rd/WrAllowed configuration
+*/
+#undef FPD_XMPU_CFG_R06_CONFIG_NSCHECKTYPE_DEFVAL 
+#undef FPD_XMPU_CFG_R06_CONFIG_NSCHECKTYPE_SHIFT 
+#undef FPD_XMPU_CFG_R06_CONFIG_NSCHECKTYPE_MASK 
+#define FPD_XMPU_CFG_R06_CONFIG_NSCHECKTYPE_DEFVAL             0x00000008
+#define FPD_XMPU_CFG_R06_CONFIG_NSCHECKTYPE_SHIFT              4
+#define FPD_XMPU_CFG_R06_CONFIG_NSCHECKTYPE_MASK               0x00000010U
+
+/*
+* 0: Region is configured to be secure 1: Region is configured to be non-s
+    * ecure (NS)
+*/
+#undef FPD_XMPU_CFG_R06_CONFIG_REGIONNS_DEFVAL 
+#undef FPD_XMPU_CFG_R06_CONFIG_REGIONNS_SHIFT 
+#undef FPD_XMPU_CFG_R06_CONFIG_REGIONNS_MASK 
+#define FPD_XMPU_CFG_R06_CONFIG_REGIONNS_DEFVAL                0x00000008
+#define FPD_XMPU_CFG_R06_CONFIG_REGIONNS_SHIFT                 3
+#define FPD_XMPU_CFG_R06_CONFIG_REGIONNS_MASK                  0x00000008U
+
+/*
+* 0: Write address matching this region are poisoned 1: Write address matc
+    * hing this region are allowed
+*/
+#undef FPD_XMPU_CFG_R06_CONFIG_WRALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R06_CONFIG_WRALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R06_CONFIG_WRALLOWED_MASK 
+#define FPD_XMPU_CFG_R06_CONFIG_WRALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R06_CONFIG_WRALLOWED_SHIFT                2
+#define FPD_XMPU_CFG_R06_CONFIG_WRALLOWED_MASK                 0x00000004U
+
+/*
+* 0: Read address matching this region are poisoned 1: Read address matchi
+    * ng this region are allowed
+*/
+#undef FPD_XMPU_CFG_R06_CONFIG_RDALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R06_CONFIG_RDALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R06_CONFIG_RDALLOWED_MASK 
+#define FPD_XMPU_CFG_R06_CONFIG_RDALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R06_CONFIG_RDALLOWED_SHIFT                1
+#define FPD_XMPU_CFG_R06_CONFIG_RDALLOWED_MASK                 0x00000002U
+
+/*
+* This field sets the start address bits [39:12] of this region (aligned t
+    * o 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R06_START_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R06_START_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R06_START_ADDR_MASK 
+#define FPD_XMPU_CFG_R06_START_ADDR_DEFVAL                     0x00000000
+#define FPD_XMPU_CFG_R06_START_ADDR_SHIFT                      0
+#define FPD_XMPU_CFG_R06_START_ADDR_MASK                       0x0FFFFFFFU
+
+/*
+* This field sets the end address bits [39:12] of this region (aligned to
+    * 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R06_END_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R06_END_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R06_END_ADDR_MASK 
+#define FPD_XMPU_CFG_R06_END_ADDR_DEFVAL                       0x00000000
+#define FPD_XMPU_CFG_R06_END_ADDR_SHIFT                        0
+#define FPD_XMPU_CFG_R06_END_ADDR_MASK                         0x0FFFFFFFU
+
+/*
+* Master ID mask.
+*/
+#undef FPD_XMPU_CFG_R06_MASTER_MASK_DEFVAL 
+#undef FPD_XMPU_CFG_R06_MASTER_MASK_SHIFT 
+#undef FPD_XMPU_CFG_R06_MASTER_MASK_MASK 
+#define FPD_XMPU_CFG_R06_MASTER_MASK_DEFVAL                    0x00000000
+#define FPD_XMPU_CFG_R06_MASTER_MASK_SHIFT                     16
+#define FPD_XMPU_CFG_R06_MASTER_MASK_MASK                      0x03FF0000U
+
+/*
+* Master ID value. An AXI MasterID will match this Master ID value of this
+    *  region if: AXI_MasterID AND MASK == ID AND MASK
+*/
+#undef FPD_XMPU_CFG_R06_MASTER_ID_DEFVAL 
+#undef FPD_XMPU_CFG_R06_MASTER_ID_SHIFT 
+#undef FPD_XMPU_CFG_R06_MASTER_ID_MASK 
+#define FPD_XMPU_CFG_R06_MASTER_ID_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_R06_MASTER_ID_SHIFT                       0
+#define FPD_XMPU_CFG_R06_MASTER_ID_MASK                        0x000003FFU
+
+/*
+* 0: Relaxed NS checking. A secure access is allowed to access secure or n
+    * on-secure region based on Rd/WrAllowed configuration. A non-secure acces
+    * s can only access non-secure region based on Rd/WrAllowed configuration
+    * 1: Strict NS checking. A secure access can only access secure region bas
+    * ed on Rd/WrAllowed configuration. A non-secure access can only access no
+    * n-secure region based on Rd/WrAllowed configuration
+*/
+#undef FPD_XMPU_CFG_R05_CONFIG_NSCHECKTYPE_DEFVAL 
+#undef FPD_XMPU_CFG_R05_CONFIG_NSCHECKTYPE_SHIFT 
+#undef FPD_XMPU_CFG_R05_CONFIG_NSCHECKTYPE_MASK 
+#define FPD_XMPU_CFG_R05_CONFIG_NSCHECKTYPE_DEFVAL             0x00000008
+#define FPD_XMPU_CFG_R05_CONFIG_NSCHECKTYPE_SHIFT              4
+#define FPD_XMPU_CFG_R05_CONFIG_NSCHECKTYPE_MASK               0x00000010U
+
+/*
+* 0: Region is configured to be secure 1: Region is configured to be non-s
+    * ecure (NS)
+*/
+#undef FPD_XMPU_CFG_R05_CONFIG_REGIONNS_DEFVAL 
+#undef FPD_XMPU_CFG_R05_CONFIG_REGIONNS_SHIFT 
+#undef FPD_XMPU_CFG_R05_CONFIG_REGIONNS_MASK 
+#define FPD_XMPU_CFG_R05_CONFIG_REGIONNS_DEFVAL                0x00000008
+#define FPD_XMPU_CFG_R05_CONFIG_REGIONNS_SHIFT                 3
+#define FPD_XMPU_CFG_R05_CONFIG_REGIONNS_MASK                  0x00000008U
+
+/*
+* 0: Write address matching this region are poisoned 1: Write address matc
+    * hing this region are allowed
+*/
+#undef FPD_XMPU_CFG_R05_CONFIG_WRALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R05_CONFIG_WRALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R05_CONFIG_WRALLOWED_MASK 
+#define FPD_XMPU_CFG_R05_CONFIG_WRALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R05_CONFIG_WRALLOWED_SHIFT                2
+#define FPD_XMPU_CFG_R05_CONFIG_WRALLOWED_MASK                 0x00000004U
+
+/*
+* 0: Read address matching this region are poisoned 1: Read address matchi
+    * ng this region are allowed
+*/
+#undef FPD_XMPU_CFG_R05_CONFIG_RDALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R05_CONFIG_RDALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R05_CONFIG_RDALLOWED_MASK 
+#define FPD_XMPU_CFG_R05_CONFIG_RDALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R05_CONFIG_RDALLOWED_SHIFT                1
+#define FPD_XMPU_CFG_R05_CONFIG_RDALLOWED_MASK                 0x00000002U
+
+/*
+* This field sets the start address bits [39:12] of this region (aligned t
+    * o 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R05_START_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R05_START_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R05_START_ADDR_MASK 
+#define FPD_XMPU_CFG_R05_START_ADDR_DEFVAL                     0x00000000
+#define FPD_XMPU_CFG_R05_START_ADDR_SHIFT                      0
+#define FPD_XMPU_CFG_R05_START_ADDR_MASK                       0x0FFFFFFFU
+
+/*
+* This field sets the end address bits [39:12] of this region (aligned to
+    * 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R05_END_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R05_END_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R05_END_ADDR_MASK 
+#define FPD_XMPU_CFG_R05_END_ADDR_DEFVAL                       0x00000000
+#define FPD_XMPU_CFG_R05_END_ADDR_SHIFT                        0
+#define FPD_XMPU_CFG_R05_END_ADDR_MASK                         0x0FFFFFFFU
+
+/*
+* Master ID mask.
+*/
+#undef FPD_XMPU_CFG_R05_MASTER_MASK_DEFVAL 
+#undef FPD_XMPU_CFG_R05_MASTER_MASK_SHIFT 
+#undef FPD_XMPU_CFG_R05_MASTER_MASK_MASK 
+#define FPD_XMPU_CFG_R05_MASTER_MASK_DEFVAL                    0x00000000
+#define FPD_XMPU_CFG_R05_MASTER_MASK_SHIFT                     16
+#define FPD_XMPU_CFG_R05_MASTER_MASK_MASK                      0x03FF0000U
+
+/*
+* Master ID value. An AXI MasterID will match this Master ID value of this
+    *  region if: AXI_MasterID AND MASK == ID AND MASK
+*/
+#undef FPD_XMPU_CFG_R05_MASTER_ID_DEFVAL 
+#undef FPD_XMPU_CFG_R05_MASTER_ID_SHIFT 
+#undef FPD_XMPU_CFG_R05_MASTER_ID_MASK 
+#define FPD_XMPU_CFG_R05_MASTER_ID_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_R05_MASTER_ID_SHIFT                       0
+#define FPD_XMPU_CFG_R05_MASTER_ID_MASK                        0x000003FFU
+
+/*
+* 0: Relaxed NS checking. A secure access is allowed to access secure or n
+    * on-secure region based on Rd/WrAllowed configuration. A non-secure acces
+    * s can only access non-secure region based on Rd/WrAllowed configuration
+    * 1: Strict NS checking. A secure access can only access secure region bas
+    * ed on Rd/WrAllowed configuration. A non-secure access can only access no
+    * n-secure region based on Rd/WrAllowed configuration
+*/
+#undef FPD_XMPU_CFG_R04_CONFIG_NSCHECKTYPE_DEFVAL 
+#undef FPD_XMPU_CFG_R04_CONFIG_NSCHECKTYPE_SHIFT 
+#undef FPD_XMPU_CFG_R04_CONFIG_NSCHECKTYPE_MASK 
+#define FPD_XMPU_CFG_R04_CONFIG_NSCHECKTYPE_DEFVAL             0x00000008
+#define FPD_XMPU_CFG_R04_CONFIG_NSCHECKTYPE_SHIFT              4
+#define FPD_XMPU_CFG_R04_CONFIG_NSCHECKTYPE_MASK               0x00000010U
+
+/*
+* 0: Region is configured to be secure 1: Region is configured to be non-s
+    * ecure (NS)
+*/
+#undef FPD_XMPU_CFG_R04_CONFIG_REGIONNS_DEFVAL 
+#undef FPD_XMPU_CFG_R04_CONFIG_REGIONNS_SHIFT 
+#undef FPD_XMPU_CFG_R04_CONFIG_REGIONNS_MASK 
+#define FPD_XMPU_CFG_R04_CONFIG_REGIONNS_DEFVAL                0x00000008
+#define FPD_XMPU_CFG_R04_CONFIG_REGIONNS_SHIFT                 3
+#define FPD_XMPU_CFG_R04_CONFIG_REGIONNS_MASK                  0x00000008U
+
+/*
+* 0: Write address matching this region are poisoned 1: Write address matc
+    * hing this region are allowed
+*/
+#undef FPD_XMPU_CFG_R04_CONFIG_WRALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R04_CONFIG_WRALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R04_CONFIG_WRALLOWED_MASK 
+#define FPD_XMPU_CFG_R04_CONFIG_WRALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R04_CONFIG_WRALLOWED_SHIFT                2
+#define FPD_XMPU_CFG_R04_CONFIG_WRALLOWED_MASK                 0x00000004U
+
+/*
+* 0: Read address matching this region are poisoned 1: Read address matchi
+    * ng this region are allowed
+*/
+#undef FPD_XMPU_CFG_R04_CONFIG_RDALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R04_CONFIG_RDALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R04_CONFIG_RDALLOWED_MASK 
+#define FPD_XMPU_CFG_R04_CONFIG_RDALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R04_CONFIG_RDALLOWED_SHIFT                1
+#define FPD_XMPU_CFG_R04_CONFIG_RDALLOWED_MASK                 0x00000002U
+
+/*
+* This field sets the start address bits [39:12] of this region (aligned t
+    * o 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R04_START_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R04_START_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R04_START_ADDR_MASK 
+#define FPD_XMPU_CFG_R04_START_ADDR_DEFVAL                     0x00000000
+#define FPD_XMPU_CFG_R04_START_ADDR_SHIFT                      0
+#define FPD_XMPU_CFG_R04_START_ADDR_MASK                       0x0FFFFFFFU
+
+/*
+* This field sets the end address bits [39:12] of this region (aligned to
+    * 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R04_END_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R04_END_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R04_END_ADDR_MASK 
+#define FPD_XMPU_CFG_R04_END_ADDR_DEFVAL                       0x00000000
+#define FPD_XMPU_CFG_R04_END_ADDR_SHIFT                        0
+#define FPD_XMPU_CFG_R04_END_ADDR_MASK                         0x0FFFFFFFU
+
+/*
+* Master ID mask.
+*/
+#undef FPD_XMPU_CFG_R04_MASTER_MASK_DEFVAL 
+#undef FPD_XMPU_CFG_R04_MASTER_MASK_SHIFT 
+#undef FPD_XMPU_CFG_R04_MASTER_MASK_MASK 
+#define FPD_XMPU_CFG_R04_MASTER_MASK_DEFVAL                    0x00000000
+#define FPD_XMPU_CFG_R04_MASTER_MASK_SHIFT                     16
+#define FPD_XMPU_CFG_R04_MASTER_MASK_MASK                      0x03FF0000U
+
+/*
+* Master ID value. An AXI MasterID will match this Master ID value of this
+    *  region if: AXI_MasterID AND MASK == ID AND MASK
+*/
+#undef FPD_XMPU_CFG_R04_MASTER_ID_DEFVAL 
+#undef FPD_XMPU_CFG_R04_MASTER_ID_SHIFT 
+#undef FPD_XMPU_CFG_R04_MASTER_ID_MASK 
+#define FPD_XMPU_CFG_R04_MASTER_ID_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_R04_MASTER_ID_SHIFT                       0
+#define FPD_XMPU_CFG_R04_MASTER_ID_MASK                        0x000003FFU
+
+/*
+* 0: Relaxed NS checking. A secure access is allowed to access secure or n
+    * on-secure region based on Rd/WrAllowed configuration. A non-secure acces
+    * s can only access non-secure region based on Rd/WrAllowed configuration
+    * 1: Strict NS checking. A secure access can only access secure region bas
+    * ed on Rd/WrAllowed configuration. A non-secure access can only access no
+    * n-secure region based on Rd/WrAllowed configuration
+*/
+#undef FPD_XMPU_CFG_R03_CONFIG_NSCHECKTYPE_DEFVAL 
+#undef FPD_XMPU_CFG_R03_CONFIG_NSCHECKTYPE_SHIFT 
+#undef FPD_XMPU_CFG_R03_CONFIG_NSCHECKTYPE_MASK 
+#define FPD_XMPU_CFG_R03_CONFIG_NSCHECKTYPE_DEFVAL             0x00000008
+#define FPD_XMPU_CFG_R03_CONFIG_NSCHECKTYPE_SHIFT              4
+#define FPD_XMPU_CFG_R03_CONFIG_NSCHECKTYPE_MASK               0x00000010U
+
+/*
+* 0: Region is configured to be secure 1: Region is configured to be non-s
+    * ecure (NS)
+*/
+#undef FPD_XMPU_CFG_R03_CONFIG_REGIONNS_DEFVAL 
+#undef FPD_XMPU_CFG_R03_CONFIG_REGIONNS_SHIFT 
+#undef FPD_XMPU_CFG_R03_CONFIG_REGIONNS_MASK 
+#define FPD_XMPU_CFG_R03_CONFIG_REGIONNS_DEFVAL                0x00000008
+#define FPD_XMPU_CFG_R03_CONFIG_REGIONNS_SHIFT                 3
+#define FPD_XMPU_CFG_R03_CONFIG_REGIONNS_MASK                  0x00000008U
+
+/*
+* 0: Write address matching this region are poisoned 1: Write address matc
+    * hing this region are allowed
+*/
+#undef FPD_XMPU_CFG_R03_CONFIG_WRALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R03_CONFIG_WRALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R03_CONFIG_WRALLOWED_MASK 
+#define FPD_XMPU_CFG_R03_CONFIG_WRALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R03_CONFIG_WRALLOWED_SHIFT                2
+#define FPD_XMPU_CFG_R03_CONFIG_WRALLOWED_MASK                 0x00000004U
+
+/*
+* 0: Read address matching this region are poisoned 1: Read address matchi
+    * ng this region are allowed
+*/
+#undef FPD_XMPU_CFG_R03_CONFIG_RDALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R03_CONFIG_RDALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R03_CONFIG_RDALLOWED_MASK 
+#define FPD_XMPU_CFG_R03_CONFIG_RDALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R03_CONFIG_RDALLOWED_SHIFT                1
+#define FPD_XMPU_CFG_R03_CONFIG_RDALLOWED_MASK                 0x00000002U
+
+/*
+* This field sets the start address bits [39:12] of this region (aligned t
+    * o 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R03_START_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R03_START_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R03_START_ADDR_MASK 
+#define FPD_XMPU_CFG_R03_START_ADDR_DEFVAL                     0x00000000
+#define FPD_XMPU_CFG_R03_START_ADDR_SHIFT                      0
+#define FPD_XMPU_CFG_R03_START_ADDR_MASK                       0x0FFFFFFFU
+
+/*
+* This field sets the end address bits [39:12] of this region (aligned to
+    * 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R03_END_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R03_END_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R03_END_ADDR_MASK 
+#define FPD_XMPU_CFG_R03_END_ADDR_DEFVAL                       0x00000000
+#define FPD_XMPU_CFG_R03_END_ADDR_SHIFT                        0
+#define FPD_XMPU_CFG_R03_END_ADDR_MASK                         0x0FFFFFFFU
+
+/*
+* Master ID mask.
+*/
+#undef FPD_XMPU_CFG_R03_MASTER_MASK_DEFVAL 
+#undef FPD_XMPU_CFG_R03_MASTER_MASK_SHIFT 
+#undef FPD_XMPU_CFG_R03_MASTER_MASK_MASK 
+#define FPD_XMPU_CFG_R03_MASTER_MASK_DEFVAL                    0x00000000
+#define FPD_XMPU_CFG_R03_MASTER_MASK_SHIFT                     16
+#define FPD_XMPU_CFG_R03_MASTER_MASK_MASK                      0x03FF0000U
+
+/*
+* Master ID value. An AXI MasterID will match this Master ID value of this
+    *  region if: AXI_MasterID AND MASK == ID AND MASK
+*/
+#undef FPD_XMPU_CFG_R03_MASTER_ID_DEFVAL 
+#undef FPD_XMPU_CFG_R03_MASTER_ID_SHIFT 
+#undef FPD_XMPU_CFG_R03_MASTER_ID_MASK 
+#define FPD_XMPU_CFG_R03_MASTER_ID_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_R03_MASTER_ID_SHIFT                       0
+#define FPD_XMPU_CFG_R03_MASTER_ID_MASK                        0x000003FFU
+
+/*
+* 0: Relaxed NS checking. A secure access is allowed to access secure or n
+    * on-secure region based on Rd/WrAllowed configuration. A non-secure acces
+    * s can only access non-secure region based on Rd/WrAllowed configuration
+    * 1: Strict NS checking. A secure access can only access secure region bas
+    * ed on Rd/WrAllowed configuration. A non-secure access can only access no
+    * n-secure region based on Rd/WrAllowed configuration
+*/
+#undef FPD_XMPU_CFG_R02_CONFIG_NSCHECKTYPE_DEFVAL 
+#undef FPD_XMPU_CFG_R02_CONFIG_NSCHECKTYPE_SHIFT 
+#undef FPD_XMPU_CFG_R02_CONFIG_NSCHECKTYPE_MASK 
+#define FPD_XMPU_CFG_R02_CONFIG_NSCHECKTYPE_DEFVAL             0x00000008
+#define FPD_XMPU_CFG_R02_CONFIG_NSCHECKTYPE_SHIFT              4
+#define FPD_XMPU_CFG_R02_CONFIG_NSCHECKTYPE_MASK               0x00000010U
+
+/*
+* 0: Region is configured to be secure 1: Region is configured to be non-s
+    * ecure (NS)
+*/
+#undef FPD_XMPU_CFG_R02_CONFIG_REGIONNS_DEFVAL 
+#undef FPD_XMPU_CFG_R02_CONFIG_REGIONNS_SHIFT 
+#undef FPD_XMPU_CFG_R02_CONFIG_REGIONNS_MASK 
+#define FPD_XMPU_CFG_R02_CONFIG_REGIONNS_DEFVAL                0x00000008
+#define FPD_XMPU_CFG_R02_CONFIG_REGIONNS_SHIFT                 3
+#define FPD_XMPU_CFG_R02_CONFIG_REGIONNS_MASK                  0x00000008U
+
+/*
+* 0: Write address matching this region are poisoned 1: Write address matc
+    * hing this region are allowed
+*/
+#undef FPD_XMPU_CFG_R02_CONFIG_WRALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R02_CONFIG_WRALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R02_CONFIG_WRALLOWED_MASK 
+#define FPD_XMPU_CFG_R02_CONFIG_WRALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R02_CONFIG_WRALLOWED_SHIFT                2
+#define FPD_XMPU_CFG_R02_CONFIG_WRALLOWED_MASK                 0x00000004U
+
+/*
+* 0: Read address matching this region are poisoned 1: Read address matchi
+    * ng this region are allowed
+*/
+#undef FPD_XMPU_CFG_R02_CONFIG_RDALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R02_CONFIG_RDALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R02_CONFIG_RDALLOWED_MASK 
+#define FPD_XMPU_CFG_R02_CONFIG_RDALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R02_CONFIG_RDALLOWED_SHIFT                1
+#define FPD_XMPU_CFG_R02_CONFIG_RDALLOWED_MASK                 0x00000002U
+
+/*
+* This field sets the start address bits [39:12] of this region (aligned t
+    * o 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R02_START_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R02_START_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R02_START_ADDR_MASK 
+#define FPD_XMPU_CFG_R02_START_ADDR_DEFVAL                     0x00000000
+#define FPD_XMPU_CFG_R02_START_ADDR_SHIFT                      0
+#define FPD_XMPU_CFG_R02_START_ADDR_MASK                       0x0FFFFFFFU
+
+/*
+* This field sets the end address bits [39:12] of this region (aligned to
+    * 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R02_END_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R02_END_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R02_END_ADDR_MASK 
+#define FPD_XMPU_CFG_R02_END_ADDR_DEFVAL                       0x00000000
+#define FPD_XMPU_CFG_R02_END_ADDR_SHIFT                        0
+#define FPD_XMPU_CFG_R02_END_ADDR_MASK                         0x0FFFFFFFU
+
+/*
+* Master ID mask.
+*/
+#undef FPD_XMPU_CFG_R02_MASTER_MASK_DEFVAL 
+#undef FPD_XMPU_CFG_R02_MASTER_MASK_SHIFT 
+#undef FPD_XMPU_CFG_R02_MASTER_MASK_MASK 
+#define FPD_XMPU_CFG_R02_MASTER_MASK_DEFVAL                    0x00000000
+#define FPD_XMPU_CFG_R02_MASTER_MASK_SHIFT                     16
+#define FPD_XMPU_CFG_R02_MASTER_MASK_MASK                      0x03FF0000U
+
+/*
+* Master ID value. An AXI MasterID will match this Master ID value of this
+    *  region if: AXI_MasterID AND MASK == ID AND MASK
+*/
+#undef FPD_XMPU_CFG_R02_MASTER_ID_DEFVAL 
+#undef FPD_XMPU_CFG_R02_MASTER_ID_SHIFT 
+#undef FPD_XMPU_CFG_R02_MASTER_ID_MASK 
+#define FPD_XMPU_CFG_R02_MASTER_ID_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_R02_MASTER_ID_SHIFT                       0
+#define FPD_XMPU_CFG_R02_MASTER_ID_MASK                        0x000003FFU
+
+/*
+* 0: Relaxed NS checking. A secure access is allowed to access secure or n
+    * on-secure region based on Rd/WrAllowed configuration. A non-secure acces
+    * s can only access non-secure region based on Rd/WrAllowed configuration
+    * 1: Strict NS checking. A secure access can only access secure region bas
+    * ed on Rd/WrAllowed configuration. A non-secure access can only access no
+    * n-secure region based on Rd/WrAllowed configuration
+*/
+#undef FPD_XMPU_CFG_R01_CONFIG_NSCHECKTYPE_DEFVAL 
+#undef FPD_XMPU_CFG_R01_CONFIG_NSCHECKTYPE_SHIFT 
+#undef FPD_XMPU_CFG_R01_CONFIG_NSCHECKTYPE_MASK 
+#define FPD_XMPU_CFG_R01_CONFIG_NSCHECKTYPE_DEFVAL             0x00000008
+#define FPD_XMPU_CFG_R01_CONFIG_NSCHECKTYPE_SHIFT              4
+#define FPD_XMPU_CFG_R01_CONFIG_NSCHECKTYPE_MASK               0x00000010U
+
+/*
+* 0: Region is configured to be secure 1: Region is configured to be non-s
+    * ecure (NS)
+*/
+#undef FPD_XMPU_CFG_R01_CONFIG_REGIONNS_DEFVAL 
+#undef FPD_XMPU_CFG_R01_CONFIG_REGIONNS_SHIFT 
+#undef FPD_XMPU_CFG_R01_CONFIG_REGIONNS_MASK 
+#define FPD_XMPU_CFG_R01_CONFIG_REGIONNS_DEFVAL                0x00000008
+#define FPD_XMPU_CFG_R01_CONFIG_REGIONNS_SHIFT                 3
+#define FPD_XMPU_CFG_R01_CONFIG_REGIONNS_MASK                  0x00000008U
+
+/*
+* 0: Write address matching this region are poisoned 1: Write address matc
+    * hing this region are allowed
+*/
+#undef FPD_XMPU_CFG_R01_CONFIG_WRALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R01_CONFIG_WRALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R01_CONFIG_WRALLOWED_MASK 
+#define FPD_XMPU_CFG_R01_CONFIG_WRALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R01_CONFIG_WRALLOWED_SHIFT                2
+#define FPD_XMPU_CFG_R01_CONFIG_WRALLOWED_MASK                 0x00000004U
+
+/*
+* 0: Read address matching this region are poisoned 1: Read address matchi
+    * ng this region are allowed
+*/
+#undef FPD_XMPU_CFG_R01_CONFIG_RDALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R01_CONFIG_RDALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R01_CONFIG_RDALLOWED_MASK 
+#define FPD_XMPU_CFG_R01_CONFIG_RDALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R01_CONFIG_RDALLOWED_SHIFT                1
+#define FPD_XMPU_CFG_R01_CONFIG_RDALLOWED_MASK                 0x00000002U
+
+/*
+* This field sets the start address bits [39:12] of this region (aligned t
+    * o 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R01_START_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R01_START_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R01_START_ADDR_MASK 
+#define FPD_XMPU_CFG_R01_START_ADDR_DEFVAL                     0x00000000
+#define FPD_XMPU_CFG_R01_START_ADDR_SHIFT                      0
+#define FPD_XMPU_CFG_R01_START_ADDR_MASK                       0x0FFFFFFFU
+
+/*
+* This field sets the end address bits [39:12] of this region (aligned to
+    * 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R01_END_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R01_END_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R01_END_ADDR_MASK 
+#define FPD_XMPU_CFG_R01_END_ADDR_DEFVAL                       0x00000000
+#define FPD_XMPU_CFG_R01_END_ADDR_SHIFT                        0
+#define FPD_XMPU_CFG_R01_END_ADDR_MASK                         0x0FFFFFFFU
+
+/*
+* Master ID mask.
+*/
+#undef FPD_XMPU_CFG_R01_MASTER_MASK_DEFVAL 
+#undef FPD_XMPU_CFG_R01_MASTER_MASK_SHIFT 
+#undef FPD_XMPU_CFG_R01_MASTER_MASK_MASK 
+#define FPD_XMPU_CFG_R01_MASTER_MASK_DEFVAL                    0x00000000
+#define FPD_XMPU_CFG_R01_MASTER_MASK_SHIFT                     16
+#define FPD_XMPU_CFG_R01_MASTER_MASK_MASK                      0x03FF0000U
+
+/*
+* Master ID value. An AXI MasterID will match this Master ID value of this
+    *  region if: AXI_MasterID AND MASK == ID AND MASK
+*/
+#undef FPD_XMPU_CFG_R01_MASTER_ID_DEFVAL 
+#undef FPD_XMPU_CFG_R01_MASTER_ID_SHIFT 
+#undef FPD_XMPU_CFG_R01_MASTER_ID_MASK 
+#define FPD_XMPU_CFG_R01_MASTER_ID_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_R01_MASTER_ID_SHIFT                       0
+#define FPD_XMPU_CFG_R01_MASTER_ID_MASK                        0x000003FFU
+
+/*
+* 0: Relaxed NS checking. A secure access is allowed to access secure or n
+    * on-secure region based on Rd/WrAllowed configuration. A non-secure acces
+    * s can only access non-secure region based on Rd/WrAllowed configuration
+    * 1: Strict NS checking. A secure access can only access secure region bas
+    * ed on Rd/WrAllowed configuration. A non-secure access can only access no
+    * n-secure region based on Rd/WrAllowed configuration
+*/
+#undef FPD_XMPU_CFG_R00_CONFIG_NSCHECKTYPE_DEFVAL 
+#undef FPD_XMPU_CFG_R00_CONFIG_NSCHECKTYPE_SHIFT 
+#undef FPD_XMPU_CFG_R00_CONFIG_NSCHECKTYPE_MASK 
+#define FPD_XMPU_CFG_R00_CONFIG_NSCHECKTYPE_DEFVAL             0x00000008
+#define FPD_XMPU_CFG_R00_CONFIG_NSCHECKTYPE_SHIFT              4
+#define FPD_XMPU_CFG_R00_CONFIG_NSCHECKTYPE_MASK               0x00000010U
+
+/*
+* 0: Region is configured to be secure 1: Region is configured to be non-s
+    * ecure (NS)
+*/
+#undef FPD_XMPU_CFG_R00_CONFIG_REGIONNS_DEFVAL 
+#undef FPD_XMPU_CFG_R00_CONFIG_REGIONNS_SHIFT 
+#undef FPD_XMPU_CFG_R00_CONFIG_REGIONNS_MASK 
+#define FPD_XMPU_CFG_R00_CONFIG_REGIONNS_DEFVAL                0x00000008
+#define FPD_XMPU_CFG_R00_CONFIG_REGIONNS_SHIFT                 3
+#define FPD_XMPU_CFG_R00_CONFIG_REGIONNS_MASK                  0x00000008U
+
+/*
+* 0: Write address matching this region are poisoned 1: Write address matc
+    * hing this region are allowed
+*/
+#undef FPD_XMPU_CFG_R00_CONFIG_WRALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R00_CONFIG_WRALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R00_CONFIG_WRALLOWED_MASK 
+#define FPD_XMPU_CFG_R00_CONFIG_WRALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R00_CONFIG_WRALLOWED_SHIFT                2
+#define FPD_XMPU_CFG_R00_CONFIG_WRALLOWED_MASK                 0x00000004U
+
+/*
+* 0: Read address matching this region are poisoned 1: Read address matchi
+    * ng this region are allowed
+*/
+#undef FPD_XMPU_CFG_R00_CONFIG_RDALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_R00_CONFIG_RDALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_R00_CONFIG_RDALLOWED_MASK 
+#define FPD_XMPU_CFG_R00_CONFIG_RDALLOWED_DEFVAL               0x00000008
+#define FPD_XMPU_CFG_R00_CONFIG_RDALLOWED_SHIFT                1
+#define FPD_XMPU_CFG_R00_CONFIG_RDALLOWED_MASK                 0x00000002U
+
+/*
+* This field sets the start address bits [39:12] of this region (aligned t
+    * o 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R00_START_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R00_START_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R00_START_ADDR_MASK 
+#define FPD_XMPU_CFG_R00_START_ADDR_DEFVAL                     0x00000000
+#define FPD_XMPU_CFG_R00_START_ADDR_SHIFT                      0
+#define FPD_XMPU_CFG_R00_START_ADDR_MASK                       0x0FFFFFFFU
+
+/*
+* This field sets the end address bits [39:12] of this region (aligned to
+    * 4kB). All bits of this field are used during comparison.
+*/
+#undef FPD_XMPU_CFG_R00_END_ADDR_DEFVAL 
+#undef FPD_XMPU_CFG_R00_END_ADDR_SHIFT 
+#undef FPD_XMPU_CFG_R00_END_ADDR_MASK 
+#define FPD_XMPU_CFG_R00_END_ADDR_DEFVAL                       0x00000000
+#define FPD_XMPU_CFG_R00_END_ADDR_SHIFT                        0
+#define FPD_XMPU_CFG_R00_END_ADDR_MASK                         0x0FFFFFFFU
+
+/*
+* Master ID mask.
+*/
+#undef FPD_XMPU_CFG_R00_MASTER_MASK_DEFVAL 
+#undef FPD_XMPU_CFG_R00_MASTER_MASK_SHIFT 
+#undef FPD_XMPU_CFG_R00_MASTER_MASK_MASK 
+#define FPD_XMPU_CFG_R00_MASTER_MASK_DEFVAL                    0x00000000
+#define FPD_XMPU_CFG_R00_MASTER_MASK_SHIFT                     16
+#define FPD_XMPU_CFG_R00_MASTER_MASK_MASK                      0x03FF0000U
+
+/*
+* Master ID value. An AXI MasterID will match this Master ID value of this
+    *  region if: AXI_MasterID AND MASK == ID AND MASK
+*/
+#undef FPD_XMPU_CFG_R00_MASTER_ID_DEFVAL 
+#undef FPD_XMPU_CFG_R00_MASTER_ID_SHIFT 
+#undef FPD_XMPU_CFG_R00_MASTER_ID_MASK 
+#define FPD_XMPU_CFG_R00_MASTER_ID_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_R00_MASTER_ID_SHIFT                       0
+#define FPD_XMPU_CFG_R00_MASTER_ID_MASK                        0x000003FFU
+
+/*
+* see INT_STATUS register for details
+*/
+#undef FPD_XMPU_CFG_IEN_SECURITYVIO_DEFVAL 
+#undef FPD_XMPU_CFG_IEN_SECURITYVIO_SHIFT 
+#undef FPD_XMPU_CFG_IEN_SECURITYVIO_MASK 
+#define FPD_XMPU_CFG_IEN_SECURITYVIO_DEFVAL                    0x00000000
+#define FPD_XMPU_CFG_IEN_SECURITYVIO_SHIFT                     3
+#define FPD_XMPU_CFG_IEN_SECURITYVIO_MASK                      0x00000008U
+
+/*
+* see INT_STATUS register for details
+*/
+#undef FPD_XMPU_CFG_IEN_WRPERMVIO_DEFVAL 
+#undef FPD_XMPU_CFG_IEN_WRPERMVIO_SHIFT 
+#undef FPD_XMPU_CFG_IEN_WRPERMVIO_MASK 
+#define FPD_XMPU_CFG_IEN_WRPERMVIO_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_IEN_WRPERMVIO_SHIFT                       2
+#define FPD_XMPU_CFG_IEN_WRPERMVIO_MASK                        0x00000004U
+
+/*
+* see INT_STATUS register for details
+*/
+#undef FPD_XMPU_CFG_IEN_RDPERMVIO_DEFVAL 
+#undef FPD_XMPU_CFG_IEN_RDPERMVIO_SHIFT 
+#undef FPD_XMPU_CFG_IEN_RDPERMVIO_MASK 
+#define FPD_XMPU_CFG_IEN_RDPERMVIO_DEFVAL                      0x00000000
+#define FPD_XMPU_CFG_IEN_RDPERMVIO_SHIFT                       1
+#define FPD_XMPU_CFG_IEN_RDPERMVIO_MASK                        0x00000002U
+
+/*
+* see INT_STATUS register for details
+*/
+#undef FPD_XMPU_CFG_IEN_INV_APB_DEFVAL 
+#undef FPD_XMPU_CFG_IEN_INV_APB_SHIFT 
+#undef FPD_XMPU_CFG_IEN_INV_APB_MASK 
+#define FPD_XMPU_CFG_IEN_INV_APB_DEFVAL                        0x00000000
+#define FPD_XMPU_CFG_IEN_INV_APB_SHIFT                         0
+#define FPD_XMPU_CFG_IEN_INV_APB_MASK                          0x00000001U
+
+/*
+* Whether an APB access to the "hole" region and to an unimplemented regis
+    * ter space causes PSLVERR
+*/
+#undef FPD_XMPU_SINK_ERR_CTRL_PSLVERR_DEFVAL 
+#undef FPD_XMPU_SINK_ERR_CTRL_PSLVERR_SHIFT 
+#undef FPD_XMPU_SINK_ERR_CTRL_PSLVERR_MASK 
+#define FPD_XMPU_SINK_ERR_CTRL_PSLVERR_DEFVAL                  0x00000000
+#define FPD_XMPU_SINK_ERR_CTRL_PSLVERR_SHIFT                   0
+#define FPD_XMPU_SINK_ERR_CTRL_PSLVERR_MASK                    0x00000001U
+
+/*
+* 0: Transaction poisoning is done by adding poison attribute defined in P
+    * OISON.ATTRIB field 1: Transaction poisoning is done by changing address
+    * to poisoned address defined in POISON.BASE field
+*/
+#undef FPD_XMPU_CFG_CTRL_POISONCFG_DEFVAL 
+#undef FPD_XMPU_CFG_CTRL_POISONCFG_SHIFT 
+#undef FPD_XMPU_CFG_CTRL_POISONCFG_MASK 
+#define FPD_XMPU_CFG_CTRL_POISONCFG_DEFVAL                     0x00000007
+#define FPD_XMPU_CFG_CTRL_POISONCFG_SHIFT                      2
+#define FPD_XMPU_CFG_CTRL_POISONCFG_MASK                       0x00000004U
+
+/*
+* Default write permission 0: If AXI write Address/ID doesn't match with a
+    * ny of the enabled regions, then write is poisoned 1: If AXI write Addres
+    * s/ID doesn't match with any of the enabled regions, then write is allowe
+    * d to go through
+*/
+#undef FPD_XMPU_CFG_CTRL_DEFWRALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_CTRL_DEFWRALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_CTRL_DEFWRALLOWED_MASK 
+#define FPD_XMPU_CFG_CTRL_DEFWRALLOWED_DEFVAL                  0x00000007
+#define FPD_XMPU_CFG_CTRL_DEFWRALLOWED_SHIFT                   1
+#define FPD_XMPU_CFG_CTRL_DEFWRALLOWED_MASK                    0x00000002U
+
+/*
+* Default read permission 0: If AXI read Address/ID doesn't match with any
+    *  of the enabled regions, then read is poisoned 1: If AXI read Address/ID
+    *  doesn't match with any of the enabled regions, then read is allowed to
+    * go through
+*/
+#undef FPD_XMPU_CFG_CTRL_DEFRDALLOWED_DEFVAL 
+#undef FPD_XMPU_CFG_CTRL_DEFRDALLOWED_SHIFT 
+#undef FPD_XMPU_CFG_CTRL_DEFRDALLOWED_MASK 
+#define FPD_XMPU_CFG_CTRL_DEFRDALLOWED_DEFVAL                  0x00000007
+#define FPD_XMPU_CFG_CTRL_DEFRDALLOWED_SHIFT                   0
+#define FPD_XMPU_CFG_CTRL_DEFRDALLOWED_MASK                    0x00000001U
+
+/*
+* 0: Region is disabled 1: Region is enabled
+*/
+#undef FPD_XMPU_CFG_R09_CONFIG_ENABLE_DEFVAL 
+#undef FPD_XMPU_CFG_R09_CONFIG_ENABLE_SHIFT 
+#undef FPD_XMPU_CFG_R09_CONFIG_ENABLE_MASK 
+#define FPD_XMPU_CFG_R09_CONFIG_ENABLE_DEFVAL                  0x00000008
+#define FPD_XMPU_CFG_R09_CONFIG_ENABLE_SHIFT                   0
+#define FPD_XMPU_CFG_R09_CONFIG_ENABLE_MASK                    0x00000001U
+
+/*
+* 0: Region is disabled 1: Region is enabled
+*/
+#undef FPD_XMPU_CFG_R08_CONFIG_ENABLE_DEFVAL 
+#undef FPD_XMPU_CFG_R08_CONFIG_ENABLE_SHIFT 
+#undef FPD_XMPU_CFG_R08_CONFIG_ENABLE_MASK 
+#define FPD_XMPU_CFG_R08_CONFIG_ENABLE_DEFVAL                  0x00000008
+#define FPD_XMPU_CFG_R08_CONFIG_ENABLE_SHIFT                   0
+#define FPD_XMPU_CFG_R08_CONFIG_ENABLE_MASK                    0x00000001U
+
+/*
+* 0: Region is disabled 1: Region is enabled
+*/
+#undef FPD_XMPU_CFG_R07_CONFIG_ENABLE_DEFVAL 
+#undef FPD_XMPU_CFG_R07_CONFIG_ENABLE_SHIFT 
+#undef FPD_XMPU_CFG_R07_CONFIG_ENABLE_MASK 
+#define FPD_XMPU_CFG_R07_CONFIG_ENABLE_DEFVAL                  0x00000008
+#define FPD_XMPU_CFG_R07_CONFIG_ENABLE_SHIFT                   0
+#define FPD_XMPU_CFG_R07_CONFIG_ENABLE_MASK                    0x00000001U
+
+/*
+* 0: Region is disabled 1: Region is enabled
+*/
+#undef FPD_XMPU_CFG_R06_CONFIG_ENABLE_DEFVAL 
+#undef FPD_XMPU_CFG_R06_CONFIG_ENABLE_SHIFT 
+#undef FPD_XMPU_CFG_R06_CONFIG_ENABLE_MASK 
+#define FPD_XMPU_CFG_R06_CONFIG_ENABLE_DEFVAL                  0x00000008
+#define FPD_XMPU_CFG_R06_CONFIG_ENABLE_SHIFT                   0
+#define FPD_XMPU_CFG_R06_CONFIG_ENABLE_MASK                    0x00000001U
+
+/*
+* 0: Region is disabled 1: Region is enabled
+*/
+#undef FPD_XMPU_CFG_R05_CONFIG_ENABLE_DEFVAL 
+#undef FPD_XMPU_CFG_R05_CONFIG_ENABLE_SHIFT 
+#undef FPD_XMPU_CFG_R05_CONFIG_ENABLE_MASK 
+#define FPD_XMPU_CFG_R05_CONFIG_ENABLE_DEFVAL                  0x00000008
+#define FPD_XMPU_CFG_R05_CONFIG_ENABLE_SHIFT                   0
+#define FPD_XMPU_CFG_R05_CONFIG_ENABLE_MASK                    0x00000001U
+
+/*
+* 0: Region is disabled 1: Region is enabled
+*/
+#undef FPD_XMPU_CFG_R04_CONFIG_ENABLE_DEFVAL 
+#undef FPD_XMPU_CFG_R04_CONFIG_ENABLE_SHIFT 
+#undef FPD_XMPU_CFG_R04_CONFIG_ENABLE_MASK 
+#define FPD_XMPU_CFG_R04_CONFIG_ENABLE_DEFVAL                  0x00000008
+#define FPD_XMPU_CFG_R04_CONFIG_ENABLE_SHIFT                   0
+#define FPD_XMPU_CFG_R04_CONFIG_ENABLE_MASK                    0x00000001U
+
+/*
+* 0: Region is disabled 1: Region is enabled
+*/
+#undef FPD_XMPU_CFG_R03_CONFIG_ENABLE_DEFVAL 
+#undef FPD_XMPU_CFG_R03_CONFIG_ENABLE_SHIFT 
+#undef FPD_XMPU_CFG_R03_CONFIG_ENABLE_MASK 
+#define FPD_XMPU_CFG_R03_CONFIG_ENABLE_DEFVAL                  0x00000008
+#define FPD_XMPU_CFG_R03_CONFIG_ENABLE_SHIFT                   0
+#define FPD_XMPU_CFG_R03_CONFIG_ENABLE_MASK                    0x00000001U
+
+/*
+* 0: Region is disabled 1: Region is enabled
+*/
+#undef FPD_XMPU_CFG_R02_CONFIG_ENABLE_DEFVAL 
+#undef FPD_XMPU_CFG_R02_CONFIG_ENABLE_SHIFT 
+#undef FPD_XMPU_CFG_R02_CONFIG_ENABLE_MASK 
+#define FPD_XMPU_CFG_R02_CONFIG_ENABLE_DEFVAL                  0x00000008
+#define FPD_XMPU_CFG_R02_CONFIG_ENABLE_SHIFT                   0
+#define FPD_XMPU_CFG_R02_CONFIG_ENABLE_MASK                    0x00000001U
+
+/*
+* 0: Region is disabled 1: Region is enabled
+*/
+#undef FPD_XMPU_CFG_R00_CONFIG_ENABLE_DEFVAL 
+#undef FPD_XMPU_CFG_R00_CONFIG_ENABLE_SHIFT 
+#undef FPD_XMPU_CFG_R00_CONFIG_ENABLE_MASK 
+#define FPD_XMPU_CFG_R00_CONFIG_ENABLE_DEFVAL                  0x00000008
+#define FPD_XMPU_CFG_R00_CONFIG_ENABLE_SHIFT                   0
+#define FPD_XMPU_CFG_R00_CONFIG_ENABLE_MASK                    0x00000001U
+
+/*
+* 0: Region is disabled 1: Region is enabled
+*/
+#undef FPD_XMPU_CFG_R01_CONFIG_ENABLE_DEFVAL 
+#undef FPD_XMPU_CFG_R01_CONFIG_ENABLE_SHIFT 
+#undef FPD_XMPU_CFG_R01_CONFIG_ENABLE_MASK 
+#define FPD_XMPU_CFG_R01_CONFIG_ENABLE_DEFVAL                  0x00000008
+#define FPD_XMPU_CFG_R01_CONFIG_ENABLE_SHIFT                   0
+#define FPD_XMPU_CFG_R01_CONFIG_ENABLE_MASK                    0x00000001U
+#undef LPD_XPPU_CFG_APERPERM_152_OFFSET 
+#define LPD_XPPU_CFG_APERPERM_152_OFFSET                                           0XFF981260
+
+/*
+* This field defines the MASTER ID match criteria. Each entry in the IDL c
+    * orresponds to a bit in this field. 0=not match, 1=match.
+*/
+#undef LPD_XPPU_CFG_APERPERM_152_PERMISSION_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_152_PERMISSION_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_152_PERMISSION_MASK 
+#define LPD_XPPU_CFG_APERPERM_152_PERMISSION_DEFVAL            0x00000000
+#define LPD_XPPU_CFG_APERPERM_152_PERMISSION_SHIFT             0
+#define LPD_XPPU_CFG_APERPERM_152_PERMISSION_MASK              0x000FFFFFU
+
+/*
+* 1=secure or non-secure transactions are allowed 0=only secure transactio
+    * na are allowed
+*/
+#undef LPD_XPPU_CFG_APERPERM_152_TRUSTZONE_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_152_TRUSTZONE_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_152_TRUSTZONE_MASK 
+#define LPD_XPPU_CFG_APERPERM_152_TRUSTZONE_DEFVAL             0x00000000
+#define LPD_XPPU_CFG_APERPERM_152_TRUSTZONE_SHIFT              27
+#define LPD_XPPU_CFG_APERPERM_152_TRUSTZONE_MASK               0x08000000U
+
+/*
+* SW must calculate and set up parity, if parity check is enabled by the C
+    * TRL register. 31: parity for bits 19:15 30: parity for bits 14:10 29: pa
+    * rity for bits 9:5 28: parity for bits 27, 4:0
+*/
+#undef LPD_XPPU_CFG_APERPERM_152_PARITY_DEFVAL 
+#undef LPD_XPPU_CFG_APERPERM_152_PARITY_SHIFT 
+#undef LPD_XPPU_CFG_APERPERM_152_PARITY_MASK 
+#define LPD_XPPU_CFG_APERPERM_152_PARITY_DEFVAL                0x00000000
+#define LPD_XPPU_CFG_APERPERM_152_PARITY_SHIFT                 28
+#define LPD_XPPU_CFG_APERPERM_152_PARITY_MASK                  0xF0000000U
 #undef FPD_SLCR_SECURE_SLCR_DPDMA_OFFSET 
 #define FPD_SLCR_SECURE_SLCR_DPDMA_OFFSET                                          0XFD690040
 #undef FPD_SLCR_SECURE_SLCR_PCIE_OFFSET 
@@ -34649,6 +42434,17 @@
 #define SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_LCL_SEL_DEFVAL     0x00000080
 #define SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_LCL_SEL_SHIFT      7
 #define SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_LCL_SEL_MASK       0x00000080U
+
+/*
+* Bit 0 of lane 0 ref clock mux one hot sel. Set to 1 to select lane 0 sli
+    * cer output from ref clock network
+*/
+#undef SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_SEL_0_DEFVAL 
+#undef SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_SEL_0_SHIFT 
+#undef SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_SEL_0_MASK 
+#define SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_SEL_0_DEFVAL       0x00000080
+#define SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_SEL_0_SHIFT        0
+#define SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_SEL_0_MASK         0x00000001U
 
 /*
 * Sel of lane 1 ref clock local mux. Set to 1 to select lane 1 slicer outp
@@ -36845,8 +44641,8 @@
 #define CRF_APB_RST_FPD_TOP_OFFSET                                                 0XFD1A0100
 #undef CRL_APB_RST_LPD_TOP_OFFSET 
 #define CRL_APB_RST_LPD_TOP_OFFSET                                                 0XFF5E023C
-#undef LPD_SLCR_AFI_FS_OFFSET 
-#define LPD_SLCR_AFI_FS_OFFSET                                                     0XFF419000
+#undef FPD_SLCR_AFI_FS_OFFSET 
+#define FPD_SLCR_AFI_FS_OFFSET                                                     0XFD615000
 
 /*
 * AF_FM0 block level reset
@@ -36923,12 +44719,12 @@
     *  AXI data width (default) 01: 64-bit AXI data width 10: 128-bit AXI data
     *  width 11: reserved
 */
-#undef LPD_SLCR_AFI_FS_DW_SS2_SEL_DEFVAL 
-#undef LPD_SLCR_AFI_FS_DW_SS2_SEL_SHIFT 
-#undef LPD_SLCR_AFI_FS_DW_SS2_SEL_MASK 
-#define LPD_SLCR_AFI_FS_DW_SS2_SEL_DEFVAL                      0x00000200
-#define LPD_SLCR_AFI_FS_DW_SS2_SEL_SHIFT                       8
-#define LPD_SLCR_AFI_FS_DW_SS2_SEL_MASK                        0x00000300U
+#undef FPD_SLCR_AFI_FS_DW_SS0_SEL_DEFVAL 
+#undef FPD_SLCR_AFI_FS_DW_SS0_SEL_SHIFT 
+#undef FPD_SLCR_AFI_FS_DW_SS0_SEL_MASK 
+#define FPD_SLCR_AFI_FS_DW_SS0_SEL_DEFVAL                      0x00000A00
+#define FPD_SLCR_AFI_FS_DW_SS0_SEL_SHIFT                       8
+#define FPD_SLCR_AFI_FS_DW_SS0_SEL_MASK                        0x00000300U
 #undef GPIO_MASK_DATA_5_MSW_OFFSET 
 #define GPIO_MASK_DATA_5_MSW_OFFSET                                                0XFF0A002C
 #undef GPIO_DIRM_5_OFFSET 

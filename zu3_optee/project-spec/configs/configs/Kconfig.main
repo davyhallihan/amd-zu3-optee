@@ -33,28 +33,28 @@ config SUBSYSTEM_ENDIAN_LITTLE
 
 if SUBSYSTEM_SDT_FLOW
 
-source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/configs/Kconfig.bootcompselection
+source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig.bootcompselection
 
 endif
 
 if SUBSYSTEM_DISTRO_PETALINUX
 
-source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/configs/Kconfig.linuxcompselection
+source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig.linuxcompselection
 
-source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/configs/Kconfig.autoconfigsettings
+source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig.autoconfigsettings
 
 endif
 
-source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/configs/Kconfig.syshw
+source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig.syshw
 
-source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/configs/Kconfig.dtgsettings
+source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig.dtgsettings
 
-source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/configs/Kconfig.bootcompconfigurations
+source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig.bootcompconfigurations
 
 if SUBSYSTEM_DISTRO_PETALINUX
 
-source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/configs/Kconfig.imagepkgconfigurations
+source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig.imagepkgconfigurations
 
 endif
 
-source /home/davy/research/optee/zup_pl_project/zu3_optee/project-spec/configs/configs/Kconfig.yoctobuildsettings
+source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig.yoctobuildsettings

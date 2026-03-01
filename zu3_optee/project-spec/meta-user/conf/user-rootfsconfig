@@ -8,3 +8,4 @@ CONFIG_optee-client
 CONFIG_optee-os
 CONFIG_optee-test
 CONFIG_optee-examples
+CONFIG_secure-switch

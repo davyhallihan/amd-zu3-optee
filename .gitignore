@@ -1,1 +1,10 @@
 */linux/*
+*.jou
+*.log
+*.pb
+*.wdb
+*.wcfg
+*.str
+*~
+.Xil/
+Debugging\ JTAG\ Boot\ Issues.md*

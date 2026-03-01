@@ -1,10 +1,10 @@
 device_id: xczu3eg
-hw_design_name: bd_wrapper
+hw_design_name: system_wrapper
 processor:
     psu_cortexa53_0:
         arch: aarch64
         ip_name: psu_cortexa53
-        slaves_strings: psu_acpu_gic psu_adma_0 psu_adma_1 psu_adma_2 psu_adma_3 psu_adma_4 psu_adma_5 psu_adma_6 psu_adma_7 psu_afi_0 psu_afi_1 psu_afi_2 psu_afi_3 psu_afi_4 psu_afi_5 psu_afi_6 psu_ams psu_apm_0 psu_apm_1 psu_apm_2 psu_apm_5 psu_apu psu_cci_gpv psu_cci_reg psu_coresight_0 psu_crf_apb psu_crl_apb psu_csu_0 psu_csudma psu_ctrl_ipi psu_ddr_0 psu_ddr_1 psu_ddr_phy psu_ddr_qos_ctrl psu_ddr_xmpu0_cfg psu_ddr_xmpu1_cfg psu_ddr_xmpu2_cfg psu_ddr_xmpu3_cfg psu_ddr_xmpu4_cfg psu_ddr_xmpu5_cfg psu_ddrc_0 psu_dp psu_dpdma psu_efuse psu_fpd_gpv psu_fpd_slcr psu_fpd_slcr_secure psu_fpd_xmpu_cfg psu_fpd_xmpu_sink psu_gdma_0 psu_gdma_1 psu_gdma_2 psu_gdma_3 psu_gdma_4 psu_gdma_5 psu_gdma_6 psu_gdma_7 psu_gpio_0 psu_gpu psu_i2c_0 psu_i2c_1 psu_iou_scntr psu_iou_scntrs psu_iousecure_slcr psu_iouslcr_0 psu_ipi_0 psu_lpd_slcr psu_lpd_slcr_secure psu_lpd_xppu psu_lpd_xppu_sink psu_mbistjtag psu_message_buffers psu_ocm psu_ocm_ram_0 psu_ocm_xmpu_cfg psu_pmu_global_0 psu_r5_0_atcm_global psu_r5_0_btcm_global psu_r5_1_atcm_global psu_r5_1_btcm_global psu_r5_tcm_ram_global psu_rcpu_gic psu_rpu psu_rsa psu_rtc psu_sd_0 psu_serdes psu_siou psu_smmu_gpv psu_smmu_reg psu_uart_1 psu_usb_0 psu_usb_1 psu_usb_xhci_0 psu_usb_xhci_1
+        slaves_strings: psu_acpu_gic psu_adma_0 psu_adma_1 psu_adma_2 psu_adma_3 psu_adma_4 psu_adma_5 psu_adma_6 psu_adma_7 psu_afi_0 psu_afi_1 psu_afi_2 psu_afi_3 psu_afi_4 psu_afi_5 psu_afi_6 psu_ams psu_apm_0 psu_apm_1 psu_apm_2 psu_apm_5 psu_apu psu_cci_gpv psu_cci_reg psu_coresight_0 psu_crf_apb psu_crl_apb psu_csu_0 psu_csudma psu_ctrl_ipi psu_ddr_0 psu_ddr_1 psu_ddr_phy psu_ddr_qos_ctrl psu_ddrc_0 psu_dp psu_dpdma psu_efuse psu_fpd_gpv psu_fpd_slcr_secure psu_fpd_xmpu_sink psu_gdma_0 psu_gdma_1 psu_gdma_2 psu_gdma_3 psu_gdma_4 psu_gdma_5 psu_gdma_6 psu_gdma_7 psu_gpio_0 psu_gpu psu_i2c_0 psu_i2c_1 psu_iou_scntr psu_iou_scntrs psu_iousecure_slcr psu_iouslcr_0 psu_ipi_0 psu_lpd_slcr_secure psu_lpd_xppu_sink psu_mbistjtag psu_message_buffers psu_ocm psu_ocm_ram_0 psu_pmu_global_0 psu_r5_0_atcm_global psu_r5_0_btcm_global psu_r5_1_atcm_global psu_r5_1_btcm_global psu_r5_tcm_ram_global psu_rcpu_gic psu_rpu psu_rsa psu_rtc psu_sd_0 psu_serdes psu_siou psu_smmu_gpv psu_smmu_reg psu_ttc_0 psu_uart_1 psu_usb_0 psu_usb_1 psu_usb_xhci_0 psu_usb_xhci_1 secure_switch_0
         slaves:
             psu_ddr_0:
                 device_type: memory
@@ -97,18 +97,6 @@ processor:
                 ip_name: psu_ddr_phy
             psu_ddr_qos_ctrl:
                 ip_name: psu_ddr_qos_ctrl
-            psu_ddr_xmpu0_cfg:
-                ip_name: psu_ddr_xmpu0_cfg
-            psu_ddr_xmpu1_cfg:
-                ip_name: psu_ddr_xmpu1_cfg
-            psu_ddr_xmpu2_cfg:
-                ip_name: psu_ddr_xmpu2_cfg
-            psu_ddr_xmpu3_cfg:
-                ip_name: psu_ddr_xmpu3_cfg
-            psu_ddr_xmpu4_cfg:
-                ip_name: psu_ddr_xmpu4_cfg
-            psu_ddr_xmpu5_cfg:
-                ip_name: psu_ddr_xmpu5_cfg
             psu_ddrc_0:
                 ip_name: psu_ddrc
             psu_dp:
@@ -119,12 +107,8 @@ processor:
                 ip_name: psu_efuse
             psu_fpd_gpv:
                 ip_name: psu_fpd_gpv
-            psu_fpd_slcr:
-                ip_name: psu_fpd_slcr
             psu_fpd_slcr_secure:
                 ip_name: psu_fpd_slcr_secure
-            psu_fpd_xmpu_cfg:
-                ip_name: psu_fpd_xmpu_cfg
             psu_fpd_xmpu_sink:
                 ip_name: psu_fpd_xmpu_sink
             psu_gdma_0:
@@ -161,12 +145,8 @@ processor:
                 ip_name: psu_iouslcr
             psu_ipi_0:
                 ip_name: psu_ipi
-            psu_lpd_slcr:
-                ip_name: psu_lpd_slcr
             psu_lpd_slcr_secure:
                 ip_name: psu_lpd_slcr_secure
-            psu_lpd_xppu:
-                ip_name: psu_lpd_xppu
             psu_lpd_xppu_sink:
                 ip_name: psu_lpd_xppu_sink
             psu_mbistjtag:
@@ -177,8 +157,6 @@ processor:
                 ip_name: psu_ocm
             psu_ocm_ram_0:
                 ip_name: psu_ocm_ram_0
-            psu_ocm_xmpu_cfg:
-                ip_name: psu_ocm_xmpu_cfg
             psu_pmu_global_0:
                 ip_name: psu_pmu_global_0
             psu_r5_0_atcm_global:
@@ -207,7 +185,11 @@ processor:
                 ip_name: psu_smmu_gpv
             psu_smmu_reg:
                 ip_name: psu_smmu_reg
+            psu_ttc_0:
+                ip_name: psu_ttc
             psu_usb_xhci_0:
                 ip_name: psu_usb_xhci
             psu_usb_xhci_1:
                 ip_name: psu_usb_xhci
+            secure_switch_0:
+                ip_name: secure_switch_axi

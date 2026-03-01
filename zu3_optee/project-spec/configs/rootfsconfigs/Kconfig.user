@@ -23,4 +23,8 @@ config peekpoke
 	 bool "peekpoke"
 	 help
 	
+config secure-switch  
+	 bool "secure-switch"
+	 help
+	
 endmenu

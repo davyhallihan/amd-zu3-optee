@@ -3977,6 +3977,7 @@ CONFIG_optee-examples=y
 CONFIG_optee-os=y
 CONFIG_optee-test=y
 # CONFIG_peekpoke is not set
+CONFIG_secure-switch=y
 
 #
 # PetaLinux RootFS Settings

@@ -3,17 +3,8 @@ SRC_URI:append = " file://0001-add-aup-zu3-target.patch"
 
 COMPATIBLE_MACHINE:zynqmp = ".*"
 OPTEEMACHINE:zynqmp = "zynqmp"
-EXTRA_OEMAKE:append:zynqmp = " PLATFORM_FLAVOR=aup_zu3 CFG_TEE_CORE_LOG_LEVEL=4 CFG_TZDRAM_START=0x1E001000 CFG_CORE_TXLAT_TABLES=32 MAX_XLAT_TABLES=32 CFG_CORE_RESERVED_SHM=n"
+EXTRA_OEMAKE:append:zynqmp = " PLATFORM_FLAVOR=aup_zu3 CFG_TEE_CORE_LOG_LEVEL=0 CFG_DDR_SIZE=0x100000000 CFG_TZDRAM_START=0x1E001000 CFG_CORE_TXLAT_TABLES=32 MAX_XLAT_TABLES=32 CFG_CORE_RESERVED_SHM=n"
 CFLAGS:append:zynqmp = " -DMAX_XLAT_TABLES=32"
-
-do_compile:prepend() {
-    # Force configuration variables
-    export CFG_DDR_SIZE=0x100000000
-    export CFG_CORE_TXLAT_TABLES=32
-    export MAX_XLAT_TABLES=32
-    
-    echo "DEBUG: Starting do_compile:prepend"
-}
 
 do_compile:append() {
     # Debug: Check conf.h AFTER build

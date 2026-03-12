@@ -1,6 +1,7 @@
 */linux/*
 *.jou
 *.log
+*.log.old
 *.pb
 *.wdb
 *.wcfg

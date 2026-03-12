@@ -1,20 +1,26 @@
-# create_secure_switch_design.tcl
-# ============================================================================
-# Batch-mode Vivado script to create a Zynq UltraScale+ block design with a
-# TrustZone-secured AXI switch reader peripheral for the AUP-ZU3 board.
+# create_secure_switch_design.tcl -- AUP-ZU3 (Zynq UltraScale+)
+#
+# Creates a Vivado block design with two instances of secure_switch_axi
+# connected to the ZynqMP PS via an AXI interconnect:
+#
+#   ZynqMP M_AXI_HPM0_FPD --> AXI Interconnect --> M00: secure_switch_0  (TZ-protected)
+#                                               --> M01: ns_switch_0      (non-secure)
+#
+# Both peripherals read the same physical switches. M00_SECURE=1 is always
+# enabled here because the ZU3's AXI interconnect correctly does per-port
+# security filtering (unlike the Zynq-7000 which blocks all non-secure
+# traffic when any port is marked secure).
 #
 # Usage:
 #   vivado -mode batch -source create_secure_switch_design.tcl
 #
 # Prerequisites:
-#   - AUP-ZU3 board files installed in Vivado board store
-#     (see: https://realdigital.org/hardware/aup-zu3)
-#   - XDC pin assignments updated in zu3_switches.xdc
+#   AUP-ZU3 board files installed in Vivado board store
+#   (see: https://realdigital.org/hardware/aup-zu3)
 #
 # Outputs:
-#   output/hardware_design.xsa   — Hardware platform (XSA) with bitstream
-#   output/bitstream.bit         — Standalone bitstream copy
-# ============================================================================
+#   output/hardware_design.xsa
+#   output/bitstream.bit
 
 set script_dir [file dirname [file normalize [info script]]]
 set proj_dir   [file join $script_dir "vivado_project"]
@@ -22,14 +28,11 @@ set output_dir [file join $script_dir "output"]
 
 file mkdir $output_dir
 
-# ----------------------------------------------------------------------------
-# 1. Create Project — Zynq UltraScale+ (XCZU3EG)
-# ----------------------------------------------------------------------------
+# --- Create project ---
 puts "=== Creating Vivado project for AUP-ZU3 ==="
 create_project secure_switch_zu3 $proj_dir -part xczu3eg-sfvc784-2-e -force
 
-# Try to set board part (requires installed board files)
-# Try 8GB variant first, then 4GB
+# Try board files (8GB variant first, then 4GB)
 set board_set 0
 foreach bp {realdigital.org:aup-zu3-8gb:part0:1.0 realdigital.org:aup-zu3-4gb:part0:1.0} {
     if {![catch {set_property board_part $bp [current_project]}]} {
@@ -40,36 +43,29 @@ foreach bp {realdigital.org:aup-zu3-8gb:part0:1.0 realdigital.org:aup-zu3-4gb:pa
 }
 if {!$board_set} {
     puts "WARNING: Could not set board_part (board files may not be installed)."
-    puts "Continuing with part-only project — PS will need manual preset."
-    puts "Install board files from: https://github.com/RealDigitalOrg/aup-zu3-bsp/tree/master/board-files"
+    puts "Install from: https://github.com/RealDigitalOrg/aup-zu3-bsp/tree/master/board-files"
 }
 
-# ----------------------------------------------------------------------------
-# 2. Add RTL source and constraints
-# ----------------------------------------------------------------------------
+# --- Add RTL and constraints ---
 puts "=== Adding source files ==="
 add_files -norecurse [file join $script_dir "secure_switch_axi.v"]
 add_files -fileset constrs_1 -norecurse [file join $script_dir "zu3_switches.xdc"]
 update_compile_order -fileset sources_1
 
-# ----------------------------------------------------------------------------
-# 3. Create Block Design
-# ----------------------------------------------------------------------------
+# --- Block design ---
 puts "=== Creating block design ==="
 create_bd_design "system"
 
-# Add Zynq UltraScale+ MPSoC PS
+# ZynqMP PS
 create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.5 zynq_ps
 
-# Apply full board preset (DDR, clocks, MIO, etc.) via board automation
+# Apply board preset (DDR timing, MIO config, clocks, etc.)
 if {[catch {apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1"} [get_bd_cells zynq_ps]} err]} {
     puts "WARNING: Board automation failed: $err"
     puts "Falling back to manual PS configuration."
 }
 
-# Configure PS settings on top of board preset
-# Board preset already configures: UART1 on MIO 32..33, I2C0 on MIO 34..35, I2C1 on MIO 36..37
-# We only add what the preset doesn't cover (AXI, PL clock, TTC, TrustZone)
+# Enable what the board preset might not cover
 set_property -dict [list \
     CONFIG.PSU__USE__M_AXI_GP0 {1} \
     CONFIG.PSU__MAXIGP0__DATA_WIDTH {32} \
@@ -80,22 +76,18 @@ set_property -dict [list \
     CONFIG.PSU__PROTECTION__ENABLE {1} \
 ] [get_bd_cells zynq_ps]
 
-# Add our secure switch reader as an RTL module reference
+# Two instances of our switch peripheral
 create_bd_cell -type module -reference secure_switch_axi secure_switch_0
-
-# Add a second (non-secure) instance of the same peripheral
 create_bd_cell -type module -reference secure_switch_axi ns_switch_0
 
-# Create AXI Interconnect to bridge PS HPM0_FPD to both peripherals
+# AXI interconnect with 2 master ports (one per peripheral)
 create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0
 set_property CONFIG.NUM_MI {2} [get_bd_cells axi_interconnect_0]
 
-# ----------------------------------------------------------------------------
-# 4. Connect everything
-# ----------------------------------------------------------------------------
+# --- Wiring ---
 puts "=== Wiring block design ==="
 
-# Clocking: PS PL_CLK0 drives everything
+# Clock: PS PL_CLK0 (100 MHz) drives everything
 connect_bd_net [get_bd_pins zynq_ps/pl_clk0] [get_bd_pins zynq_ps/maxihpm0_fpd_aclk]
 connect_bd_net [get_bd_pins zynq_ps/pl_clk0] [get_bd_pins axi_interconnect_0/ACLK]
 connect_bd_net [get_bd_pins zynq_ps/pl_clk0] [get_bd_pins axi_interconnect_0/S00_ACLK]
@@ -112,27 +104,23 @@ connect_bd_net [get_bd_pins zynq_ps/pl_resetn0] [get_bd_pins axi_interconnect_0/
 connect_bd_net [get_bd_pins zynq_ps/pl_resetn0] [get_bd_pins secure_switch_0/s_axi_aresetn]
 connect_bd_net [get_bd_pins zynq_ps/pl_resetn0] [get_bd_pins ns_switch_0/s_axi_aresetn]
 
-# AXI bus: PS HPM0_FPD → Interconnect → Switch readers
+# AXI data path: PS -> interconnect -> peripherals
 connect_bd_intf_net [get_bd_intf_pins zynq_ps/M_AXI_HPM0_FPD] [get_bd_intf_pins axi_interconnect_0/S00_AXI]
 connect_bd_intf_net [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins secure_switch_0/s_axi]
 connect_bd_intf_net [get_bd_intf_pins axi_interconnect_0/M01_AXI] [get_bd_intf_pins ns_switch_0/s_axi]
 
-# TrustZone: Mark M00 (secure_switch_0) as secure — only secure masters (OP-TEE) can access it
-# M01 (ns_switch_0) stays non-secure — Linux can access it directly via /dev/mem
+# TrustZone: M00 is secure-only (ZU3 interconnect handles this per-port)
 set_property CONFIG.M00_SECURE {1} [get_bd_cells axi_interconnect_0]
 
-# Make switches external — both instances share the same physical switches
+# Both peripherals share the same physical switch pins
 create_bd_port -dir I -from 1 -to 0 sw
 connect_bd_net [get_bd_ports sw] [get_bd_pins secure_switch_0/sw]
 connect_bd_net [get_bd_ports sw] [get_bd_pins ns_switch_0/sw]
 
-# ----------------------------------------------------------------------------
-# 5. Assign address
-# ----------------------------------------------------------------------------
+# --- Address assignment ---
 puts "=== Assigning addresses ==="
 assign_bd_address
 
-# Print the assigned addresses so the user can use them in OP-TEE / host app
 puts "=============================================="
 foreach {inst label} {secure_switch_0 "SECURE" ns_switch_0 "NON-SECURE"} {
     set addr_segs [get_bd_addr_segs -of_objects [get_bd_intf_pins ${inst}/s_axi]]
@@ -142,25 +130,20 @@ foreach {inst label} {secure_switch_0 "SECURE" ns_switch_0 "NON-SECURE"} {
         puts "  $label PERIPHERAL ($inst): $offset  RANGE: $range"
     }
 }
-puts "  Use secure address in OP-TEE CFG_SWITCH_BASE"
-puts "  Use non-secure address in host app NS_SWITCH_ADDR"
+puts "  Use secure address for CFG_SWITCH_BASE in OP-TEE build"
+puts "  Use non-secure address for NS_SWITCH_ADDR in host app build"
 puts "=============================================="
 
-# ----------------------------------------------------------------------------
-# 6. Validate and save
-# ----------------------------------------------------------------------------
+# --- Validate and save ---
 puts "=== Validating design ==="
 validate_bd_design
 save_bd_design
 
-# Create HDL wrapper
 set wrapper [make_wrapper -files [get_files system.bd] -top]
 add_files -norecurse $wrapper
 update_compile_order -fileset sources_1
 
-# ----------------------------------------------------------------------------
-# 7. Synthesize, Implement, Generate Bitstream
-# ----------------------------------------------------------------------------
+# --- Build ---
 puts "=== Running synthesis ==="
 launch_runs synth_1 -jobs 8
 wait_on_run synth_1
@@ -177,15 +160,11 @@ if {[get_property STATUS [get_runs impl_1]] != "write_bitstream Complete!"} {
     exit 1
 }
 
-# ----------------------------------------------------------------------------
-# 8. Export outputs
-# ----------------------------------------------------------------------------
+# --- Export ---
 puts "=== Exporting XSA and bitstream ==="
 
-# Export XSA with bitstream included
 write_hw_platform -fixed -include_bit -force [file join $output_dir "hardware_design.xsa"]
 
-# Also copy the bitstream directly
 set bit_file [glob -nocomplain [file join $proj_dir "secure_switch_zu3.runs" "impl_1" "*.bit"]]
 if {[llength $bit_file] > 0} {
     file copy -force [lindex $bit_file 0] [file join $output_dir "bitstream.bit"]
@@ -199,8 +178,7 @@ puts "  BUILD COMPLETE"
 puts "  XSA: [file join $output_dir hardware_design.xsa]"
 puts "  BIT: [file join $output_dir bitstream.bit]"
 puts ""
-puts "  Copy XSA to build directory:"
-puts "    cp vivado/output/hardware_design.xsa aup-zu3-8gb-hw/"
+puts "  Next: copy XSA to PetaLinux project hardware source"
 puts "=============================================="
 
 exit

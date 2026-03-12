@@ -1,17 +1,27 @@
 // SPDX-License-Identifier: BSD-2-Clause
-/*
- * PTA Benchmark — Pseudo Trusted Application for Zynq UltraScale+ (AArch64)
- *
- * Runs inside OP-TEE core to perform secure-world MMIO reads of the
- * AXI switch peripheral with ARM PMU cycle counting. This avoids the
- * overhead of a user-space TA and gives direct access to physical I/O.
- *
- * Build: compile into OP-TEE OS by adding this file to a sub.mk and
- *        setting CFG_SWITCH_BASE to the secure peripheral's physical address.
- *
- * Required OP-TEE build flags:
- *   CFG_SWITCH_BASE=0xA0000000   (update to match Vivado assign_bd_address output)
- */
+//
+// pta_benchmark.c -- Pseudo Trusted Application for Cortex-A53 (AArch64)
+//
+// This PTA runs inside the OP-TEE kernel (not as a userspace TA) so it
+// can directly access physical MMIO registers and the ARM PMU cycle counter.
+// It's compiled into the OP-TEE OS image via the 0002-add-benchmark-pta.patch
+// applied by the PetaLinux optee-os bbappend recipe.
+//
+// The host application (optee_benchmark) calls into this PTA via the
+// standard GlobalPlatform TEE Client API. The call path is:
+//
+//   Linux: TEEC_InvokeCommand() -> ioctl(/dev/tee0) -> SMC
+//   EL3:   TF-A fast-path -> forward to OP-TEE at S-EL1
+//   S-EL1: OP-TEE dispatcher -> pta_invoke() -> io_read32()
+//   Return: SMC return -> ioctl returns -> TEEC_InvokeCommand returns
+//
+// Build integration (PetaLinux / Yocto):
+//   The 0002 patch adds this file to optee_os/core/pta/ and the bbappend sets:
+//     CFG_BENCHMARK_PTA=y
+//     CFG_SWITCH_BASE=0xA0001000   (from Vivado's assign_bd_address)
+//
+//   The patch also adds to plat-zynqmp/main.c:
+//     register_phys_mem(MEM_AREA_IO_SEC, CFG_SWITCH_BASE, 0x1000)
 
 #include <compiler.h>
 #include <io.h>
@@ -37,26 +47,30 @@
 #define SWITCH_PHYS	((paddr_t)CFG_SWITCH_BASE)
 #define SWITCH_SIZE	0x1000
 
-/*
- * Cycle counter helpers for Cortex-A53 (AArch64)
- *
- * We enable PMCCNTR_EL0 counting, read it before/after the AXI access,
- * and return the delta. The PTA runs at EL1 (secure) so we have full
- * access to the PMU registers.
- */
+
+// ----------------------------------------------------------------------------
+// ARM PMU cycle counter (Cortex-A53, AArch64 system register interface)
+//
+// PMCCNTR_EL0 counts CPU cycles. We enable it, reset it to zero, then
+// read it before and after the operation we're measuring. The delta gives
+// us a cycle-accurate cost that's independent of clock speed.
+//
+// On A53 the counter is 64 bits (vs 32 on A9), but we truncate to u32
+// when returning to the host since our measurements are well under 2^32.
+// ----------------------------------------------------------------------------
+
 static inline void pmu_enable(void)
 {
 	uint32_t val;
 
-	/* Enable all counters globally (PMCR_EL0.E = 1) and reset cycle counter (C = 1) */
+	// PMCR_EL0: set E (enable) and C (reset cycle counter)
 	asm volatile("mrs %0, pmcr_el0" : "=r"(val));
 	val |= (1 << 0) | (1 << 2);  /* E | C */
 	asm volatile("msr pmcr_el0, %0" : : "r"(val));
 
-	/* Enable cycle counter (PMCNTENSET_EL0 bit 31) */
+	// PMCNTENSET_EL0: enable the cycle counter specifically (bit 31)
 	asm volatile("msr pmcntenset_el0, %0" : : "r"((uint32_t)(1U << 31)));
 
-	/* Ensure writes complete before reading */
 	asm volatile("isb");
 }
 
@@ -69,13 +83,16 @@ static inline uint64_t read_cycles(void)
 	return cnt;
 }
 
-/*
- * Open session — map the secure switch peripheral.
- *
- * phys_to_virt() works because the address must be registered in OP-TEE's
- * platform memory map as MEM_AREA_IO_SEC. If this returns NULL, the
- * peripheral address is not in the secure I/O map — check platform_config.h.
- */
+
+// ----------------------------------------------------------------------------
+// Session management
+//
+// On session open, we look up the virtual address for our FPGA peripheral.
+// phys_to_virt() works because the address was registered as MEM_AREA_IO_SEC
+// in plat-zynqmp/main.c (via the 0002 patch). We store the VA in the
+// session context so each command can use it without re-mapping.
+// ----------------------------------------------------------------------------
+
 static TEE_Result pta_open(uint32_t param_types __unused,
 			   TEE_Param params[4] __unused,
 			   void **sess_ctx)
@@ -90,15 +107,17 @@ static TEE_Result pta_open(uint32_t param_types __unused,
 	}
 
 	*sess_ctx = (void *)va;
-	DMSG("Mapped secure switch at PA 0x%" PRIxPA " → VA %p",
+	DMSG("Mapped secure switch at PA 0x%" PRIxPA " -> VA %p",
 	     SWITCH_PHYS, (void *)va);
 	return TEE_SUCCESS;
 }
 
-/*
- * CMD_NOP — return immediately.
- * Measures pure SMC context-switch overhead when timed from the host.
- */
+
+// ----------------------------------------------------------------------------
+// CMD_NOP: do nothing, return immediately.
+// The host times the full round-trip to measure pure SMC overhead.
+// ----------------------------------------------------------------------------
+
 static TEE_Result cmd_nop(uint32_t param_types,
 			  TEE_Param params[4] __unused)
 {
@@ -111,14 +130,15 @@ static TEE_Result cmd_nop(uint32_t param_types,
 	return TEE_SUCCESS;
 }
 
-/*
- * CMD_AXI_READ — MMIO read with cycle counting.
- *
- * out: params[0].value.a = switch register value
- *      params[0].value.b = AXI read cycles (PMCCNTR delta)
- *      params[1].value.a = total command cycles (entry to exit)
- *      params[1].value.b = 0 (reserved)
- */
+
+// ----------------------------------------------------------------------------
+// CMD_AXI_READ: single MMIO read with cycle counting.
+//
+// We take four cycle counter snapshots to give two granularities:
+//   c_axi = cycles for just the io_read32 (the AXI transaction)
+//   c_total = cycles for the entire command (includes PMU setup overhead)
+// ----------------------------------------------------------------------------
+
 static TEE_Result cmd_axi_read(uint32_t param_types,
 			       TEE_Param params[4],
 			       vaddr_t switch_va)
@@ -136,7 +156,6 @@ static TEE_Result cmd_axi_read(uint32_t param_types,
 
 	c_start = read_cycles();
 
-	/* Time just the MMIO read */
 	c_axi_start = read_cycles();
 	val = io_read32(switch_va);
 	c_axi_end = read_cycles();
@@ -151,14 +170,15 @@ static TEE_Result cmd_axi_read(uint32_t param_types,
 	return TEE_SUCCESS;
 }
 
-/*
- * CMD_AXI_READ_N — multiple consecutive MMIO reads, one SMC.
- *
- * in:  params[0].value.a = number of reads (1..16)
- * out: params[0].value.b = last read value
- *      params[1].value.a = total cycles for all N reads
- *      params[1].value.b = 0
- */
+
+// ----------------------------------------------------------------------------
+// CMD_AXI_READ_N: N consecutive MMIO reads in a single SMC invocation.
+//
+// Used for the multi-read sweep: by varying N and plotting total cycles,
+// the slope gives us the marginal cost per AXI read and the y-intercept
+// gives us the fixed PTA dispatch overhead.
+// ----------------------------------------------------------------------------
+
 static TEE_Result cmd_axi_read_n(uint32_t param_types,
 				 TEE_Param params[4],
 				 vaddr_t switch_va)
@@ -190,6 +210,11 @@ static TEE_Result cmd_axi_read_n(uint32_t param_types,
 
 	return TEE_SUCCESS;
 }
+
+
+// ----------------------------------------------------------------------------
+// Command dispatch
+// ----------------------------------------------------------------------------
 
 static TEE_Result pta_invoke(void *sess_ctx,
 			     uint32_t cmd_id, uint32_t param_types,

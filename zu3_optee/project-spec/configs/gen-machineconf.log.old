@@ -1,36 +1,14 @@
-2026-03-01 21:42:40,187 - [DEBUG] Using xsct from : /tools/xilinx/petalinux/2025.1/components/xsct/bin/xsct
-2026-03-01 21:42:40,187 - [INFO] Getting Platform info from HW file
-2026-03-01 21:42:40,187 - [DEBUG] Using the soc_family specified by user:zynqmp
-2026-03-01 21:42:40,189 - [INFO] Generating Kconfig for project
-2026-03-01 21:42:40,189 - [DEBUG] Generating System HW file
-2026-03-01 21:42:40,189 - [DEBUG] xsct -sdx -nodisp /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/hw-description.tcl plnx_gen_hwsysconf /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/hw-description/system.xsa
-2026-03-01 21:42:49,542 - [DEBUG] 
-
-****** Software Commandline Tool (XSCT) v2025.1.0
-  **** SW Build 6135694 on Thu May 15 18:54:54 MDT 2025
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-Warning: XSCT is deprecated and will be removed in future releases.
-We recommend using the new Python command-line tool for project management and debugging:
-- Run "vitis -i" for interactive mode.
-- Run "vitis -s <script>" for script mode.
-WARNING: sdtgen package cannot be loaded. System Device tree commands will not 
- be available
-INFO: [Hsi 55-2053] elapsed time for repository (/tools/xilinx/petalinux/2025.1/components/xsct/data/embeddedsw) loading 0 seconds
-
-WARNING: Failed in finding /tools/xilinx/petalinux/2025.1/components/xsct/data/system-device-tree-xlnx/device_tree/data/device_tree.tcl path.
-
-
-2026-03-01 21:42:49,607 - [DEBUG] Hardware Configuration:
-2026-03-01 21:42:49,607 - [DEBUG] MACHINE     = "None"
-2026-03-01 21:42:49,607 - [DEBUG] DEVICE_ID   = "xczu3eg"
-2026-03-01 21:42:49,607 - [DEBUG] SOC_FAMILY  = "zynqmp"
-2026-03-01 21:42:49,607 - [DEBUG] SOC_VARIANT = "eg"
-2026-03-01 21:42:49,607 - [INFO] Silentconfig project
-2026-03-01 21:42:49,607 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/config conf /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig
-2026-03-01 21:42:49,613 - [DEBUG] *
+2026-03-03 03:23:17,171 - [DEBUG] Using xsct from : /tools/xilinx/petalinux/2025.1/components/xsct/bin/xsct
+2026-03-03 03:23:17,171 - [INFO] Getting Platform info from HW file
+2026-03-03 03:23:17,171 - [DEBUG] Using the soc_family specified by user:zynqmp
+2026-03-03 03:23:17,204 - [DEBUG] Hardware Configuration:
+2026-03-03 03:23:17,204 - [DEBUG] MACHINE     = "None"
+2026-03-03 03:23:17,204 - [DEBUG] DEVICE_ID   = "xczu3eg"
+2026-03-03 03:23:17,204 - [DEBUG] SOC_FAMILY  = "zynqmp"
+2026-03-03 03:23:17,204 - [DEBUG] SOC_VARIANT = "eg"
+2026-03-03 03:23:17,204 - [INFO] Silentconfig project
+2026-03-03 03:23:17,204 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/config conf /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/configs/Kconfig
+2026-03-03 03:23:17,209 - [DEBUG] *
 * PetaLinux System Configuration
 *
 ZYNQMP Configuration (SYSTEM_ZYNQMP) [Y/?] y
@@ -69,12 +47,12 @@ choice[1]: 1
 * Memory Settings
 *
 Primary Memory
-> 1. psu_ddr_0 (SUBSYSTEM_MEMORY_PSU_DDR_0_SELECT) (NEW)
+> 1. psu_ddr_0 (SUBSYSTEM_MEMORY_PSU_DDR_0_SELECT)
   2. psu_ddr_1 (SUBSYSTEM_MEMORY_PSU_DDR_1_SELECT)
   3. manual (SUBSYSTEM_MEMORY_MANUAL_SELECT)
-choice[1-3?]: System memory base address (SUBSYSTEM_MEMORY_PSU_DDR_0_BASEADDR) [0x0] (NEW) 
-System memory size (SUBSYSTEM_MEMORY_PSU_DDR_0_SIZE) [0x80000000] (NEW) 
-u-boot text base address (SUBSYSTEM_MEMORY_PSU_DDR_0_U__BOOT_TEXTBASE_OFFSET) [0x8000000] (NEW) 
+choice[1-3?]: System memory base address (SUBSYSTEM_MEMORY_PSU_DDR_0_BASEADDR) [0x0] 
+System memory size (SUBSYSTEM_MEMORY_PSU_DDR_0_SIZE) [0x80000000] 
+u-boot text base address (SUBSYSTEM_MEMORY_PSU_DDR_0_U__BOOT_TEXTBASE_OFFSET) [0x8000000] 
 *
 * Serial Settings
 *
@@ -284,9 +262,9 @@ user layer 0 (USER_LAYER_0) []
 #
 # configuration written to /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/config
 #
-2026-03-01 21:42:49,649 - [INFO] Silentconfig rootfs
-2026-03-01 21:42:49,649 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/rootfs_config conf /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/rootfsconfigs/Kconfig
-2026-03-01 21:42:49,658 - [DEBUG] *
+2026-03-03 03:23:17,247 - [INFO] Silentconfig rootfs
+2026-03-03 03:23:17,248 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/rootfs_config conf /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/rootfsconfigs/Kconfig
+2026-03-03 03:23:17,257 - [DEBUG] *
 * Configuration
 *
 *
@@ -3758,7 +3736,7 @@ Add Users to Sudo users (ADD_USERS_TO_SUDOERS) [petalinux]
 #
 # configuration written to /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/configs/rootfs_config
 #
-2026-03-01 21:42:49,664 - [INFO] Generating configuration files
-2026-03-01 21:42:49,666 - [DEBUG] No multilibs enabled.
-2026-03-01 21:42:49,666 - [DEBUG] No multilibs enabled.
-2026-03-01 21:42:49,682 - [DEBUG] Shutting down bitbake
+2026-03-03 03:23:17,262 - [INFO] Generating configuration files
+2026-03-03 03:23:17,264 - [DEBUG] No multilibs enabled.
+2026-03-03 03:23:17,265 - [DEBUG] No multilibs enabled.
+2026-03-03 03:23:17,281 - [DEBUG] Shutting down bitbake

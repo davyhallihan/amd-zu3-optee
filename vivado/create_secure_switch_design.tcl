@@ -83,9 +83,12 @@ set_property -dict [list \
 # Add our secure switch reader as an RTL module reference
 create_bd_cell -type module -reference secure_switch_axi secure_switch_0
 
-# Create AXI Interconnect to bridge PS HPM0_FPD to our peripheral
+# Add a second (non-secure) instance of the same peripheral
+create_bd_cell -type module -reference secure_switch_axi ns_switch_0
+
+# Create AXI Interconnect to bridge PS HPM0_FPD to both peripherals
 create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0
-set_property CONFIG.NUM_MI {1} [get_bd_cells axi_interconnect_0]
+set_property CONFIG.NUM_MI {2} [get_bd_cells axi_interconnect_0]
 
 # ----------------------------------------------------------------------------
 # 4. Connect everything
@@ -97,21 +100,31 @@ connect_bd_net [get_bd_pins zynq_ps/pl_clk0] [get_bd_pins zynq_ps/maxihpm0_fpd_a
 connect_bd_net [get_bd_pins zynq_ps/pl_clk0] [get_bd_pins axi_interconnect_0/ACLK]
 connect_bd_net [get_bd_pins zynq_ps/pl_clk0] [get_bd_pins axi_interconnect_0/S00_ACLK]
 connect_bd_net [get_bd_pins zynq_ps/pl_clk0] [get_bd_pins axi_interconnect_0/M00_ACLK]
+connect_bd_net [get_bd_pins zynq_ps/pl_clk0] [get_bd_pins axi_interconnect_0/M01_ACLK]
 connect_bd_net [get_bd_pins zynq_ps/pl_clk0] [get_bd_pins secure_switch_0/s_axi_aclk]
+connect_bd_net [get_bd_pins zynq_ps/pl_clk0] [get_bd_pins ns_switch_0/s_axi_aclk]
 
 # Reset: PS PL_RESETN0
 connect_bd_net [get_bd_pins zynq_ps/pl_resetn0] [get_bd_pins axi_interconnect_0/ARESETN]
 connect_bd_net [get_bd_pins zynq_ps/pl_resetn0] [get_bd_pins axi_interconnect_0/S00_ARESETN]
 connect_bd_net [get_bd_pins zynq_ps/pl_resetn0] [get_bd_pins axi_interconnect_0/M00_ARESETN]
+connect_bd_net [get_bd_pins zynq_ps/pl_resetn0] [get_bd_pins axi_interconnect_0/M01_ARESETN]
 connect_bd_net [get_bd_pins zynq_ps/pl_resetn0] [get_bd_pins secure_switch_0/s_axi_aresetn]
+connect_bd_net [get_bd_pins zynq_ps/pl_resetn0] [get_bd_pins ns_switch_0/s_axi_aresetn]
 
-# AXI bus: PS HPM0_FPD → Interconnect → Switch reader
+# AXI bus: PS HPM0_FPD → Interconnect → Switch readers
 connect_bd_intf_net [get_bd_intf_pins zynq_ps/M_AXI_HPM0_FPD] [get_bd_intf_pins axi_interconnect_0/S00_AXI]
 connect_bd_intf_net [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins secure_switch_0/s_axi]
+connect_bd_intf_net [get_bd_intf_pins axi_interconnect_0/M01_AXI] [get_bd_intf_pins ns_switch_0/s_axi]
 
-# Make switches external
+# TrustZone: Mark M00 (secure_switch_0) as secure — only secure masters (OP-TEE) can access it
+# M01 (ns_switch_0) stays non-secure — Linux can access it directly via /dev/mem
+set_property CONFIG.M00_SECURE {1} [get_bd_cells axi_interconnect_0]
+
+# Make switches external — both instances share the same physical switches
 create_bd_port -dir I -from 1 -to 0 sw
 connect_bd_net [get_bd_ports sw] [get_bd_pins secure_switch_0/sw]
+connect_bd_net [get_bd_ports sw] [get_bd_pins ns_switch_0/sw]
 
 # ----------------------------------------------------------------------------
 # 5. Assign address
@@ -119,16 +132,19 @@ connect_bd_net [get_bd_ports sw] [get_bd_pins secure_switch_0/sw]
 puts "=== Assigning addresses ==="
 assign_bd_address
 
-# Print the assigned address so the user can use it in OP-TEE
-set addr_segs [get_bd_addr_segs -of_objects [get_bd_intf_pins secure_switch_0/s_axi]]
-foreach seg $addr_segs {
-    set offset [get_property OFFSET $seg]
-    set range  [get_property RANGE $seg]
-    puts "=============================================="
-    puts "  PERIPHERAL ADDRESS: $offset  RANGE: $range"
-    puts "  Use this address in OP-TEE platform_config.h"
-    puts "=============================================="
+# Print the assigned addresses so the user can use them in OP-TEE / host app
+puts "=============================================="
+foreach {inst label} {secure_switch_0 "SECURE" ns_switch_0 "NON-SECURE"} {
+    set addr_segs [get_bd_addr_segs -of_objects [get_bd_intf_pins ${inst}/s_axi]]
+    foreach seg $addr_segs {
+        set offset [get_property OFFSET $seg]
+        set range  [get_property RANGE $seg]
+        puts "  $label PERIPHERAL ($inst): $offset  RANGE: $range"
+    }
 }
+puts "  Use secure address in OP-TEE CFG_SWITCH_BASE"
+puts "  Use non-secure address in host app NS_SWITCH_ADDR"
+puts "=============================================="
 
 # ----------------------------------------------------------------------------
 # 6. Validate and save

@@ -27,7 +27,7 @@ do_compile() {
 
 do_install() {
     install -d ${D}${bindir}
-    install -m 0755 ${B}/host/optee_benchmark_switch ${D}${bindir}
+    install -m 0755 ${B}/host/optee_benchmark ${D}${bindir}
 
     install -d ${D}${nonarch_base_libdir}/optee_armtz
     install -m 0444 ${B}/ta/*.ta ${D}${nonarch_base_libdir}/optee_armtz

@@ -33,6 +33,31 @@ stop
 after 1000
 psu_ps_pl_isolation_removal; psu_ps_pl_reset_config
 
+# Ensure AFI (PS-PL AXI bridge) is out of reset and configured
+# Release AFIFM0-5 resets in FPD (RST_FPD_TOP)
+psu_mask_write 0xFD1A0100 0x00001F80 0x00000000
+# Release AFIFM6 reset in LPD (RST_LPD_TOP)
+psu_mask_write 0xFF5E023C 0x00080000 0x00000000
+# Set AFIFM fabric width to 32-bit for HPM0_FPD (afi_fs)
+psu_mask_write 0xFD615000 0x00000300 0x00000000
+
+# Diagnostic: verify AFI and PL clock configuration
+puts stderr "INFO: Verifying PS-PL bridge configuration..."
+puts stderr "  RST_FPD_TOP (0xFD1A0100) - AFIFM bits [12:7] should be 0:"
+puts stderr "    [mrd -force 0xFD1A0100]"
+puts stderr "  RST_LPD_TOP (0xFF5E023C) - AFIFM6 bit [19] should be 0:"
+puts stderr "    [mrd -force 0xFF5E023C]"
+puts stderr "  AFI_FS (0xFD615000) - fabric width bits [9:8] should be 0 (32-bit):"
+puts stderr "    [mrd -force 0xFD615000]"
+puts stderr "  PL_CLK0 (PL0_REF_CTRL @ 0xFF5E00C0) - should be enabled:"
+puts stderr "    [mrd -force 0xFF5E00C0]"
+puts stderr "  Try reading PL peripheral at 0xA0000000 (ns_switch):"
+if {[catch {puts stderr "    [mrd -force 0xA0000000]"} err]} {
+    puts stderr "    FAILED: $err"
+} else {
+    puts stderr "    SUCCESS - PL AXI is working!"
+}
+
 puts stderr "INFO: Loading DTB..."
 dow -data "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/system.dtb" 0x100000
 

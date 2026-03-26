@@ -1,13 +1,17 @@
 connect -url tcp:172.31.224.1:3121
 configparams force-mem-access 1
 
+set script_dir [file dirname [file normalize [info script]]]
+set img "$script_dir/images/linux"
+set hw "$script_dir/project-spec/hw-description"
+
 # Try to reset the whole system first
 targets -set -nocase -filter {name =~ "*PSU*"}
 rst -system
 after 2000
 
 puts stderr "INFO: Configuring the FPGA..."
-fpga "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/system.bit"
+fpga "$img/system.bit"
 
 targets -set -nocase -filter {name =~ "*PSU*"}
 mask_write 0xFFCA0038 0x1C0 0x1C0
@@ -17,16 +21,16 @@ if { [string first "Stopped" [state]] != 0 } {
 	stop
 }
 puts stderr "INFO: Downloading PMUFW..."
-dow "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/pmufw.elf"
+dow "$img/pmufw.elf"
 con
 after 500
 
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor -clear-registers
 
-source /home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/project-spec/hw-description/psu_init.tcl
+source "$hw/psu_init.tcl"
 puts stderr "INFO: Downloading FSBL..."
-dow "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/zynqmp_fsbl.elf"
+dow "$img/zynqmp_fsbl.elf"
 con
 after 3000
 stop
@@ -59,26 +63,26 @@ if {[catch {puts stderr "    [mrd -force 0xA0000000]"} err]} {
 }
 
 puts stderr "INFO: Loading DTB..."
-dow -data "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/system.dtb" 0x100000
+dow -data "$img/system.dtb" 0x100000
 
 puts stderr "INFO: Downloading Kernel (Image)..."
-dow -data "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/Image" 0x00200000
+dow -data "$img/Image" 0x00200000
 
 puts stderr "INFO: Downloading RootFS..."
-dow -data "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/rootfs.cpio.gz.u-boot" 0x04000000
+dow -data "$img/rootfs.cpio.gz.u-boot" 0x04000000
 
 puts stderr "INFO: Downloading Boot Script..."
-dow -data "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/boot.scr" 0x20000000
+dow -data "$img/boot.scr" 0x20000000
 
 puts stderr "INFO: Downloading U-Boot..."
-dow "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/u-boot.elf"
+dow "$img/u-boot.elf"
 
 puts stderr "INFO: Downloading OP-TEE..."
-dow -data "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/tee-header_v2.bin" 0x1E000000
-dow -data "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/tee-raw.bin" 0x1E001000
+dow -data "$img/tee-header_v2.bin" 0x1E000000
+dow -data "$img/tee-raw.bin" 0x1E001000
 
 puts stderr "INFO: Downloading BL31..."
-dow "/home/davy/research/pynq-tee/amd-zu3-optee/zu3_optee/images/linux/bl31.elf"
+dow "$img/bl31.elf"
 
 puts stderr "INFO: Booting..."
 con
